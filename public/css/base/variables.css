@@ -1,0 +1,62 @@
+/* ==========================================================
+   Variables
+   Project : Fit5 Sports Club 2.0
+========================================================== */
+
+:root{
+
+    /* ================= Brand Colors ================= */
+
+    --primary-color:#ff6b00;
+     --secondary-color:#105cea;
+
+    /* ================= Light Theme ================= */
+    --bg-color: #ffffff;
+    --surface-color: #ffffff;
+    --surface-alt-color: #F8FAF8;
+
+
+    --heading-color:#0d111cf6;
+    --text-color:#1d2227d0;
+
+    --white:#ffffff;
+    --light-bg:#f8fafc;
+    --section-bg:#ffffff;
+    --border-color:#e5e7eb;
+
+    --nav-bg: rgba(255,255,255,.92);
+    --nav-text: #222222;
+    --nav-hover: #ff9603;
+
+    --dropdown-bg: rgba(242, 255, 245, 0.96);
+    --dropdown-text: #0c0c0c;
+    --dropdown-hover: #F3F8F3;
+
+    --hero-overlay: rgba(255,255,255,.25);
+
+    --button-text: #ffffff;
+
+    /* ================= Font ================= */
+    --font-family: "Poppins", sans-serif;
+
+    /* ================= Radius ================= */
+    --radius-sm:6px;
+    --radius-md:12px;
+    --radius-lg:18px;
+
+
+     /*============== Shadow ===================== */
+
+    --shadow-sm:0 4px 12px rgba(0,0,0,.06);
+    --shadow-md:0 12px 28px rgba(0,0,0,.08);
+    --shadow-lg:0 18px 45px rgba(0,0,0,.12);
+
+    /* ================ Container =============== */
+
+    --container-width:1200px;
+
+
+    /* =============== Transition ================ */
+
+    --transition:.35s ease;
+}

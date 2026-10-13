@@ -1,0 +1,197 @@
+<div class="contact-details-panel" id="contactDetailsPanel">
+
+    <!-- Details Header -->
+    <div class="contact-details-header">
+
+        <div class="details-person">
+
+            <div class="details-avatar" id="detailsAvatar">
+                U
+            </div>
+
+            <div>
+                <h2 id="detailsName">
+                    Unknown
+                </h2>
+
+                <span id="detailsEmail">
+                    -
+                </span>
+            </div>
+
+        </div>
+
+        <div class="details-header-right">
+
+            <span class="contact-status status-new" id="detailsStatus">
+                New
+            </span>
+
+            <button
+                type="button"
+                class="details-close"
+                id="closeContactDetails"
+                aria-label="Close details"
+            >
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- Details Content -->
+    <div class="contact-details-content">
+
+        <h3>Message Details</h3>
+
+
+        <!-- Subject -->
+        <div class="detail-item">
+
+            <i class="fa-regular fa-envelope"></i>
+
+            <div>
+                <span>Subject</span>
+
+                <strong id="detailsSubject">
+                    General Inquiry
+                </strong>
+            </div>
+
+        </div>
+
+
+        <!-- Phone -->
+        <div class="detail-item">
+
+            <i class="fa-solid fa-phone"></i>
+
+            <div>
+                <span>Phone</span>
+
+                <strong id="detailsPhone">
+                    Not provided
+                </strong>
+            </div>
+
+        </div>
+
+
+        <!-- Received -->
+        <div class="detail-item">
+
+            <i class="fa-regular fa-calendar"></i>
+
+            <div>
+                <span>Received On</span>
+
+                <strong id="detailsDate">
+                    -
+                </strong>
+            </div>
+
+        </div>
+
+
+        <!-- Message -->
+        <div class="detail-message">
+
+            <div class="detail-message-label">
+
+                <i class="fa-regular fa-message"></i>
+
+                <span>Message</span>
+
+            </div>
+
+            <div class="message-box" id="detailsMessage">
+                -
+            </div>
+
+        </div>
+
+
+        <!-- Status -->
+        <div class="details-status-control">
+
+            <label>
+                <i class="fa-regular fa-circle-check"></i>
+                Status
+            </label>
+
+            <select id="detailsStatusSelect">
+                <option value="new">New</option>
+                <option value="read">Read</option>
+                <option value="replied">Replied</option>
+            </select>
+
+        </div>
+
+
+        <!-- Quick Actions -->
+        <div class="quick-actions">
+
+            <h3>Quick Actions</h3>
+
+            <div class="quick-action-buttons">
+
+                <button
+                    type="button"
+                    class="action-btn action-read"
+                    id="markContactRead"
+                >
+                    <i class="fa-regular fa-circle-check"></i>
+                    <span>Mark as Read</span>
+                </button>
+
+
+                <button
+                    type="button"
+                    class="action-btn action-reply"
+                    id="replyToContact"
+                >
+                    <i class="fa-solid fa-reply"></i>
+                    <span>Reply</span>
+                </button>
+
+
+                <button
+                    type="button"
+                    class="action-btn action-delete"
+                    id="deleteContact"
+                >
+                    <i class="fa-regular fa-trash-can"></i>
+                    <span>Delete</span>
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Admin Notes -->
+        <div class="admin-notes">
+
+            <h3>Notes (Admin only)</h3>
+
+            <textarea
+                id="contactAdminNote"
+                placeholder="Add notes about this request..."
+            ></textarea>
+
+
+            <button
+                type="button"
+                class="save-note-btn"
+                id="saveContactNote"
+            >
+                Save Note
+            </button>
+
+        </div>
+
+    </div>
+
+</div>

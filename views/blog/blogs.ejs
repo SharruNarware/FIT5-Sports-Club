@@ -1,0 +1,118 @@
+<% layout("/layouts/layout") %>
+
+<section class="blogs-page">
+    <div class="blogs-container">
+
+        <section class="blog-hero">
+            <div class="blog-hero-overlay"></div>
+            <div class="blog-hero-content">
+                <span class="blog-hero-badge">
+                    <i class="fa-solid fa-book-open"></i>
+                    FIT5 SPORTS CLUB BLOG
+                </span>
+                <h1 class="blog-hero-title">
+                    Latest blog &
+                    <span>Sports Insights</span>
+                </h1>
+                <p class="blog-hero-description">
+                    Discover expert training guides, inspiring athlete stories,
+                    fitness tips and updates from the Fit5 Sports Club community.
+                </p>
+                <div class="blog-hero-buttons">
+                    <a href="/home/blogs/new" class="blog-primary-btn">
+                        <i class="fa-solid fa-plus"></i>
+                        Start Blogging
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="blog-category-bar">
+            <button class="blog-category active">
+                All
+            </button>
+
+            <button class="blog-category">
+                Football
+            </button>
+
+            <button class="blog-category">
+                Fitness
+            </button>
+
+            <button class="blog-category">
+                Summer Camp
+            </button>
+
+            <button class="blog-category">
+                Events
+            </button>
+
+            <button class="blog-category">
+                Swimming
+            </button>
+        </section>
+
+
+
+        <div class="blogs-grid">
+            <% blogs.forEach(blog=>{ %>
+            <article class="blog-card"
+                onclick="window.location.href='/home/blogs/<%= blog._id %>'">
+
+                <div class="blog-card-image">
+                    <img src="<%= blog.image %>" alt="<%= blog.title %>">
+                </div>
+
+                <div class="blog-card-content">
+
+                    <div class="blog-card-meta">
+                        <span class="blog-topic">
+                            <%= blog.topic %>
+                        </span>
+
+                        <span class="blog-reading-time">
+                            <i class="fa-regular fa-clock"></i>
+                            <%= blog.readTime %> min read
+                        </span>
+                    </div>
+
+                    <h2 class="blog-card-title">
+                        <%= blog.title %>
+                    </h2>
+
+                    <p class="blog-card-description">
+                        <%= blog.description ?
+                        blog.description.split(" ").slice(0,15).join(" ")
+                        : "" %>...
+                    </p>
+
+                    <div class="blog-card-footer">
+                        <div class="blog-date">
+                            <i class="fa-regular fa-calendar"></i>
+                            <%= blog.createdAt ?
+                            blog.createdAt.toLocaleDateString(
+                            'en-US',
+                            {
+                            month:'short',
+                            day:'numeric',
+                            year:'numeric'
+                            }) : 'No Date' %>
+                        </div>
+
+                        <a href="/home/blogs/<%= blog._id %>"
+                           class="blog-read-more">
+                            Read More
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+                </div>
+            </article>
+            <% }) %>
+        </div>
+
+    </div>
+</section>
+
+<script src="/js/blogs.js"></script>

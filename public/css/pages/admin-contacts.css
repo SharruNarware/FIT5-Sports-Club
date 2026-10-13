@@ -1,0 +1,2530 @@
+/* =========================================================
+   FIT5 ADMIN — CONTACT REQUESTS
+   DESKTOP VERSION
+   ========================================================= */
+.admin-contacts {
+    width: calc(100% - 300px);
+    margin-left: 300px;
+    padding: 40px;
+    min-width: 0;
+    color: #202640;
+}
+
+/* =========================================================
+   PAGE HEADER
+   ========================================================= */
+.contacts-page-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 28px;
+}
+
+.contacts-page-header h1 {
+    margin: 0 0 7px;
+    color: #17213f;
+    font-size: 30px;
+    font-weight: 750;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+}
+
+.contacts-page-header p {
+    margin: 0;
+    color: #7a8198;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* =========================================================
+   STATISTICS
+   ========================================================= */
+.contact-stats {
+    display: grid;
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    width: 100%;
+    margin-bottom: 22px;
+}
+
+.contact-stat-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    min-width: 0;
+    min-height: 112px;
+    padding: 20px;
+    background: #ffffff;
+    border: 1px solid #e8eaf1;
+    border-radius: 15px;
+    box-shadow:
+        0 6px 20px rgba(25, 30, 60, 0.04);
+}
+
+/* =========================================================
+   STAT ICON
+   ========================================================= */
+.stat-icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-size: 20px;
+}
+
+.stat-icon-purple {
+    background: #eeeaff;
+    color: #6c5ce7;
+}
+
+.stat-icon-green {
+    background: #e9f8f1;
+    color: #2ca36a;
+}
+
+.stat-icon-blue {
+    background: #e8f1ff;
+    color: #3779d5;
+}
+
+.stat-icon-orange {
+    background: #fff1df;
+    color: #e58b27;
+}
+
+/* =========================================================
+   STAT CONTENT
+   ========================================================= */
+.stat-content {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-label {
+    margin-bottom: 5px;
+    color: #7a8198;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.stat-number {
+    color: #18213d;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+/* =========================================================
+   MAIN WORKSPACE
+   ========================================================= */
+.contacts-workspace {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1.65fr)
+        minmax(390px, 0.95fr);
+    gap: 20px;
+    width: 100%;
+    align-items: stretch;
+}
+
+/* =========================================================
+   LEFT REQUEST PANEL
+   ========================================================= */
+.contacts-list-panel {
+    min-width: 0;
+    background: #ffffff;
+    border: 1px solid #e8eaf1;
+    border-radius: 16px;
+    box-shadow:
+        0 6px 20px rgba(25, 30, 60, 0.04);
+    overflow: hidden;
+}
+
+/* =========================================================
+   FILTER AREA
+   ========================================================= */
+.contacts-filters {
+    display: grid;
+    grid-template-columns:
+        minmax(220px, 1fr)
+        145px
+        220px;
+    gap: 10px;
+    padding: 18px;
+    border-bottom: 1px solid #eceef3;
+    background: #ffffff;
+}
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+.contact-search {
+    position: relative;
+    min-width: 0;
+}
+
+.contact-search i {
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    transform: translateY(-50%);
+    color: #9aa0b1;
+    font-size: 13px;
+    pointer-events: none;
+}
+
+.contact-search input {
+    width: 100%;
+    height: 42px;
+    padding:
+        0 14px 0 38px;
+    border: 1px solid #e1e4eb;
+    border-radius: 9px;
+    outline: none;
+    background: #ffffff;
+    color: #202640;
+    font-family: inherit;
+    font-size: 12px;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.contact-search input::placeholder {
+    color: #a0a5b4;
+}
+
+.contact-search input:focus {
+    border-color: #7168dc;
+    box-shadow:
+        0 0 0 3px rgba(113, 104, 220, 0.10);
+}
+
+/* =========================================================
+   STATUS FILTER
+   ========================================================= */
+.contact-filter select,
+.contact-date-filter input {
+    width: 100%;
+    height: 42px;
+    border: 1px solid #e1e4eb;
+    border-radius: 9px;
+    outline: none;
+    background: #ffffff;
+    color: #52596d;
+    font-family: inherit;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.contact-filter select {
+    padding: 0 12px;
+}
+
+.contact-filter select:focus,
+.contact-date-filter input:focus {
+    border-color: #7168dc;
+    box-shadow:
+        0 0 0 3px rgba(113, 104, 220, 0.10);
+}
+
+/* =======================================================
+   DATE FILTER
+   ========================================================= */
+.contact-date-filter {
+    position: relative;
+}
+
+.contact-date-filter i {
+    position: absolute;
+    top: 50%;
+    left: 13px;
+    transform: translateY(-50%);
+    color: #8f96a8;
+    font-size: 13px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.contact-date-filter input {
+    padding:
+        0 12px 0 35px;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+.contacts-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.contacts-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.contacts-table thead {
+    background: #fafaff;
+}
+
+.contacts-table th {
+    padding:
+        13px 12px;
+    color: #8a90a2;
+    font-size: 10px;
+    font-weight: 650;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid #eceef3;
+}
+
+.contacts-table td {
+    padding:
+        14px 12px;
+    vertical-align: middle;
+    border-bottom: 1px solid #f0f1f5;
+}
+
+
+/* Column sizing */
+.contacts-table th:nth-child(1),
+.contacts-table td:nth-child(1) {
+    width: 24%;
+}
+
+.contacts-table th:nth-child(2),
+.contacts-table td:nth-child(2) {
+    width: 17%;
+}
+
+.contacts-table th:nth-child(3),
+.contacts-table td:nth-child(3) {
+    width: 25%;
+}
+
+.contacts-table th:nth-child(4),
+.contacts-table td:nth-child(4) {
+    width: 13%;
+}
+
+.contacts-table th:nth-child(5),
+.contacts-table td:nth-child(5) {
+    width: 14%;
+}
+
+.contacts-table th:nth-child(6),
+.contacts-table td:nth-child(6) {
+    width: 7%;
+}
+
+
+/* =========================================================
+   CONTACT ROW
+   ========================================================= */
+.contact-row {
+    cursor: pointer;
+    transition:
+        background 0.2s ease;
+}
+
+.contact-row:hover {
+    background: #fafaff;
+}
+
+.contact-row.active {
+    background: #f6f5ff;
+}
+
+.contact-row.active td:first-child {
+    box-shadow:
+        inset 3px 0 0 #6c63d9;
+}
+
+
+/* =========================================================+
+   PERSON
+   ========================================================= */
+.contact-person {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+}
+
+.contact-avatar {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background:
+        linear-gradient(
+            135deg,
+            #756be4,
+            #5d56c8
+        );
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.contact-person-info {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-person-info strong {
+    min-width: 0;
+    margin-bottom: 3px;
+    color: #272d43;
+    font-size: 12px;
+    font-weight: 650;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.contact-person-info span {
+    min-width: 0;
+    color: #9298a9;
+    font-size: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* =========================================================
+   SUBJECT
+   ========================================================= */
+.contact-subject {
+    min-width: 0;
+    color: #343a50;
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* =========================================================
+   MESSAGE PREVIEW
+   ========================================================= */
+.contact-message-preview {
+    min-width: 0;
+    color: #8a90a2;
+    font-size: 10px;
+    line-height: 1.4;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* =========================================================
+   STATUS BADGE
+   ========================================================= */
+.contact-status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 55px;
+    padding:
+        5px 9px;
+    border-radius: 20px;
+    font-size: 9px;
+    font-weight: 650;
+    line-height: 1;
+}
+
+.status-new {
+    background: #eeeaff;
+    color: #665dd8;
+}
+
+.status-read {
+    background: #e9f8f1;
+    color: #2c9b68;
+}
+
+.status-replied {
+    background: #e8f1ff;
+    color: #3779d5;
+}
+
+
+/* =========================================================
+   DATE
+   ========================================================= */
+.contact-date {
+    color: #8f95a6;
+    font-size: 10px;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   VIEW BUTTON
+   ========================================================= */
+.contact-view-btn {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    border: 0;
+    border-radius: 7px;
+    background: transparent;
+    color: #8b91a3;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.contact-view-btn:hover {
+    background: #eeecff;
+    color: #6259d4;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+.contacts-empty-state {
+    min-height: 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    text-align: center;
+}
+
+.empty-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    border-radius: 14px;
+    background: #efedff;
+    color: #6b62d8;
+    font-size: 20px;
+}
+
+.contacts-empty-state h3 {
+    margin: 0 0 5px;
+    color: #555b70;
+    font-size: 14px;
+}
+
+.contacts-empty-state p {
+    max-width: 300px;
+    margin: 0;
+    color: #9a9fae;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   PAGINATION
+   ========================================================= */
+.contacts-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 14px 18px;
+    border-top: 1px solid #eceef3;
+}
+
+.contacts-pagination > span {
+    color: #9298a9;
+    font-size: 10px;
+}
+
+.contacts-pagination > span strong {
+    color: #555b70;
+}
+
+.pagination-buttons {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.pagination-buttons button {
+    width: 29px;
+    height: 29px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e2e4eb;
+    border-radius: 7px;
+    background: #ffffff;
+    color: #73798b;
+    font-family: inherit;
+    font-size: 10px;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.pagination-buttons button:hover {
+    border-color: #756be0;
+    color: #5f56ce;
+}
+
+.pagination-buttons button.active {
+    border-color: #6c63d9;
+    background: #6c63d9;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   RIGHT DETAILS PANEL
+   ========================================================= */
+.contact-details-panel {
+    min-width: 0;
+    background: #ffffff;
+    border: 1px solid #e8eaf1;
+    border-radius: 16px;
+    box-shadow:
+        0 6px 20px rgba(25, 30, 60, 0.04);
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   DETAILS HEADER
+   ========================================================= */
+.contact-details-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 20px;
+    border-bottom: 1px solid #eceef3;
+}
+
+.details-person {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    min-width: 0;
+}
+
+.details-avatar {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background:
+        linear-gradient(
+            135deg,
+            #756be4,
+            #5d56c8
+        );
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.details-person > div:last-child {
+    min-width: 0;
+}
+
+.details-person h2 {
+    min-width: 0;
+    margin: 0 0 3px;
+    color: #252b42;
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.details-person span {
+    display: block;
+    max-width: 210px;
+    color: #9298a9;
+    font-size: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.details-header-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.details-close {
+    display: none;
+}
+
+
+/* =========================================================
+   DETAILS CONTENT
+   ========================================================= */
+.contact-details-content {
+    padding: 20px;
+}
+
+.contact-details-content > h3 {
+    margin: 0 0 18px;
+    color: #343a50;
+    font-size: 13px;
+    font-weight: 650;
+}
+
+
+/* =========================================================
+   DETAIL ITEM
+   ========================================================= */
+.detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f1f5;
+}
+
+.detail-item > i {
+    width: 20px;
+    flex-shrink: 0;
+    padding-top: 2px;
+    color: #7067d8;
+    font-size: 13px;
+    text-align: center;
+}
+
+.detail-item > div {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-item span {
+    margin-bottom: 4px;
+    color: #9a9fae;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.detail-item strong {
+    color: #454b60;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   MESSAGE
+   ========================================================= */
+.detail-message {
+    padding: 16px 0;
+}
+
+.detail-message-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 9px;
+}
+
+.detail-message-label i {
+    color: #7067d8;
+    font-size: 12px;
+}
+
+.detail-message-label span {
+    color: #777e91;
+    font-size: 10px;
+    font-weight: 650;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.message-box {
+    min-height: 90px;
+    padding: 13px;
+    border: 1px solid #eceef3;
+    border-radius: 10px;
+    background: #fafaff;
+    color: #646a7c;
+    font-size: 11px;
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   STATUS CONTROL
+   ========================================================= */
+.details-status-control {
+    padding: 14px 0;
+    border-bottom: 1px solid #f0f1f5;
+}
+
+.details-status-control label {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 8px;
+    color: #777e91;
+    font-size: 10px;
+    font-weight: 650;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.details-status-control label i {
+    color: #7067d8;
+}
+
+.details-status-control select {
+    width: 100%;
+    height: 38px;
+    padding: 0 10px;
+    border: 1px solid #e1e4eb;
+    border-radius: 8px;
+    outline: none;
+    background: #ffffff;
+    color: #4e5569;
+    font-family: inherit;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   QUICK ACTIONS
+   ========================================================= */
+.quick-actions {
+    padding: 16px 0;
+    border-bottom: 1px solid #f0f1f5;
+}
+
+.quick-actions h3,
+.admin-notes h3 {
+    margin: 0 0 10px;
+    color: #555b70;
+    font-size: 11px;
+    font-weight: 650;
+}
+
+.quick-action-buttons {
+    display: grid;
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+    gap: 7px;
+}
+
+.action-btn {
+    min-height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 0 8px;
+    border: 1px solid #e3e5ec;
+    border-radius: 8px;
+    background: #ffffff;
+    font-family: inherit;
+    font-size: 9px;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.action-read {
+    color: #2d9968;
+}
+
+.action-read:hover {
+    background: #effaf5;
+    border-color: #cceedd;
+}
+
+.action-reply {
+    color: #5f57c9;
+}
+
+.action-reply:hover {
+    background: #f3f1ff;
+    border-color: #dcd8ff;
+}
+
+.action-delete {
+    color: #df5b61;
+}
+
+.action-delete:hover {
+    background: #fff2f3;
+    border-color: #f6d2d5;
+}
+
+
+/* =========================================================
+   ADMIN NOTES
+   ========================================================= */
+
+.admin-notes {
+    padding-top: 16px;
+}
+
+.admin-notes textarea {
+    width: 100%;
+    min-height: 70px;
+    resize: vertical;
+    padding: 10px;
+    border: 1px solid #e1e4eb;
+    border-radius: 8px;
+    outline: none;
+    background: #ffffff;
+    color: #4e5569;
+    font-family: inherit;
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+.admin-notes textarea::placeholder {
+    color: #a0a5b4;
+}
+
+.admin-notes textarea:focus {
+    border-color: #7168dc;
+    box-shadow:
+        0 0 0 3px rgba(113, 104, 220, 0.10);
+}
+
+.save-note-btn {
+    width: 100%;
+    height: 34px;
+    margin-top: 8px;
+    border: 0;
+    border-radius: 8px;
+    background: #6c63d9;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 10px;
+    font-weight: 650;
+    cursor: pointer;
+    transition:
+        background 0.2s ease;
+}
+
+.save-note-btn:hover {
+    background: #5b52c8;
+}
+
+
+/* =========================================================
+   DESKTOP LARGE SCREENS
+   ========================================================= */
+@media (min-width: 1400px) {
+
+    .contact-stats {
+        gap: 20px;
+    }
+
+    .contacts-workspace {
+        grid-template-columns:
+            minmax(0, 1.7fr)
+            minmax(420px, 0.9fr);
+        gap: 22px;
+    }
+
+}
+
+
+/* =========================================================
+   CONTACT PAGE — TABLET
+   768px - 1199px
+   Reference Layout
+   ========================================================= */
+
+@media (min-width: 768px) and (max-width: 1199px) {
+
+    .admin-contacts {
+        width: calc(100% - 70px);
+        max-width: calc(100% - 70px);
+
+        margin-left: 70px;
+
+        padding: 24px 20px 30px;
+
+        min-width: 0;
+
+        overflow-x: hidden;
+    }
+
+
+    /* =====================================================
+       HEADER
+       ===================================================== */
+
+    .contacts-page-header {
+        margin-bottom: 18px;
+        margin-left: 45px;
+    }
+
+    .contacts-page-header h1 {
+        margin-bottom: 5px;
+
+        font-size: 25px;
+        line-height: 1.2;
+    }
+
+    .contacts-page-header p {
+        font-size: 13px;
+    }
+
+
+    /* =====================================================
+       STATS — 4 CARDS IN ONE ROW
+       ===================================================== */
+
+    .contact-stats {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+
+        gap: 10px;
+
+        margin-bottom: 16px;
+    }
+
+    .contact-stat-card {
+        min-height: 82px;
+
+        padding: 12px 14px;
+
+        gap: 9px;
+
+        border-radius: 10px;
+    }
+
+    .stat-icon {
+        width: 36px;
+        height: 36px;
+
+        min-width: 36px;
+
+        border-radius: 9px;
+
+        font-size: 15px;
+    }
+
+    .stat-content {
+        min-width: 0;
+    }
+
+    .stat-label {
+        margin-bottom: 2px;
+
+        font-size: 9px;
+        line-height: 1.2;
+    }
+
+    .stat-number {
+        font-size: 21px;
+    }
+
+
+    /* =====================================================
+       MAIN AREA
+       LEFT LIST + RIGHT DETAILS
+       ===================================================== */
+
+    .contacts-workspace {
+        display: grid;
+
+        grid-template-columns:
+            minmax(0, 1.15fr)
+            minmax(285px, 0.85fr);
+
+        gap: 12px;
+
+        width: 100%;
+        min-width: 0;
+
+        align-items: stretch;
+    }
+
+
+    /* =====================================================
+       LEFT PANEL
+       ===================================================== */
+
+    .contacts-list-panel {
+        min-width: 0;
+
+        border-radius: 11px;
+
+        overflow: hidden;
+    }
+
+
+    /* =====================================================
+       FILTERS
+
+       Search | Status | Calendar button
+       ===================================================== */
+
+    .contacts-filters {
+        display: grid;
+
+        grid-template-columns:
+            minmax(0, 1fr)
+            120px
+            42px;
+
+        gap: 8px;
+
+        padding: 12px;
+
+        align-items: center;
+    }
+
+
+    .contact-search input {
+        height: 38px;
+
+        padding-left: 34px;
+
+        font-size: 10px;
+    }
+
+    .contact-search i {
+        left: 12px;
+
+        font-size: 11px;
+    }
+
+
+    .contact-filter select {
+        height: 38px;
+
+        padding: 0 10px;
+
+        font-size: 10px;
+    }
+
+
+    /* Calendar becomes icon only */
+
+    .contact-date-filter {
+        width: 42px;
+        height: 38px;
+    }
+
+    .contact-date-filter input {
+        width: 42px;
+        height: 38px;
+
+        padding: 0;
+
+        font-size: 0;
+
+        color: transparent;
+
+        cursor: pointer;
+    }
+
+    .contact-date-filter i {
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+
+        font-size: 13px;
+
+        color: #6f7689;
+    }
+
+
+    /* =====================================================
+       TABLE → COMPACT TABLET REQUEST LIST
+       ===================================================== */
+
+    .contacts-table-wrapper {
+        width: 100%;
+
+        overflow: hidden;
+    }
+
+    .contacts-table {
+        width: 100%;
+        min-width: 0;
+
+        table-layout: auto;
+    }
+
+
+    /* Hide desktop heading row */
+
+    .contacts-table thead {
+        display: none;
+    }
+
+
+    .contacts-table tbody {
+        display: block;
+
+        width: 100%;
+    }
+
+
+    /* Each request becomes one compact row */
+
+    .contacts-table tr {
+        display: grid;
+
+        grid-template-columns:
+            minmax(0, 1fr)
+            auto
+            auto
+            24px;
+
+        grid-template-rows:
+            auto
+            auto;
+
+        column-gap: 8px;
+
+        width: 100%;
+
+        padding: 11px 10px;
+
+        border-bottom: 1px solid #eef0f4;
+
+        background: #ffffff;
+
+        cursor: pointer;
+    }
+
+
+    .contacts-table tr:hover {
+        background: #fafaff;
+    }
+
+
+    .contacts-table tr.active {
+        background: #f4f2ff;
+
+        box-shadow:
+            inset 2px 0 0 #6c63d9;
+    }
+
+
+    /* Reset TD desktop styles */
+
+    .contacts-table td {
+        width: auto !important;
+
+        padding: 0;
+
+        border: 0;
+    }
+
+
+    /* -----------------------------------------
+       NAME + EMAIL
+       ----------------------------------------- */
+
+    .contacts-table td:nth-child(1) {
+        display: block;
+
+        grid-column: 1;
+        grid-row: 1 / 3;
+
+        min-width: 0;
+
+        align-self: center;
+    }
+
+
+    .contact-person {
+        gap: 9px;
+
+        min-width: 0;
+    }
+
+    .contact-avatar {
+        width: 34px;
+        height: 34px;
+
+        min-width: 34px;
+
+        font-size: 11px;
+    }
+
+    .contact-person-info strong {
+        font-size: 11px;
+    }
+
+    .contact-person-info span {
+        display: none;
+    }
+
+
+    /* -----------------------------------------
+       SUBJECT
+       Put beneath name like reference
+       ----------------------------------------- */
+
+    .contacts-table td:nth-child(2) {
+        display: block;
+
+        grid-column: 1;
+        grid-row: 2;
+
+        padding-left: 43px;
+
+        min-width: 0;
+    }
+
+    .contact-subject {
+        max-width: 180px;
+
+        color: #73798b;
+
+        font-size: 9px;
+        font-weight: 500;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+
+    /* -----------------------------------------
+       MESSAGE COLUMN — HIDE
+       reference does not show this
+       ----------------------------------------- */
+
+    .contacts-table td:nth-child(3) {
+        display: none;
+    }
+
+
+    /* -----------------------------------------
+       STATUS
+       ----------------------------------------- */
+
+    .contacts-table td:nth-child(4) {
+        display: block;
+
+        grid-column: 2;
+        grid-row: 1 / 3;
+
+        align-self: center;
+    }
+
+    .contact-status {
+        min-width: 42px;
+
+        padding: 4px 7px;
+
+        font-size: 8px;
+    }
+
+
+    /* -----------------------------------------
+       DATE / TIME
+       ----------------------------------------- */
+
+    .contacts-table td:nth-child(5) {
+        display: block;
+
+        grid-column: 3;
+        grid-row: 1 / 3;
+
+        align-self: center;
+    }
+
+    .contact-date {
+        font-size: 8px;
+
+        white-space: nowrap;
+    }
+
+
+    /* -----------------------------------------
+       ARROW
+       ----------------------------------------- */
+
+    .contacts-table td:nth-child(6) {
+        display: flex;
+
+        grid-column: 4;
+        grid-row: 1 / 3;
+
+        align-self: center;
+        justify-self: end;
+    }
+
+    .contact-view-btn {
+        width: 22px;
+        height: 26px;
+
+        padding: 0;
+
+        color: #6c63d9;
+    }
+
+    .contact-view-btn i {
+        font-size: 9px;
+    }
+
+
+    /* =====================================================
+       PAGINATION
+       ===================================================== */
+
+    .contacts-pagination {
+        min-height: 52px;
+
+        justify-content: center;
+
+        padding: 10px 12px;
+    }
+
+    .contacts-pagination > span {
+        display: none;
+    }
+
+    .pagination-buttons {
+        gap: 5px;
+    }
+
+    .pagination-buttons button {
+        width: 27px;
+        height: 27px;
+
+        font-size: 9px;
+    }
+
+
+    /* =====================================================
+       RIGHT DETAILS PANEL
+       ===================================================== */
+
+    .contact-details-panel {
+        width: 100%;
+        min-width: 0;
+
+        border-radius: 11px;
+
+        overflow: hidden;
+    }
+
+
+    .contact-details-header {
+        padding: 14px;
+
+        gap: 8px;
+    }
+
+    .details-avatar {
+        width: 36px;
+        height: 36px;
+
+        min-width: 36px;
+
+        font-size: 12px;
+    }
+
+    .details-person {
+        gap: 8px;
+    }
+
+    .details-person h2 {
+        font-size: 12px;
+    }
+
+    .details-person span {
+        max-width: 125px;
+
+        font-size: 8px;
+    }
+
+
+    /* X visible in reference */
+
+    .details-close {
+        width: 24px;
+        height: 24px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        padding: 0;
+
+        border: 0;
+
+        background: transparent;
+
+        color: #5d6374;
+
+        font-size: 11px;
+
+        cursor: pointer;
+    }
+
+
+    /* =====================================================
+       DETAILS CONTENT
+       ===================================================== */
+
+    .contact-details-content {
+        padding: 14px;
+    }
+
+    .contact-details-content > h3 {
+        margin-bottom: 12px;
+
+        font-size: 12px;
+    }
+
+
+    .detail-item {
+        padding: 8px 0;
+
+        gap: 8px;
+    }
+
+    .detail-item > i {
+        width: 16px;
+
+        font-size: 10px;
+    }
+
+    .detail-item span {
+        margin-bottom: 3px;
+
+        font-size: 7px;
+    }
+
+    .detail-item strong {
+        font-size: 9px;
+    }
+
+
+    /* =====================================================
+       MESSAGE
+       ===================================================== */
+
+    .detail-message {
+        padding: 11px 0;
+    }
+
+    .detail-message-label {
+        margin-bottom: 7px;
+    }
+
+    .detail-message-label span {
+        font-size: 8px;
+    }
+
+    .message-box {
+        min-height: 80px;
+
+        padding: 10px;
+
+        border-radius: 8px;
+
+        font-size: 9px;
+        line-height: 1.5;
+    }
+
+
+    /* =====================================================
+       STATUS
+       ===================================================== */
+
+    .details-status-control {
+        padding: 10px 0;
+    }
+
+    .details-status-control label {
+        margin-bottom: 6px;
+
+        font-size: 8px;
+    }
+
+    .details-status-control select {
+        height: 34px;
+
+        font-size: 9px;
+    }
+
+
+    /* =====================================================
+       QUICK ACTIONS
+       ===================================================== */
+
+    .quick-actions {
+        padding: 11px 0;
+    }
+
+    .quick-actions h3 {
+        margin-bottom: 8px;
+
+        font-size: 9px;
+    }
+
+    .quick-action-buttons {
+        gap: 6px;
+    }
+
+    .action-btn {
+        min-height: 33px;
+
+        padding: 0 5px;
+
+        font-size: 0;
+    }
+
+    .action-btn i {
+        font-size: 11px;
+    }
+
+
+    /* =====================================================
+       NOTES
+
+       Reference tablet mainly focuses on quick actions.
+       Keep notes compact.
+       ===================================================== */
+
+    .admin-notes {
+        padding-top: 11px;
+    }
+
+    .admin-notes h3 {
+        font-size: 9px;
+    }
+
+    .admin-notes textarea {
+        min-height: 60px;
+
+        font-size: 9px;
+    }
+
+    .save-note-btn {
+        height: 32px;
+
+        font-size: 9px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   <= 767px
+   ========================================================= */
+@media (max-width: 767px) {
+
+    /* -----------------------------
+       MAIN CONTACT CONTAINER
+       ----------------------------- */
+    .admin-contacts {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        padding: 18px 14px 30px;
+        overflow-x: hidden;
+        margin: 0;
+        margin-top: 50px;
+
+    }
+
+
+    /* -----------------------------
+       PAGE HEADER
+       ----------------------------- */
+    .contacts-page-header {
+        display: block;
+        margin-bottom: 18px;
+    }
+
+    .contacts-page-header h1 {
+        margin-bottom: 5px;
+        font-size: 21px;
+        line-height: 1.25;
+    }
+
+    .contacts-page-header p {
+        font-size: 12px;
+        line-height: 1.45;
+    }
+
+
+    /* -----------------------------
+       STATISTICS
+       2 x 2 GRID
+       ----------------------------- */
+    .contact-stats {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        margin-bottom: 14px;
+    }
+
+    .contact-stat-card {
+        min-height: 78px;
+        padding: 12px;
+        gap: 9px;
+        border-radius: 11px;
+    }
+
+    .stat-icon {
+        width: 34px;
+        height: 34px;
+        border-radius: 9px;
+        font-size: 14px;
+    }
+
+    .stat-number {
+        font-size: 19px;
+    }
+
+    .stat-label {
+        margin-bottom: 2px;
+        font-size: 9px;
+        line-height: 1.2;
+    }
+
+
+    /* -----------------------------
+       CONTACT WORKSPACE
+       ----------------------------- */
+    .contacts-workspace {
+        display: block;
+        width: 100%;
+        min-width: 0;
+        margin: 0;
+    }
+
+
+    /* -----------------------------
+       REQUEST LIST
+       ----------------------------- */
+    .contacts-list-panel {
+        width: 100%;
+        min-width: 0;
+        border-radius: 12px;
+    }
+
+
+    /* ----------------------------
+       FILTERS
+       ----------------------------- */
+    .contacts-filters {
+        display: grid;
+        grid-template-columns:
+            minmax(0, 1fr)
+            42px
+            42px;
+        gap: 7px;
+        padding: 11px;
+    }
+
+    .contact-search input {
+        height: 38px;
+        font-size: 10px;
+    }
+
+    .contact-filter select {
+        height: 38px;
+        font-size: 10px;
+    }
+
+    .contact-date-filter input {
+        height: 38px;
+        padding-left: 30px;
+        font-size: 0;
+    }
+
+    .contact-date-filter i {
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 13px;
+    }
+
+
+    /* -----------------------------
+       MOBILE REQUEST LIST
+       ----------------------------- */
+    .contacts-table-wrapper {
+        overflow: hidden;
+    }
+
+    .contacts-table {
+        min-width: 0;
+        width: 100%;
+        table-layout: auto;
+    }
+
+    .contacts-table thead {
+        display: none;
+    }
+
+    .contacts-table tbody {
+        display: block;
+        width: 100%;
+    }
+
+    .contacts-table tr {
+        display: grid;
+        grid-template-columns:
+            minmax(0, 1fr)
+            auto;
+        position: relative;
+        width: 100%;
+        padding: 12px 11px;
+        border-bottom: 1px solid #f0f1f5;
+    }
+
+    .contacts-table td {
+        display: none;
+        width: auto !important;
+        padding: 0;
+        border: 0;
+    }
+
+
+    /* Person */
+    .contacts-table td:nth-child(1) {
+        display: block;
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+
+    /* Status */
+    .contacts-table td:nth-child(4) {
+        display: block;
+        grid-column: 2;
+        grid-row: 1;
+        align-self: start;
+        margin-left: 8px;
+    }
+
+
+    /* View arrow */
+    .contacts-table td:nth-child(6) {
+        display: block;
+        grid-column: 2;
+        grid-row: 1;
+        align-self: center;
+        margin-left: 7px;
+    }
+
+    .contact-view-btn {
+        width: 25px;
+        height: 25px;
+    }
+
+    .contact-person {
+        gap: 9px;
+    }
+
+    .contact-avatar {
+        width: 34px;
+        height: 34px;
+        font-size: 11px;
+    }
+
+    .contact-person-info strong {
+        font-size: 11px;
+    }
+
+    .contact-person-info span {
+        font-size: 9px;
+    }
+
+
+    /* -----------------------------
+       PAGINATION
+       ----------------------------- */
+    .contacts-pagination {
+        padding: 11px;
+        gap: 8px;
+    }
+
+    .contacts-pagination > span {
+        font-size: 9px;
+    }
+
+    .pagination-buttons button {
+        width: 26px;
+        height: 26px;
+        font-size: 9px;
+    }
+
+
+    /* =====================================================
+       MOBILE CONTACT DETAILS
+       ===================================================== */
+    .contact-details-panel {
+        width: 100%;
+        min-width: 0;
+        margin-top: 12px;
+        border-radius: 12px;
+    }
+
+    .contact-details-header {
+        padding: 14px;
+    }
+
+    .contact-details-content {
+        padding: 14px;
+    }
+
+    .details-avatar {
+        width: 38px;
+        height: 38px;
+        font-size: 13px;
+    }
+
+    .details-person h2 {
+        font-size: 13px;
+    }
+
+    .details-person span {
+        max-width: 170px;
+        font-size: 9px;
+    }
+
+    .details-close {
+        display: flex;
+        width: 28px;
+        height: 28px;
+        align-items: center;
+        justify-content: center;
+        border: 0;
+        background: transparent;
+        color: #7d8394;
+        cursor: pointer;
+    }
+
+
+    /* -----------------------------
+       DETAIL CONTENT
+       ----------------------------- */
+    .contact-details-content > h3 {
+        margin-bottom: 12px;
+        font-size: 12px;
+    }
+
+    .detail-item {
+        padding: 9px 0;
+        gap: 8px;
+    }
+
+    .detail-item > i {
+        width: 17px;
+        font-size: 11px;
+    }
+
+    .detail-item span {
+        font-size: 8px;
+    }
+
+    .detail-item strong {
+        font-size: 10px;
+    }
+
+
+    /* -----------------------------
+       MESSAGE
+       ----------------------------- */
+    .detail-message {
+        padding: 12px 0;
+    }
+
+    .detail-message-label {
+        margin-bottom: 7px;
+    }
+
+    .detail-message-label span {
+        font-size: 9px;
+    }
+
+    .message-box {
+        min-height: 85px;
+        padding: 11px;
+        font-size: 10px;
+        line-height: 1.55;
+    }
+
+
+    /* -----------------------------
+       STATUS
+       ----------------------------- */
+    .details-status-control {
+        padding: 12px 0;
+    }
+
+    .details-status-control label {
+        font-size: 9px;
+    }
+
+    .details-status-control select {
+        height: 36px;
+        font-size: 10px;
+    }
+
+
+    /* -----------------------------
+       QUICK ACTIONS
+       ----------------------------- */
+    .quick-actions {
+        padding: 13px 0;
+    }
+
+    .quick-actions h3,
+    .admin-notes h3 {
+        font-size: 10px;
+    }
+
+    .quick-action-buttons {
+        gap: 6px;
+    }
+
+    .action-btn {
+        min-height: 35px;
+        font-size: 9px;
+    }
+
+
+    /* -----------------------------
+       NOTES
+       ----------------------------- */
+
+    .admin-notes {
+        padding-top: 13px;
+    }
+
+    .admin-notes textarea {
+        min-height: 70px;
+        font-size: 10px;
+    }
+
+    .save-note-btn {
+        height: 36px;
+        font-size: 10px;
+    }
+}
+
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   <= 380px
+   ========================================================= */
+@media (max-width: 380px) {
+    .admin-contacts {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .contact-stats {
+        gap: 7px;
+    }
+
+    .contact-stat-card {
+        padding: 9px;
+        gap: 7px;
+    }
+
+    .stat-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .stat-number {
+        font-size: 17px;
+    }
+
+    .stat-label {
+        font-size: 8px;
+    }
+
+    .contacts-filters {
+        grid-template-columns:
+            minmax(0, 1fr)
+            38px
+            38px;
+    }
+}
+
+/* =========================================================
+   FUNCTIONAL UI OVERRIDES
+   Calendar • Reply • Close • Search
+   These rules intentionally come AFTER the responsive CSS
+   so they take priority without changing the main design.
+   ========================================================= */
+
+/* -------------------------
+   DETAILS CLOSE BUTTON
+   ------------------------- */
+.contact-details-header .details-close {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 30px;
+    padding: 0;
+    border: 1px solid #e7e8ef;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #73798b;
+    font-size: 12px;
+    line-height: 1;
+    cursor: pointer;
+    transition:
+        background .2s ease,
+        border-color .2s ease,
+        color .2s ease,
+        transform .2s ease;
+}
+
+.contact-details-header .details-close:hover {
+    background: #f5f3ff;
+    border-color: #dcd8ff;
+    color: #5f57c9;
+    transform: translateY(-1px);
+}
+
+/* JS removes .active when the panel is closed. */
+.contact-details-panel:not(.active) {
+    display: none;
+}
+
+
+/* -------------------------
+   SEARCH — ICON STAYS INSIDE
+   ------------------------- */
+.contact-search {
+    position: relative !important;
+}
+
+.contact-search > i {
+    position: absolute !important;
+    left: 14px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.contact-search input {
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+
+/* -------------------------
+   CALENDAR POPUP
+   Hidden until JS adds .show
+   ------------------------- */
+.contact-calendar-popup {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    z-index: 1000;
+
+    display: none;
+    width: 270px;
+    box-sizing: border-box;
+
+    padding: 15px;
+
+    background: #ffffff;
+    border: 1px solid #e6e8ef;
+    border-radius: 12px;
+
+    box-shadow:
+        0 12px 35px rgba(28, 34, 65, 0.14);
+}
+
+.contact-calendar-popup.show {
+    display: block;
+}
+
+.calendar-popup-header {
+    margin-bottom: 12px;
+}
+
+.calendar-popup-header strong {
+    display: block;
+    color: #252b42;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.calendar-fields {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.calendar-fields > div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.calendar-fields label {
+    color: #777e91;
+    font-size: 9px;
+    font-weight: 650;
+    text-transform: uppercase;
+    letter-spacing: .35px;
+}
+
+.calendar-fields input {
+    width: 100%;
+    height: 36px;
+    box-sizing: border-box;
+
+    padding: 0 10px;
+
+    border: 1px solid #e1e4eb;
+    border-radius: 8px;
+    outline: none;
+
+    background: #ffffff;
+    color: #454b60;
+
+    font-family: inherit;
+    font-size: 11px;
+}
+
+.calendar-fields input:focus {
+    border-color: #7168dc;
+    box-shadow:
+        0 0 0 3px rgba(113, 104, 220, .10);
+}
+
+.calendar-popup-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 7px;
+    margin-top: 13px;
+}
+
+.calendar-popup-actions button {
+    min-width: 58px;
+    height: 31px;
+
+    padding: 0 10px;
+
+    border: 1px solid #e1e4eb;
+    border-radius: 7px;
+
+    background: #ffffff;
+    color: #62697c;
+
+    font-family: inherit;
+    font-size: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.calendar-popup-actions button:hover {
+    border-color: #756be0;
+    color: #5f56ce;
+}
+
+.calendar-popup-actions #applyContactDate {
+    border-color: #6c63d9;
+    background: #6c63d9;
+    color: #ffffff;
+}
+
+.calendar-popup-actions #applyContactDate:hover {
+    background: #5b52c8;
+}
+
+
+/* -------------------------
+   REPLY VIEW
+   ------------------------- */
+.contact-reply-view {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.reply-view-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.reply-view-header h3 {
+    margin: 0;
+    color: #343a50;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.reply-back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    height: 30px;
+    padding: 0 9px;
+
+    border: 1px solid #e1e4eb;
+    border-radius: 7px;
+
+    background: #ffffff;
+    color: #555d71;
+
+    font-family: inherit;
+    font-size: 10px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition:
+        background .2s ease,
+        border-color .2s ease,
+        color .2s ease;
+}
+
+.reply-back-btn:hover {
+    background: #f5f3ff;
+    border-color: #dcd8ff;
+    color: #5f57c9;
+}
+
+.reply-to-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+
+    margin-bottom: 13px;
+    padding: 11px 12px;
+
+    border: 1px solid #eceef3;
+    border-radius: 9px;
+
+    background: #fafaff;
+}
+
+.reply-to-info span,
+.reply-original-message > span {
+    color: #9a9fae;
+    font-size: 8px;
+    font-weight: 650;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+}
+
+.reply-to-info strong {
+    color: #343a50;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.reply-to-info small {
+    color: #9298a9;
+    font-size: 9px;
+}
+
+.reply-original-message {
+    margin-bottom: 14px;
+}
+
+.reply-original-message > div {
+    margin-top: 6px;
+    padding: 11px 12px;
+
+    border: 1px solid #eceef3;
+    border-radius: 9px;
+
+    background: #f8f8fc;
+    color: #646a7c;
+
+    font-size: 10px;
+    line-height: 1.55;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.reply-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.reply-form label {
+    margin-bottom: 6px;
+    color: #777e91;
+    font-size: 9px;
+    font-weight: 650;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+}
+
+.reply-form textarea {
+    width: 100%;
+    min-height: 145px;
+    box-sizing: border-box;
+
+    resize: vertical;
+
+    padding: 11px 12px;
+
+    border: 1px solid #e1e4eb;
+    border-radius: 9px;
+    outline: none;
+
+    background: #ffffff;
+    color: #454b60;
+
+    font-family: inherit;
+    font-size: 11px;
+    line-height: 1.55;
+
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease;
+}
+
+.reply-form textarea::placeholder {
+    color: #a0a5b4;
+}
+
+.reply-form textarea:focus {
+    border-color: #7168dc;
+    box-shadow:
+        0 0 0 3px rgba(113, 104, 220, .10);
+}
+
+.reply-form .action-reply {
+    align-self: flex-end;
+    min-width: 105px;
+    margin-top: 10px;
+    padding: 0 13px;
+
+    min-height: 36px;
+    font-size: 10px;
+}
+
+.reply-form .action-reply:disabled {
+    opacity: .6;
+    cursor: not-allowed;
+}
+
+
+/* -------------------------
+   RESPONSIVE REPLY
+   ------------------------- */
+@media (max-width: 1199px) {
+
+    .contact-calendar-popup {
+        width: 250px;
+    }
+
+    .reply-view-header h3 {
+        font-size: 13px;
+    }
+
+    .reply-form textarea {
+        min-height: 120px;
+        font-size: 10px;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    .contact-details-header .details-close {
+        width: 28px;
+        height: 28px;
+        flex-basis: 28px;
+        border-radius: 7px;
+        font-size: 11px;
+    }
+
+    .contact-calendar-popup {
+        top: calc(100% + 7px);
+        right: 0;
+        width: min(250px, calc(100vw - 30px));
+        padding: 13px;
+    }
+
+    .reply-view-header {
+        gap: 8px;
+        margin-bottom: 14px;
+    }
+
+    .reply-view-header h3 {
+        font-size: 13px;
+    }
+
+    .reply-to-info {
+        padding: 10px;
+    }
+
+    .reply-form textarea {
+        min-height: 130px;
+    }
+
+    .reply-form .action-reply {
+        width: 100%;
+        margin-top: 9px;
+    }
+
+}
+
+@media (max-width: 380px) {
+
+    .contact-calendar-popup {
+        width: min(235px, calc(100vw - 20px));
+    }
+
+    .reply-form textarea {
+        min-height: 115px;
+    }
+
+}

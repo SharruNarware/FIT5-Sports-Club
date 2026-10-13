@@ -1,0 +1,4179 @@
+/* =========================================================
+   ABOUT INTRO
+   HERO + STATS
+========================================================= */
+.about-intro {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+.about-hero {
+    width: 100%;
+    min-height: 570px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background:
+        linear-gradient(
+            145deg,
+            #a42be8 0%,
+            #d82b8b 48%,
+            #f21f55 100%
+        );
+}
+
+
+/* subtle dotted pattern */
+.about-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(
+            rgba(255,255,255,.20) 1px,
+            transparent 1px
+        );
+    background-size: 34px 34px;
+    opacity: .62;
+    pointer-events: none;
+}
+
+
+/* soft glow */
+.about-hero::after {
+    content: "";
+    position: absolute;
+    width: 650px;
+    height: 650px;
+    right: -180px;
+    top: -280px;
+    border-radius: 50%;
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,.08),
+            transparent 65%
+        );
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+.about-hero-content {
+    position: relative;
+    z-index: 1;
+    width: min(1500px, calc(100% - 40px));
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* =========================================================
+   STORY BADGE
+========================================================= */
+.about-story-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 2px 10px;
+    margin-bottom: 27px;
+    border: 1px solid rgba(255,255,255,.55);
+    border-radius: 7px;
+    background: rgba(255,255,255,.12);
+    color: #ffffff;
+    font-size: .85rem;
+    font-weight: 650;
+    box-shadow:
+        0 4px 10px rgba(0,0,0,.08);
+    backdrop-filter: blur(3px);
+}
+
+.about-story-badge i {
+    font-size: .82rem;
+}
+
+
+/* =========================================================
+   HERO HEADING
+========================================================= */
+
+.about-hero h1 {
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(3.5rem, 5vw, 4.6rem);
+    line-height: 1.2;
+    font-weight: 600;
+    letter-spacing: -1.3px;
+}
+
+
+/* =========================================================
+   HERO DESCRIPTION
+========================================================= */
+.about-hero-content > p {
+    max-width: 820px;
+    margin: 22px auto 0;
+    color: rgba(255,255,255,.96);
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
+.about-hero-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 65px;
+}
+
+
+.about-hero-btn {
+    min-width: 235px;
+    height: 48px;
+    padding: 0 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        background-color .25s ease;
+}
+
+
+/* Explore */
+
+.about-explore-btn {
+    background: #ffffff;
+
+    color: #8b2ee8;
+
+    border: 1px solid #ffffff;
+
+    box-shadow:
+        0 7px 16px rgba(0,0,0,.12);
+}
+
+
+/* Team */
+.about-team-btn {
+    background: rgba(255,255,255,.04);
+    color: #ffffff;
+    border: 2px solid rgba(255,255,255,.95);
+}
+
+
+/* Hover */
+.about-hero-btn:hover {
+    transform: translateY(-3px);
+}
+
+.about-explore-btn:hover {
+    box-shadow:
+        0 11px 22px rgba(0,0,0,.18);
+}
+
+.about-team-btn:hover {
+    background: rgba(255,255,255,.10);
+}
+
+
+/* =========================================================
+   STATS
+========================================================= */
+.about-stats {
+    width: 100%;
+    min-height: 155px;
+    padding: 25px 60px;
+    display: grid;
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+    align-items: center;
+    background:
+        linear-gradient(
+            110deg,
+            #a52ee9 0%,
+            #c62ca8 50%,
+            #e52372 100%
+        );
+    margin-bottom: 10px;
+}
+
+
+/* =========================================================
+   STAT ITEM
+========================================================= */
+.about-stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+}
+
+
+.about-stat-item strong {
+    display: block;
+    margin: 0;
+    color: #ffffff;
+    font-size: 3.1rem;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: -.8px;
+}
+
+
+.about-stat-item span {
+    display: block;
+    margin-top: 7px;
+    color: rgba(255,255,255,.94);
+    font-size: 1.15rem;
+    line-height: 1.35;
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+@media (max-width: 900px) {
+
+    .about-hero {
+        min-height: 500px;
+    }
+
+    .about-hero h1 {
+        font-size: 3rem;
+    }
+
+    .about-hero-content > p {
+        max-width: 700px;
+        font-size: 1.15rem;
+    }
+
+    .about-stats {
+        min-height: 135px;
+
+        padding: 25px 25px;
+    }
+
+    .about-stat-item strong {
+        font-size: 2.5rem;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .about-hero {
+        min-height: 560px;
+
+        padding: 65px 0;
+    }
+
+    .about-hero-content {
+        width: calc(100% - 28px);
+    }
+
+
+    /* Badge */
+
+    .about-story-badge {
+        margin-bottom: 22px;
+
+        font-size: .76rem;
+    }
+
+
+    /* Heading */
+
+    .about-hero h1 {
+        font-size: 2.35rem;
+
+        line-height: 1.12;
+
+        letter-spacing: -.7px;
+    }
+
+
+    /* Description */
+
+    .about-hero-content > p {
+        margin-top: 18px;
+
+        font-size: 1rem;
+
+        line-height: 1.55;
+    }
+
+
+    /* Buttons */
+
+    .about-hero-buttons {
+        width: 100%;
+
+        flex-direction: column;
+
+        gap: 12px;
+
+        margin-top: 28px;
+    }
+
+    .about-hero-btn {
+        width: min(100%, 260px);
+
+        min-width: 0;
+    }
+
+
+    /* Stats */
+
+    .about-stats {
+        min-height: auto;
+
+        padding: 30px 18px;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        row-gap: 30px;
+    }
+
+    .about-stat-item strong {
+        font-size: 2.25rem;
+    }
+
+    .about-stat-item span {
+        font-size: .88rem;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .about-hero {
+        min-height: 540px;
+    }
+
+    .about-hero h1 {
+        font-size: 2.1rem;
+    }
+
+    .about-hero-content > p {
+        font-size: .94rem;
+    }
+
+    .about-stat-item strong {
+        font-size: 2rem;
+    }
+
+    .about-stat-item span {
+        font-size: .82rem;
+    }
+
+}
+
+
+
+
+/* =========================================================
+   MISSION & VISION
+========================================================= */
+.about-mission-vision {
+    width: 100%;
+    padding: 95px 0 90px;
+    background: #ffffff;
+}
+
+
+.about-mission-vision-container {
+    width: min(1450px, calc(100% - 38px));
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 55px;
+    align-items: stretch;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+.about-mv-card {
+    position: relative;
+    padding: 34px 34px 38px;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow:
+        0 12px 28px rgba(15, 23, 42, .12);
+}
+
+
+/* =========================================================
+   TOP GRADIENT LINE
+========================================================= */
+.about-mv-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 8px;
+    background: linear-gradient(
+        90deg,
+        #a42be8,
+        #e51f68
+    );
+}
+
+
+/* Mission and Vision slightly different */
+.about-mission-card::before {
+    background: linear-gradient(
+        90deg,
+        #9b2de8,
+        #d22c9d
+    );
+}
+
+.about-vision-card::before {
+    background: linear-gradient(
+        90deg,
+        #f448a9,
+        #ef1f51
+    );
+}
+
+
+/* =========================================================
+   CARD HEADING
+========================================================= */
+.about-mv-heading {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+
+.about-mv-heading h2 {
+    margin: 0;
+    color: #071a35;
+    font-size: 2.25rem;
+    line-height: 1.2;
+    font-weight: 750;
+    letter-spacing: -.5px;
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+.about-mv-icon {
+    width: 65px;
+    height: 65px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    color: #ffffff;
+    font-size: 1.9rem;
+    box-shadow:
+        0 7px 15px rgba(15, 23, 42, .12);
+}
+
+
+/* Mission icon */
+.about-mission-card .about-mv-icon {
+    background: linear-gradient(
+        135deg,
+        #a42de8,
+        #d326a7
+    );
+}
+
+
+/* Vision icon */
+.about-vision-card .about-mv-icon {
+    background: linear-gradient(
+        135deg,
+        #f73985,
+        #f01749
+    );
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+.about-mv-content p {
+    margin: 0;
+    color: #263f5e;
+    font-size: 1.35rem;
+    line-height: 1.72;
+    font-weight: 400;
+}
+
+
+.about-mv-content p + p {
+    margin-top: 20px;
+}
+
+
+/* =========================================================
+   CARD HOVER
+========================================================= */
+.about-mv-card {
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.about-mv-card:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        0 17px 34px rgba(15, 23, 42, .15);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+@media (max-width: 900px) {
+
+    .about-mission-vision {
+        padding: 70px 0 75px;
+    }
+
+    .about-mission-vision-container {
+        width: calc(100% - 40px);
+        grid-template-columns: 1fr;
+        gap: 38px;
+    }
+
+    .about-mv-card {
+        padding: 30px 28px 32px;
+    }
+
+    .about-mv-heading h2 {
+        font-size: 1.95rem;
+    }
+
+    .about-mv-content p {
+        font-size: 1.2rem;
+        line-height: 1.65;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+@media (max-width: 700px) {
+    .about-mission-vision {
+        padding: 60px 0 65px;
+    }
+
+    .about-mission-vision-container {
+        width: calc(100% - 28px);
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .about-mv-card {
+        padding: 29px 22px 30px;
+        border-radius: 12px;
+    }
+
+    .about-mv-heading {
+        gap: 14px;
+        margin-bottom: 21px;
+    }
+
+    .about-mv-icon {
+        width: 54px;
+        height: 54px;
+        border-radius: 13px;
+        font-size: 1.45rem;
+    }
+
+    .about-mv-heading h2 {
+        font-size: 1.75rem;
+    }
+
+    .about-mv-content p {
+        font-size: 1rem;
+        line-height: 1.65;
+    }
+
+    .about-mv-content p + p {
+        margin-top: 18px;
+    }
+}
+
+
+
+/* =========================================================
+   OUR STORY SECTION
+========================================================= */
+.about-story-section {
+    width: 100%;
+    padding: 90px 0 90px;
+    background: #f8fafc;
+}
+
+
+.about-story-container {
+    width: min(1500px, calc(100% - 38px));
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1.15fr)
+        minmax(500px, 1fr);
+    gap: 55px;
+    align-items: start;
+}
+
+
+/* =========================================================
+   TEXT SIDE
+========================================================= */
+
+.about-story-content {
+    min-width: 0;
+    order: 1;
+}
+
+
+.about-story-label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 13px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    background: #f3e8ff;
+    color: #7c3aed;
+    font-size: .95rem;
+    font-weight: 600;
+    box-shadow:
+        0 3px 8px rgba(15,23,42,.08);
+}
+
+
+.about-story-content h2 {
+    margin: 0 0 24px;
+    max-width: 680px;
+    color: #071a35;
+    font-size: clamp(2.5rem, 3vw, 2.7rem);
+    line-height: 1.18;
+    font-weight: 750;
+    letter-spacing: -.6px;
+}
+
+
+/* =========================================================
+   PARAGRAPHS
+========================================================= */
+.about-story-text p {
+    margin: 0;
+    color: #294361;
+    font-size: 1.2rem;
+    line-height: 1.68;
+}
+
+
+.about-story-text p + p {
+    margin-top: 20px;
+}
+
+
+/* =========================================================
+   IMAGE GALLERY
+========================================================= */
+.about-story-gallery {
+    min-width: 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    order: 1;
+    align-items: center;
+    margin-top: 35px;
+}
+
+
+/* Main tall image */
+.about-story-gallery-main {
+    height: 500px;
+    overflow: hidden;
+    border-radius: 16px;
+    background: #e5e7eb;
+    box-shadow:
+        0 12px 25px rgba(15,23,42,.10);
+}
+
+
+.about-story-gallery-main img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform .5s ease;
+}
+
+
+/* Small image column */
+.about-story-gallery-small {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+.about-story-gallery-card {
+    height: 332px;
+    overflow: hidden;
+    border-radius: 16px;
+    background: #e5e7eb;
+    box-shadow:
+        0 12px 25px rgba(15,23,42,.10);
+}
+
+
+.about-story-gallery-card img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform .5s ease;
+}
+
+
+/* =========================================================
+   IMAGE HOVER
+========================================================= */
+.about-story-gallery-main:hover img,
+.about-story-gallery-card:hover img {
+    transform: scale(1.04);
+}
+
+
+/* =========================================================
+   TABLET
+   Text first → same image collage below
+========================================================= */
+@media (max-width:1400px) {
+
+    .about-story-container {
+        width: calc(100% - 50px);
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    /* TEXT FIRST */
+    .about-story-content {
+        order: 1;
+    }
+
+    /* IMAGE COLLAGE BELOW TEXT */
+    .about-story-gallery {
+        order: 2;
+        width: 100%;
+        display: grid;
+        /* SAME DESIGN AS DESKTOP */
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .about-story-gallery-main {
+        height: 400px;
+    }
+
+    .about-story-gallery-small {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .about-story-gallery-card {
+        height: 230px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   Text first → SAME image collage below
+========================================================= */
+@media (max-width:650px) {
+    .about-story-container {
+        width: calc(100% - 50px);
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    /* TEXT */
+    .about-story-content {
+        order: 1;
+    }
+
+    /* SAME COLLAGE BELOW TEXT */
+    .about-story-gallery {
+        order: 2;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .about-story-gallery-main {
+        height: 300px;
+        border-radius: 14px;
+    }
+
+    .about-story-gallery-small {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .about-story-gallery-card {
+        height: 180px;
+        border-radius: 14px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width:400px) {
+
+    .about-story-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .about-story-gallery-main {
+        height: 250px;
+    }
+
+    .about-story-gallery-small {
+        gap: 15px;
+    }
+
+    .about-story-gallery-card {
+        height: 145px;
+    }
+}
+
+
+
+
+/* =========================================================
+   ABOUT — OUR JOURNEY / MILESTONES
+========================================================= */
+.about-journey-section {
+  width: 100%;
+  background: #ffffff;
+  padding: 95px 0 105px;
+}
+
+.about-journey-container {
+  width: min(1250px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+.about-journey-header {
+  text-align: center;
+  margin-bottom: 98px;
+}
+
+.about-journey-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 13px;
+  background: #ffe9ff;
+  color: #f00a79;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 550;
+  line-height: 1;
+  box-shadow:
+    0 4px 12px rgba(17, 24, 39, 0.12);
+}
+
+.about-journey-header h2 {
+  margin: 35px 0 14px;
+  color: #071a38;
+  font-size: clamp(2.55rem, 3.3vw, 2.95rem);
+  line-height: 1.15;
+  font-weight: 750;
+  letter-spacing: -0.5px;
+}
+
+.about-journey-header p {
+  margin: 0;
+  color: #405574;
+  font-size: 1.48rem;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   TIMELINE
+========================================================= */
+.about-timeline {
+  position: relative;
+  width: 100%;
+  padding: 0;
+}
+
+
+/* Center vertical line */
+.about-timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 8px;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    to bottom,
+    #e7d4ff,
+    #f4c4df
+  );
+  border-radius: 999px;
+}
+
+
+/* =========================================================
+   TIMELINE ITEM
+========================================================= */
+.about-timeline-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 215px;
+  margin-bottom: 25px;
+}
+
+
+/* Last item */
+.about-timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   LEFT / RIGHT POSITIONING
+========================================================= */
+.about-timeline-left .about-timeline-card {
+  grid-column: 1;
+  margin-right: 34px;
+}
+
+.about-timeline-right .about-timeline-card {
+  grid-column: 2;
+  margin-left: 34px;
+}
+
+
+/* =========================================================
+   TIMELINE DOT
+========================================================= */
+.about-timeline-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 22px;
+  height: 22px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    #9c2be8,
+    #e41d75
+  );
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 0 1px rgba(210, 120, 230, 0.18);
+  z-index: 3;
+}
+
+
+/* =========================================================
+   TIMELINE CARD
+========================================================= */
+.about-timeline-card {
+  align-self: center;
+  background: #ffffff;
+  padding: 30px 28px 27px;
+  border-radius: 13px;
+  box-shadow:
+    0 8px 20px rgba(17, 24, 39, 0.09);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* Very subtle hover */
+.about-timeline-card:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 12px 25px rgba(17, 24, 39, 0.12);
+}
+
+
+/* =========================================================
+   CARD TAG
+========================================================= */
+.about-timeline-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 11px;
+  color: #ffffff;
+  background: linear-gradient(
+    135deg,
+    #9d27e9,
+    #df2178
+  );
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+
+
+/* =========================================================
+   CARD HEADING
+========================================================= */
+.about-timeline-card h3 {
+  margin: 0 0 10px;
+  color: #071a38;
+  font-size: 1.4rem;
+  line-height: 1.3;
+  font-weight: 750;
+}
+
+
+/* =========================================================
+   CARD DESCRIPTION
+========================================================= */
+.about-timeline-card p {
+  margin: 0;
+  color: #405574;
+  font-size: 1.15rem;
+  line-height: 1.65;
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+@media (max-width: 900px) {
+
+  .about-journey-section {
+    padding: 80px 0 90px;
+  }
+
+  .about-journey-container {
+    width: min(900px, calc(100% - 36px));
+  }
+
+  .about-journey-header {
+    margin-bottom: 48px;
+  }
+
+  .about-journey-header h2 {
+    font-size: 2.25rem;
+  }
+
+  .about-journey-header p {
+    font-size: 1.08rem;
+  }
+
+  .about-timeline-item {
+    min-height: 205px;
+  }
+
+  .about-timeline-left .about-timeline-card {
+    margin-right: 28px;
+  }
+
+  .about-timeline-right .about-timeline-card {
+    margin-left: 28px;
+  }
+
+  .about-timeline-card {
+    padding: 24px 23px;
+  }
+
+  .about-timeline-card h3 {
+    font-size: 1.18rem;
+  }
+
+  .about-timeline-card p {
+    font-size: 0.97rem;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+@media (max-width: 600px) {
+
+  .about-journey-section {
+    padding: 65px 0 75px;
+  }
+
+  .about-journey-container {
+    width: calc(100% - 30px);
+  }
+
+  /* Header */
+  .about-journey-header {
+    margin-bottom: 40px;
+  }
+
+  .about-journey-badge {
+    font-size: 12px;
+    padding: 5px 11px;
+  }
+
+  .about-journey-header h2 {
+    margin-top: 17px;
+    margin-bottom: 11px;
+
+    font-size: 1.85rem;
+  }
+
+  .about-journey-header p {
+    font-size: 0.98rem;
+    line-height: 1.5;
+  }
+
+
+  /* Timeline moves to left */
+  .about-timeline::before {
+    left: 15px;
+    width: 8px;
+    transform: none;
+  }
+
+  /* Items become one column */
+  .about-timeline-item {
+    display: block;
+    min-height: 0;
+    padding-left: 38px;
+    margin-bottom: 24px;
+  }
+
+
+  /* All cards on right */
+  .about-timeline-left .about-timeline-card,
+  .about-timeline-right .about-timeline-card {
+    margin: 0;
+    width: 100%;
+  }
+
+
+  /* Dot moves to left line */
+  .about-timeline-dot {
+    top: 28px;
+    left: 19px;
+    width: 18px;
+    height: 18px;
+    transform: translate(-50%, 0);
+  }
+
+  /* Card */
+  .about-timeline-card {
+    padding: 21px 19px;
+    border-radius: 11px;
+  }
+
+  .about-timeline-tag {
+    font-size: 13px;
+    padding: 4px 9px;
+    margin-bottom: 11px;
+  }
+
+  .about-timeline-card h3 {
+    font-size: 1.22rem;
+    margin-bottom: 8px;
+  }
+
+  .about-timeline-card p {
+    font-size: 0.99rem;
+    line-height: 1.6;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+@media (max-width: 380px) {
+  .about-journey-container {
+    width: calc(100% - 234px);
+  }
+
+  .about-journey-section {
+    padding: 55px 0 65px;
+  }
+
+  .about-journey-header h2 {
+    font-size: 1.65rem;
+  }
+
+  .about-journey-header p {
+    font-size: 0.92rem;
+  }
+
+  .about-timeline-item {
+    padding-left: 33px;
+  }
+
+  .about-timeline::before {
+    left: 10px;
+  }
+
+  .about-timeline-dot {
+    left: 15px;
+  }
+
+  .about-timeline-card {
+    padding: 19px 16px;
+  }
+
+  .about-timeline-card h3 {
+    font-size: 1.15rem;
+  }
+
+  .about-timeline-card p {
+    font-size: 0.95rem;
+  }
+
+}
+
+
+
+
+/* =========================================================
+   ABOUT — OUR CORE VALUES
+========================================================= */
+.about-values-section {
+  width: 100%;
+  background: #f8fafc;
+  padding: 92px 0 105px;
+}
+
+
+.about-values-container {
+  width: min(1405px, calc(100% - 38px));
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+.about-values-header {
+  text-align: center;
+  margin-bottom: 58px;
+}
+
+.about-values-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 13px;
+  background: #f4e7ff;
+  color: #8c20e8;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.2;
+  box-shadow:
+    0 2px 6px rgba(139, 32, 232, 0.08);
+}
+
+
+.about-values-header h2 {
+  margin: 20px 0 14px;
+  color: #071a38;
+  font-size: clamp(2.4rem, 3.2vw, 2.8rem);
+  line-height: 1.15;
+  font-weight: 750;
+  letter-spacing: -0.5px;
+}
+
+
+.about-values-header p {
+  margin: 0;
+  color: #405574;
+  font-size: 1.35rem;
+  line-height: 1.55;
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   VALUES GRID
+========================================================= */
+.about-values-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+
+
+/* =========================================================
+   VALUE CARD
+========================================================= */
+.about-value-card {
+  display: flex;
+  align-items: flex-start;
+  min-height: 200px;
+  padding: 35px 35px;
+  background: #ffffff;
+  border-radius: 13px;
+  box-shadow:
+    0 8px 20px rgba(17, 24, 39, 0.15);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.about-value-card:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 12px 26px rgba(17, 24, 39, 0.12);
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+.about-value-icon {
+  flex: 0 0 70px;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 22px;
+  border-radius: 17px;
+  color: #ffffff;
+  font-size: 48px;
+  line-height: 1;
+  box-shadow:
+    0 8px 15px rgba(17, 24, 39, 0.12);
+}
+
+
+.about-value-icon span {
+  display: block;
+  font-weight: 400;
+}
+
+
+/* Pink */
+
+.about-value-icon-pink {
+  background: linear-gradient(
+    135deg,
+    #fc5ac1,
+    #ee285d
+  );
+}
+
+
+/* Blue */
+
+.about-value-icon-blue {
+  background: linear-gradient(
+    135deg,
+    #60a8ff,
+    #824af3
+  );
+}
+
+
+/* Purple */
+
+.about-value-icon-purple {
+  background: linear-gradient(
+    135deg,
+    #c462f9,
+    #8534f6
+  );
+}
+
+
+/* Orange */
+
+.about-value-icon-orange {
+  background: linear-gradient(
+    135deg,
+    #feae35,
+    #ff6708
+  );
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+.about-value-content {
+  flex: 1;
+  min-width: 0;
+}
+
+
+.about-value-content h3 {
+  margin: 3px 0 10px;
+  color: #071a38;
+  font-size: 1.5rem;
+  line-height: 1.3;
+  font-weight: 750;
+}
+
+
+.about-value-content p {
+  margin: 0;
+  color: #405574;
+  font-size: 1.2rem;
+  line-height: 1.65;
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+@media (max-width: 900px) {
+
+  .about-values-section {
+    padding: 80px 0 90px;
+  }
+
+
+  .about-values-container {
+    width: min(
+      900px,
+      calc(100% - 46px)
+    );
+  }
+
+
+  .about-values-header {
+    margin-bottom: 48px;
+  }
+
+
+  .about-values-header h2 {
+    font-size: 2.35rem;
+  }
+
+
+  .about-values-header p {
+    font-size: 1.12rem;
+  }
+
+
+  .about-values-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+  }
+
+
+  .about-value-card {
+    min-height: 190px;
+    padding: 27px 25px;
+  }
+
+
+  .about-value-icon {
+    flex-basis: 56px;
+    width: 58px;
+    height: 58px;
+    margin-right: 18px;
+    border-radius: 15px;
+    font-size: 36px;
+  }
+
+
+  .about-value-content h3 {
+    font-size: 1.25rem;
+  }
+
+  .about-value-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+@media (max-width: 600px) {
+
+  .about-values-section {
+    padding: 65px 0 75px;
+  }
+
+
+  .about-values-container {
+    width: calc(100% - 25px);
+  }
+
+
+  .about-values-header {
+    margin-bottom: 38px;
+  }
+
+
+  .about-values-badge {
+    font-size: 14px;
+    padding: 5px 11px;
+  }
+
+
+  .about-values-header h2 {
+    margin-top: 17px;
+    margin-bottom: 11px;
+    font-size: 1.25rem;
+  }
+
+
+  .about-values-header p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+
+  /* One card per row */
+  .about-values-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+
+  .about-value-card {
+    min-height: 0;
+    padding: 23px 20px;
+    border-radius: 11px;
+  }
+
+
+  .about-value-icon {
+    flex: 0 0 54px;
+    width: 56px;
+    height: 56px;
+    margin-right: 16px;
+    border-radius: 14px;
+    font-size: 30px;
+  }
+
+
+  .about-value-content h3 {
+    margin-top: 2px;
+    margin-bottom: 8px;
+    font-size: 1.12rem;
+    line-height: 1.3;
+  }
+
+
+  .about-value-content p {
+    font-size: 0.99rem;
+    line-height: 1.58;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+@media (max-width: 380px) {
+  .about-values-container {
+    width: calc(100% - 24px);
+  }
+
+  .about-values-section {
+    padding: 55px 0 65px;
+  }
+
+  .about-values-header h2 {
+    font-size: 1.65rem;
+  }
+
+  .about-values-header p {
+    font-size: 0.92rem;
+  }
+
+  .about-value-card {
+    padding: 20px 16px;
+  }
+
+  .about-value-icon {
+    flex-basis: 50px;
+
+    width: 50px;
+    height: 50px;
+
+    margin-right: 14px;
+
+    font-size: 27px;
+  }
+
+  .about-value-content h3 {
+    font-size: 1rem;
+  }
+
+  .about-value-content p {
+    font-size: 0.89rem;
+  }
+
+}
+
+
+
+/* =========================================================
+   ABOUT — WHAT MAKES US DIFFERENT
+========================================================= */
+.about-different-section {
+  width: 100%;
+  background: #f8fafc;
+  padding: 92px 0 105px;
+}
+
+.about-different-container {
+  width: min(1505px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+.about-different-header {
+  text-align: center;
+  margin-bottom: 58px;
+}
+
+
+.about-different-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 13px;
+  background: #ffe9ed;
+  color: #ed174c;
+  border-radius: 6px;
+  font-size: 15px;
+  line-height: 1.2;
+  font-weight: 600;
+  box-shadow:
+    0 2px 6px rgba(237, 23, 76, 0.08);
+}
+
+
+.about-different-header h2 {
+  margin: 20px 0 14px;
+  color: #071a38;
+  font-size: clamp(2.5rem, 3.2vw, 2.5rem);
+  line-height: 1.15;
+  font-weight: 750;
+  letter-spacing: -0.5px;
+}
+
+
+.about-different-header p {
+  margin: 0;
+  color: #405574;
+  font-size: 1.28rem;
+  line-height: 1.55;
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   CARD GRID
+========================================================= */
+.about-different-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+.about-different-card {
+  min-height: 240px;
+  padding: 28px 25px 27px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow:
+    0 8px 20px rgba(17, 24, 39, 0.09);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.about-different-card:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 12px 26px rgba(17, 24, 39, 0.12);
+}
+
+
+/* =========================================================
+   ICON BOX
+========================================================= */
+.about-different-icon {
+  width: 68px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+  border-radius: 17px;
+  color: #ffffff;
+  font-size: 43px;
+  line-height: 1;
+  box-shadow:
+    0 7px 15px rgba(17, 24, 39, 0.13);
+}
+
+.about-different-icon span {
+  display: block;
+  line-height: 1;
+}
+
+/* Blue */
+.different-icon-blue {
+  background: linear-gradient(
+    135deg,
+    #378cff,
+    #1fcce7
+  );
+}
+
+
+/* Green */
+
+.different-icon-green {
+  background: linear-gradient(
+    135deg,
+    #14b98f,
+    #02582c
+  );
+}
+
+
+/* Purple */
+
+.different-icon-purple {
+  background: linear-gradient(
+    135deg,
+    #4649ff,
+    #a044ed
+  );
+}
+
+
+/* Orange */
+
+.different-icon-orange {
+  background: linear-gradient(
+    135deg,
+    #ff9c0b,
+    #ff5a08
+  );
+}
+
+
+/* Pink */
+
+.different-icon-pink {
+  background: linear-gradient(
+    135deg,
+    #f36590,
+    #ed2770
+  );
+}
+
+
+/* =========================================================
+   CARD TEXT
+========================================================= */
+.about-different-card h3 {
+  margin: 0 0 11px;
+  color: #071a38;
+  font-size: 1.35rem;
+  line-height: 1;
+  font-weight: 750;
+}
+
+
+.about-different-card p {
+  margin: 0;
+  color: #405574;
+  font-size: 1.1rem;
+  line-height: 1.62;
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .about-different-section {
+    padding: 80px 0 90px;
+  }
+
+
+  .about-different-container {
+    width: min(
+      900px,
+      calc(100% - 46px)
+    );
+  }
+
+
+  .about-different-header {
+    margin-bottom: 48px;
+  }
+
+
+  .about-different-header h2 {
+    font-size: 2.35rem;
+  }
+
+
+  .about-different-header p {
+    font-size: 1.15rem;
+  }
+
+
+  .about-different-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+  }
+
+
+  .about-different-card {
+    min-height: 225px;
+    padding: 26px 23px;
+  }
+
+
+  .about-different-icon {
+    width: 58px;
+    height: 58px;
+    margin-bottom: 19px;
+    border-radius: 15px;
+    font-size: 45px;
+  }
+
+
+  .about-different-card h3 {
+    font-size: 1.25rem;
+  }
+
+
+  .about-different-card p {
+    font-size: 0.99rem;
+    line-height: 1.58;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .about-different-section {
+    padding: 65px 0 75px;
+  }
+
+  .about-different-container {
+    width: calc(100% - 25px);
+  }
+
+  .about-different-header {
+    margin-bottom: 38px;
+  }
+
+  .about-different-badge {
+    padding: 5px 11px;
+    font-size: 14px;
+  }
+
+  .about-different-header h2 {
+    margin-top: 17px;
+    margin-bottom: 11px;
+    font-size: 1.95rem;
+  }
+
+  .about-different-header p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  /* One card per row */
+  .about-different-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .about-different-card {
+    min-height: 0;
+    padding: 23px 20px;
+    border-radius: 11px;
+  }
+
+  .about-different-icon {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 17px;
+    border-radius: 14px;
+    font-size: 29px;
+  }
+
+  .about-different-card h3 {
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+  }
+
+  .about-different-card p {
+    font-size: 0.99rem;
+    line-height: 1.58;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+@media (max-width: 380px) {
+
+  .about-different-container {
+    width: calc(100% - 24px);
+  }
+
+  .about-different-section {
+    padding: 55px 0 65px;
+  }
+
+  .about-different-header h2 {
+    font-size: 1.65rem;
+  }
+
+  .about-different-header p {
+    font-size: 0.92rem;
+  }
+
+  .about-different-card {
+    padding: 20px 16px;
+  }
+
+  .about-different-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+    font-size: 25px;
+  }
+
+  .about-different-card h3 {
+    font-size: 1rem;
+  }
+
+  .about-different-card p {
+    font-size: 0.89rem;
+  }
+}
+
+
+
+
+/* =========================================================
+   ABOUT — OUR APPROACH / HOW WE CREATE IMPACT
+========================================================= */
+.about-approach-section {
+  width: 100%;
+  background: #fff5fc;
+  padding: 88px 0 86px;
+}
+
+.about-approach-container {
+  width: min(1405px, calc(100% - 38px));
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+.about-approach-header {
+  text-align: center;
+
+  max-width: 900px;
+
+  margin: 0 auto 60px;
+}
+
+
+.about-approach-badge {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 6px 13px;
+
+  border-radius: 7px;
+
+  background: #f2e5ff;
+
+  color: #8a22e8;
+
+  font-size: 15px;
+
+  line-height: 1.2;
+
+  font-weight: 600;
+
+  box-shadow:
+    0 2px 6px rgba(123, 43, 220, 0.08);
+}
+
+
+.about-approach-header h2 {
+  margin: 20px 0 14px;
+
+  color: #071a38;
+
+  font-size: clamp(2.5rem, 3vw, 2.65rem);
+
+  line-height: 1.15;
+
+  font-weight: 750;
+
+  letter-spacing: -0.5px;
+}
+
+
+.about-approach-header p {
+  max-width: 820px;
+
+  margin: 0 auto;
+
+  color: #405574;
+
+  font-size: 1.28rem;
+
+  line-height: 1.55;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   CARDS GRID
+========================================================= */
+
+.about-approach-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 34px;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.about-approach-card {
+  min-height: 340px;
+
+  padding: 34px 38px 32px;
+
+  background: #ffffff;
+
+  border-radius: 12px;
+
+  text-align: center;
+
+  box-shadow:
+    0 9px 22px rgba(17, 24, 39, 0.10);
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.about-approach-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 13px 28px rgba(17, 24, 39, 0.13);
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.about-approach-icon {
+  width: 70px;
+  height: 70px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  margin-bottom: 25px;
+
+  border-radius: 17px;
+
+  color: #ffffff;
+
+  font-size: 35px;
+
+  line-height: 1;
+
+  box-shadow:
+    0 8px 17px rgba(17, 24, 39, 0.14);
+}
+
+
+.about-approach-icon span {
+  display: block;
+
+  line-height: 1;
+}
+
+
+/* =========================================================
+   ICON COLORS
+========================================================= */
+
+.approach-icon-coaching {
+  background: linear-gradient(
+    135deg,
+    #a348f2,
+    #e93691
+  );
+}
+
+
+.approach-icon-programs {
+  background: linear-gradient(
+    135deg,
+    #f33e86,
+    #f02d62
+  );
+}
+
+
+.approach-icon-inclusive {
+  background: linear-gradient(
+    135deg,
+    #ff3f51,
+    #ff8b08
+  );
+}
+
+
+/* =========================================================
+   CARD TEXT
+========================================================= */
+
+.about-approach-card h3 {
+  margin: 0 0 14px;
+
+  color: #071a38;
+
+  font-size: 1.35rem;
+
+  line-height: 1.3;
+
+  font-weight: 750;
+}
+
+
+.about-approach-card p {
+  max-width: 365px;
+
+  margin: 0;
+
+  color: #405574;
+
+  font-size: 1.15rem;
+
+  line-height: 1.62;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .about-approach-section {
+    padding: 78px 0 80px;
+  }
+
+
+  .about-approach-container {
+    width: calc(100% - 36px);
+  }
+
+
+  .about-approach-header {
+    margin-bottom: 48px;
+  }
+
+
+  .about-approach-header h2 {
+    font-size: 2.25rem;
+  }
+
+
+  .about-approach-header p {
+    font-size: 1.08rem;
+  }
+
+
+  .about-approach-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 22px;
+  }
+
+
+  .about-approach-card {
+    min-height: 315px;
+
+    padding: 30px 26px;
+  }
+
+
+  .about-approach-icon {
+    width: 62px;
+    height: 62px;
+
+    margin-bottom: 21px;
+
+    border-radius: 15px;
+
+    font-size: 31px;
+  }
+
+
+  .about-approach-card h3 {
+    font-size: 1.12rem;
+  }
+
+
+  .about-approach-card p {
+    font-size: 0.94rem;
+
+    line-height: 1.58;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .about-approach-section {
+    padding: 64px 0 70px;
+  }
+
+
+  .about-approach-container {
+    width: calc(100% - 30px);
+  }
+
+
+  .about-approach-header {
+    margin-bottom: 38px;
+  }
+
+
+  .about-approach-badge {
+    padding: 5px 11px;
+
+    font-size: 12px;
+  }
+
+
+  .about-approach-header h2 {
+    margin-top: 17px;
+
+    margin-bottom: 11px;
+
+    font-size: 1.85rem;
+  }
+
+
+  .about-approach-header p {
+    font-size: 0.98rem;
+
+    line-height: 1.52;
+  }
+
+
+  /* One card per row */
+
+  .about-approach-grid {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+
+  .about-approach-card {
+    min-height: 0;
+
+    padding: 28px 20px 27px;
+
+    border-radius: 11px;
+  }
+
+
+  .about-approach-icon {
+    width: 58px;
+    height: 58px;
+
+    margin-bottom: 19px;
+
+    border-radius: 15px;
+
+    font-size: 29px;
+  }
+
+
+  .about-approach-card h3 {
+    margin-bottom: 10px;
+
+    font-size: 1.08rem;
+  }
+
+
+  .about-approach-card p {
+    max-width: 100%;
+
+    font-size: 0.93rem;
+
+    line-height: 1.58;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .about-approach-container {
+    width: calc(100% - 24px);
+  }
+
+
+  .about-approach-section {
+    padding: 55px 0 62px;
+  }
+
+
+  .about-approach-header h2 {
+    font-size: 1.65rem;
+  }
+
+
+  .about-approach-header p {
+    font-size: 0.92rem;
+  }
+
+
+  .about-approach-card {
+    padding: 24px 17px;
+  }
+
+
+  .about-approach-icon {
+    width: 53px;
+    height: 53px;
+
+    margin-bottom: 17px;
+
+    font-size: 26px;
+  }
+
+
+  .about-approach-card h3 {
+    font-size: 1rem;
+  }
+
+
+  .about-approach-card p {
+    font-size: 0.89rem;
+  }
+
+}
+
+
+
+
+
+/* =========================================================
+   OUR APPROACH TO INCLUSION
+========================================================= */
+.inclusion-section {
+  width: 100%;
+  background: #ffffff;
+  padding: 84px 0 86px;
+}
+
+.inclusion-container {
+  width: min(1505px, calc(100% - 38px));
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+.inclusion-header {
+  text-align: center;
+  max-width: 1050px;
+  margin: 0 auto 58px;
+}
+
+
+.inclusion-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 13px;
+  border-radius: 7px;
+  background: #f1e5ff;
+  color: #8b22e8;
+  font-size: 15px;
+  line-height: 1.2;
+  font-weight: 600;
+  box-shadow:
+    0 2px 6px rgba(120, 50, 210, 0.08);
+}
+
+
+.inclusion-header h2 {
+  margin: 20px 0 14px;
+  color: #071a38;
+  font-size: clamp(2.3rem, 3.2vw, 2.7rem);
+  line-height: 1.15;
+  font-weight: 750;
+  letter-spacing: -0.5px;
+}
+
+
+.inclusion-header p {
+  margin: 0 auto;
+  color: #405574;
+  font-size: 1.35rem;
+  line-height: 1.55;
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   CARDS GRID
+========================================================= */
+.inclusion-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 24px 30px;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.inclusion-card {
+  background: #ffffff;
+
+  border-radius: 12px;
+
+  padding: 31px 34px 32px;
+
+  min-height: 400px;
+
+  box-shadow:
+    0 8px 20px rgba(17, 24, 39, 0.10);
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.inclusion-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 26px rgba(17, 24, 39, 0.13);
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.inclusion-icon {
+  width: 65px;
+  height: 65px;
+
+  border-radius: 16px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  margin-bottom: 23px;
+
+  color: #ffffff;
+
+  font-size: 35px;
+
+  line-height: 1;
+
+  box-shadow:
+    0 7px 15px rgba(17, 24, 39, 0.13);
+}
+
+
+.inclusion-icon span {
+  display: block;
+
+  line-height: 1;
+}
+
+
+/* =========================================================
+   ICON COLORS
+========================================================= */
+
+.inclusion-icon-purple {
+  background: linear-gradient(
+    135deg,
+    #4ac2f2,
+    #3d86df
+  );
+}
+
+
+.inclusion-icon-pink {
+  background: linear-gradient(
+    135deg,
+    #f66492,
+    #f01f5a
+  );
+}
+
+
+.inclusion-icon-orange {
+  background: linear-gradient(
+    135deg,
+    #ff3c52,
+    #ff8411
+  );
+}
+
+
+.inclusion-icon-yellow {
+  background: linear-gradient(
+    135deg,
+    #79d08c,
+    #058020
+  );
+}
+
+
+/* =========================================================
+   CARD TYPOGRAPHY
+========================================================= */
+
+.inclusion-card h3 {
+  margin: 0 0 14px;
+
+  color: #071a38;
+
+  font-size: 1.75rem;
+
+  line-height: 1.3;
+
+  font-weight: 750;
+}
+
+
+.inclusion-card p {
+  margin: 0 0 17px;
+
+  color: #405574;
+
+  font-size: 1.18rem;
+
+  line-height: 1.62;
+
+  font-weight: 400;
+}
+
+
+.inclusion-card p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .inclusion-section {
+    padding: 75px 0 78px;
+  }
+
+
+  .inclusion-container {
+    width: calc(100% - 36px);
+  }
+
+
+  .inclusion-header {
+    margin-bottom: 45px;
+  }
+
+
+  .inclusion-header h2 {
+    font-size: 2.25rem;
+  }
+
+
+  .inclusion-header p {
+    font-size: 1.08rem;
+  }
+
+
+  .inclusion-grid {
+    gap: 20px;
+  }
+
+
+  .inclusion-card {
+    min-height: 365px;
+
+    padding: 28px 27px 30px;
+  }
+
+
+  .inclusion-icon {
+    width: 58px;
+    height: 58px;
+
+    margin-bottom: 20px;
+
+    border-radius: 15px;
+
+    font-size: 28px;
+  }
+
+
+  .inclusion-card h3 {
+    font-size: 1.12rem;
+  }
+
+
+  .inclusion-card p {
+    font-size: 0.94rem;
+
+    line-height: 1.58;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .inclusion-section {
+    padding: 62px 0 68px;
+  }
+
+
+  .inclusion-container {
+    width: calc(100% - 30px);
+  }
+
+
+  .inclusion-header {
+    margin-bottom: 36px;
+  }
+
+
+  .inclusion-badge {
+    padding: 5px 11px;
+
+    font-size: 12px;
+  }
+
+
+  .inclusion-header h2 {
+    margin-top: 17px;
+
+    margin-bottom: 11px;
+
+    font-size: 1.85rem;
+  }
+
+
+  .inclusion-header p {
+    font-size: 0.97rem;
+
+    line-height: 1.52;
+  }
+
+
+  /* One card per row */
+
+  .inclusion-grid {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+
+  .inclusion-card {
+    min-height: 0;
+
+    padding: 27px 20px 28px;
+
+    border-radius: 11px;
+  }
+
+
+  .inclusion-icon {
+    width: 57px;
+    height: 57px;
+
+    margin-bottom: 19px;
+
+    border-radius: 15px;
+
+    font-size: 27px;
+  }
+
+
+  .inclusion-card h3 {
+    margin-bottom: 10px;
+
+    font-size: 1.08rem;
+  }
+
+
+  .inclusion-card p {
+    font-size: 0.93rem;
+
+    line-height: 1.58;
+
+    margin-bottom: 15px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .inclusion-container {
+    width: calc(100% - 24px);
+  }
+
+
+  .inclusion-section {
+    padding: 54px 0 62px;
+  }
+
+
+  .inclusion-header h2 {
+    font-size: 1.65rem;
+  }
+
+
+  .inclusion-header p {
+    font-size: 0.91rem;
+  }
+
+
+  .inclusion-card {
+    padding: 24px 17px 25px;
+  }
+
+
+  .inclusion-icon {
+    width: 53px;
+    height: 53px;
+
+    margin-bottom: 17px;
+
+    font-size: 25px;
+  }
+
+
+  .inclusion-card h3 {
+    font-size: 1rem;
+  }
+
+
+  .inclusion-card p {
+    font-size: 0.89rem;
+  }
+
+}
+
+
+
+
+
+/* =========================================================
+   PROGRAMS AT A GLANCE
+========================================================= */
+
+.programs-glance-section {
+  width: 100%;
+  background: #fff7fe;
+  padding: 86px 0 92px;
+}
+
+
+.programs-glance-container {
+  width: min(1505px, calc(100% - 38px));
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.programs-glance-header {
+  text-align: center;
+  max-width: 1050px;
+  margin: 0 auto 58px;
+}
+
+
+.programs-glance-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 6px 13px;
+
+  border-radius: 7px;
+
+  background: #ffe9f1;
+  color: #e61f5c;
+
+  font-size: 15px;
+  line-height: 1.2;
+  font-weight: 600;
+
+  box-shadow: 0 2px 6px rgba(230, 31, 92, 0.08);
+}
+
+
+.programs-glance-header h2 {
+  margin: 20px 0 14px;
+
+  color: #071a38;
+
+  font-size: clamp(2.25rem, 3vw, 2.8rem);
+  line-height: 1.15;
+
+  font-weight: 750;
+
+  letter-spacing: -0.5px;
+}
+
+
+.programs-glance-header p {
+  margin: 0 auto;
+
+  color: #405574;
+
+  font-size: 1.25rem;
+  line-height: 1.55;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.programs-glance-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 24px 25px;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.programs-glance-card {
+  background: #ffffff;
+
+  border-radius: 12px;
+
+  padding: 27px 26px 29px;
+
+  min-height: 238px;
+
+  box-shadow:
+    0 8px 20px rgba(17, 24, 39, 0.10);
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.programs-glance-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 25px rgba(17, 24, 39, 0.13);
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.programs-glance-icon {
+  width: 61px;
+  height: 61px;
+
+  border-radius: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  margin-bottom: 22px;
+
+  color: #ffffff;
+
+  font-size: 27px;
+
+  box-shadow:
+    0 7px 15px rgba(17, 24, 39, 0.12);
+}
+
+
+.programs-glance-icon i {
+  line-height: 1;
+}
+
+
+/* =========================================================
+   ICON COLORS
+========================================================= */
+
+.programs-glance-icon-purple {
+  background: linear-gradient(
+    135deg,
+    #a64af2,
+    #df3d9c
+  );
+}
+
+
+.programs-glance-icon-pink {
+  background: linear-gradient(
+    135deg,
+    #f43875,
+    #ef3569
+  );
+}
+
+
+.programs-glance-icon-orange-red {
+  background: linear-gradient(
+    135deg,
+    #ff3b52,
+    #ff8310
+  );
+}
+
+
+.programs-glance-icon-orange {
+  background: linear-gradient(
+    135deg,
+    #ffb000,
+    #ff8110
+  );
+}
+
+
+.programs-glance-icon-green {
+  background: linear-gradient(
+    135deg,
+    #18c2a0,
+    #08b796
+  );
+}
+
+
+.programs-glance-icon-blue {
+  background: linear-gradient(
+    135deg,
+    #5575ef,
+    #5968e9
+  );
+}
+
+
+/* =========================================================
+   CARD TEXT
+========================================================= */
+
+.programs-glance-card h3 {
+  margin: 0 0 13px;
+
+  color: #071a38;
+
+  font-size: 1.35rem;
+  line-height: 1.3;
+
+  font-weight: 750;
+}
+
+
+.programs-glance-card p {
+  margin: 0;
+
+  color: #405574;
+
+  font-size: 1.08rem;
+  line-height: 1.58;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .programs-glance-section {
+    padding: 74px 0 80px;
+  }
+
+
+  .programs-glance-container {
+    width: calc(100% - 36px);
+  }
+
+
+  .programs-glance-header {
+    margin-bottom: 44px;
+  }
+
+
+  .programs-glance-header h2 {
+    font-size: 2.25rem;
+  }
+
+
+  .programs-glance-header p {
+    font-size: 1.08rem;
+  }
+
+
+  .programs-glance-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+
+  .programs-glance-card {
+    min-height: 225px;
+    padding: 26px 24px 27px;
+  }
+
+
+  .programs-glance-icon {
+    width: 58px;
+    height: 58px;
+
+    margin-bottom: 19px;
+
+    border-radius: 15px;
+
+    font-size: 25px;
+  }
+
+
+  .programs-glance-card h3 {
+    font-size: 1.1rem;
+  }
+
+
+  .programs-glance-card p {
+    font-size: 0.94rem;
+    line-height: 1.55;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .programs-glance-section {
+    padding: 62px 0 68px;
+  }
+
+
+  .programs-glance-container {
+    width: calc(100% - 30px);
+  }
+
+
+  .programs-glance-header {
+    margin-bottom: 36px;
+  }
+
+
+  .programs-glance-badge {
+    padding: 5px 11px;
+    font-size: 12px;
+  }
+
+
+  .programs-glance-header h2 {
+    margin-top: 17px;
+    margin-bottom: 11px;
+
+    font-size: 1.85rem;
+  }
+
+
+  .programs-glance-header p {
+    font-size: 0.97rem;
+    line-height: 1.52;
+  }
+
+
+  /* One card per row */
+
+  .programs-glance-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+
+  .programs-glance-card {
+    min-height: 0;
+
+    padding: 25px 20px 27px;
+
+    border-radius: 11px;
+  }
+
+
+  .programs-glance-icon {
+    width: 57px;
+    height: 57px;
+
+    margin-bottom: 18px;
+
+    border-radius: 15px;
+
+    font-size: 25px;
+  }
+
+
+  .programs-glance-card h3 {
+    margin-bottom: 10px;
+
+    font-size: 1.08rem;
+  }
+
+
+  .programs-glance-card p {
+    font-size: 0.93rem;
+    line-height: 1.58;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .programs-glance-container {
+    width: calc(100% - 24px);
+  }
+
+
+  .programs-glance-section {
+    padding: 54px 0 62px;
+  }
+
+
+  .programs-glance-header h2 {
+    font-size: 1.65rem;
+  }
+
+
+  .programs-glance-header p {
+    font-size: 0.91rem;
+  }
+
+
+  .programs-glance-card {
+    padding: 23px 17px 25px;
+  }
+
+
+  .programs-glance-icon {
+    width: 53px;
+    height: 53px;
+
+    margin-bottom: 16px;
+
+    font-size: 23px;
+  }
+
+
+  .programs-glance-card h3 {
+    font-size: 1rem;
+  }
+
+
+  .programs-glance-card p {
+    font-size: 0.89rem;
+  }
+
+}
+
+
+
+
+
+/* =========================================================
+   PARTNERS & COLLABORATIONS
+========================================================= */
+
+.partners-section {
+  width: 100%;
+  background: #ffffff;
+  padding: 86px 0 99px;
+}
+
+
+.partners-container {
+  width: min(1505px, calc(100% - 38px));
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.partners-header {
+  max-width: 900px;
+  margin: 0 auto 60px;
+
+  text-align: center;
+}
+
+
+.partners-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 6px 13px;
+
+  border-radius: 7px;
+
+  background: #f3e7ff;
+  color: #8b2be2;
+
+  font-size: 15px;
+  line-height: 1.2;
+  font-weight: 600;
+
+  box-shadow: 0 2px 6px rgba(139, 43, 226, 0.08);
+}
+
+
+.partners-header h2 {
+  margin: 20px 0 14px;
+
+  color: #071a38;
+
+  font-size: clamp(2.25rem, 3vw, 2.85rem);
+  line-height: 1.15;
+
+  font-weight: 750;
+
+  letter-spacing: -0.5px;
+}
+
+
+.partners-header p {
+  max-width: 810px;
+
+  margin: 0 auto;
+
+  color: #405574;
+
+  font-size: 1.4rem;
+  line-height: 1.55;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   PARTNER GRID
+========================================================= */
+
+.partners-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 24px;
+}
+
+
+/* =========================================================
+   PARTNER CARD
+========================================================= */
+
+.partner-card {
+  min-height: 260px;
+
+  padding: 27px 23px 28px;
+
+  background: #ffffff;
+
+  border-radius: 12px;
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  box-shadow:
+    0 8px 20px rgba(17, 24, 39, 0.15);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.partner-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 25px rgba(17, 24, 39, 0.13);
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.partner-icon {
+  width: 61px;
+  height: 61px;
+
+  margin-bottom: 20px;
+
+  border-radius: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  color: #ffffff;
+
+  font-size: 26px;
+
+  box-shadow:
+    0 7px 15px rgba(17, 24, 39, 0.12);
+}
+
+
+.partner-icon-purple {
+  background: linear-gradient(
+    135deg,
+    #a64af2,
+    #df3d9c
+  );
+}
+
+
+.partner-icon i {
+  line-height: 1;
+}
+
+
+/* =========================================================
+   CARD TEXT
+========================================================= */
+
+.partner-card h3 {
+  margin: 0 0 12px;
+
+  color: #071a38;
+
+  font-size: 1.38rem;
+  line-height: 1.3;
+
+  font-weight: 750;
+}
+
+
+.partner-card p {
+  max-width: 260px;
+
+  margin: 0;
+
+  color: #405574;
+
+  font-size: 1.08rem;
+  line-height: 1.55;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .partners-section {
+    padding: 74px 0 80px;
+  }
+
+
+  .partners-container {
+    width: calc(100% - 36px);
+  }
+
+
+  .partners-header {
+    margin-bottom: 44px;
+  }
+
+
+  .partners-header h2 {
+    font-size: 2.25rem;
+  }
+
+
+  .partners-header p {
+    font-size: 1.08rem;
+  }
+
+
+  .partners-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+  }
+
+
+  .partner-card {
+    min-height: 245px;
+
+    padding: 25px 22px 27px;
+  }
+
+
+  .partner-icon {
+    width: 58px;
+    height: 58px;
+
+    margin-bottom: 18px;
+
+    border-radius: 15px;
+
+    font-size: 25px;
+  }
+
+
+  .partner-card h3 {
+    font-size: 1.06rem;
+  }
+
+
+  .partner-card p {
+    font-size: 0.93rem;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .partners-section {
+    padding: 62px 0 68px;
+  }
+
+
+  .partners-container {
+    width: calc(100% - 30px);
+  }
+
+
+  .partners-header {
+    margin-bottom: 36px;
+  }
+
+
+  .partners-badge {
+    padding: 5px 11px;
+
+    font-size: 12px;
+  }
+
+
+  .partners-header h2 {
+    margin-top: 17px;
+    margin-bottom: 11px;
+
+    font-size: 1.85rem;
+  }
+
+
+  .partners-header p {
+    font-size: 0.97rem;
+    line-height: 1.52;
+  }
+
+
+  /* One card per row */
+
+  .partners-grid {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+
+  .partner-card {
+    min-height: 0;
+
+    padding: 25px 20px 27px;
+
+    border-radius: 11px;
+  }
+
+
+  .partner-icon {
+    width: 57px;
+    height: 57px;
+
+    margin-bottom: 17px;
+
+    border-radius: 15px;
+
+    font-size: 24px;
+  }
+
+
+  .partner-card h3 {
+    margin-bottom: 10px;
+
+    font-size: 1.06rem;
+  }
+
+
+  .partner-card p {
+    max-width: 330px;
+
+    font-size: 0.93rem;
+    line-height: 1.57;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .partners-container {
+    width: calc(100% - 24px);
+  }
+
+
+  .partners-section {
+    padding: 54px 0 62px;
+  }
+
+
+  .partners-header h2 {
+    font-size: 1.65rem;
+  }
+
+
+  .partners-header p {
+    font-size: 0.91rem;
+  }
+
+
+  .partner-card {
+    padding: 23px 17px 25px;
+  }
+
+
+  .partner-icon {
+    width: 53px;
+    height: 53px;
+
+    margin-bottom: 16px;
+
+    font-size: 22px;
+  }
+
+
+  .partner-card h3 {
+    font-size: 1rem;
+  }
+
+
+  .partner-card p {
+    font-size: 0.89rem;
+  }
+
+}
+
+
+
+
+
+/* =========================================================
+   SERVING ALL CHILDREN ACROSS INDIA
+========================================================= */
+
+.serving-india-section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 78% 35%,
+      rgba(218, 38, 157, 0.45),
+      transparent 42%
+    ),
+    linear-gradient(
+      150deg,
+      #17182f 0%,
+      #3c1769 48%,
+      #8d145d 100%
+    );
+
+  padding: 85px 20px 86px;
+
+  color: #ffffff;
+}
+
+
+/* subtle dotted background */
+
+.serving-india-section::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    radial-gradient(
+      rgba(255, 255, 255, 0.20) 1px,
+      transparent 1px
+    );
+
+  background-size: 32px 32px;
+
+  opacity: 0.30;
+
+  pointer-events: none;
+}
+
+
+/* content wrapper */
+
+.serving-india-container {
+  position: relative;
+  z-index: 1;
+
+  width: min(1300px, 100%);
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.serving-india-icon {
+  width: 86px;
+  height: 86px;
+
+  margin: 0 auto 27px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 17px;
+
+  background: linear-gradient(
+    135deg,
+    #a847ef,
+    #ec3f9d
+  );
+
+  color: #ffffff;
+
+  font-size: 43px;
+
+  box-shadow:
+    0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.serving-india-container h2 {
+  margin: 0 0 20px;
+
+  color: #ffffff;
+
+  font-size: clamp(2.5rem, 4.2vw, 3.65rem);
+
+  line-height: 1.12;
+
+  font-weight: 800;
+
+  letter-spacing: -1px;
+}
+
+
+/* =========================================================
+   FIRST PARAGRAPH
+========================================================= */
+
+.serving-india-intro {
+  max-width: 960px;
+
+  margin: 0 auto;
+
+  color: rgba(255, 255, 255, 0.90);
+
+  font-size: 1.35rem;
+
+  line-height: 1.55;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   SECOND PARAGRAPH
+========================================================= */
+
+.serving-india-description {
+  max-width: 960px;
+
+  margin: 29px auto 0;
+
+  color: rgba(230, 207, 245, 0.78);
+
+  font-size: 1.25rem;
+
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.serving-india-actions {
+  margin-top: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 30px;
+}
+
+
+.serving-india-actions a {
+  min-width: 250px;
+
+  min-height: 45px;
+
+  padding: 11px 22px;
+
+  border-radius: 6px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  text-decoration: none;
+
+  font-size: 1.25rem;
+  font-weight: 700;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+
+/* primary */
+
+.serving-india-primary {
+  color: #ffffff;
+
+  background: linear-gradient(
+    90deg,
+    #a947ef,
+    #ec3f9d
+  );
+
+  box-shadow:
+    0 7px 18px rgba(0, 0, 0, 0.20);
+}
+
+
+.serving-india-primary:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 23px rgba(0, 0, 0, 0.28);
+}
+
+
+/* secondary */
+
+.serving-india-secondary {
+  color: #ffffff;
+
+  background: transparent;
+
+  border: 2px solid rgba(255, 255, 255, 0.90);
+}
+
+
+.serving-india-secondary:hover {
+  transform: translateY(-2px);
+  color: #780480;
+  background: rgb(255, 254, 254);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .serving-india-section {
+    padding: 72px 20px 74px;
+  }
+
+  .serving-india-container {
+    width: min(760px, 100%);
+  }
+
+  .serving-india-icon {
+    width: 76px;
+    height: 76px;
+
+    margin-bottom: 23px;
+
+    font-size: 37px;
+  }
+
+  .serving-india-container h2 {
+    font-size: 2.75rem;
+  }
+
+  .serving-india-intro {
+    font-size: 1.12rem;
+  }
+
+  .serving-india-description {
+    font-size: 1rem;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .serving-india-section {
+    padding: 60px 18px 64px;
+  }
+
+  .serving-india-container {
+    width: 100%;
+  }
+
+  .serving-india-icon {
+    width: 68px;
+    height: 68px;
+
+    margin-bottom: 21px;
+
+    border-radius: 15px;
+
+    font-size: 32px;
+  }
+
+  .serving-india-container h2 {
+    margin-bottom: 17px;
+
+    font-size: 2rem;
+
+    line-height: 1.16;
+
+    letter-spacing: -0.5px;
+  }
+
+  .serving-india-intro {
+    font-size: 1rem;
+
+    line-height: 1.55;
+  }
+
+  .serving-india-description {
+    margin-top: 23px;
+
+    font-size: 0.94rem;
+
+    line-height: 1.58;
+  }
+
+  .serving-india-actions {
+    margin-top: 28px;
+
+    flex-direction: column;
+
+    gap: 12px;
+  }
+
+  .serving-india-actions a {
+    width: min(100%, 300px);
+
+    min-width: 0;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .serving-india-section {
+    padding: 52px 15px 58px;
+  }
+
+  .serving-india-icon {
+    width: 62px;
+    height: 62px;
+
+    font-size: 29px;
+  }
+
+  .serving-india-container h2 {
+    font-size: 1.75rem;
+  }
+
+  .serving-india-intro {
+    font-size: 0.94rem;
+  }
+
+  .serving-india-description {
+    font-size: 0.88rem;
+  }
+
+}

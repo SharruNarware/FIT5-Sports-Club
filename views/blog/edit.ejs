@@ -1,0 +1,76 @@
+<% layout("/layouts/layout") %>
+
+    <div class="container">
+        <div class="top">
+            <a href="/home/blogs/<%= blog._id %>" class="back-btn">
+                <i class="fa-solid fa-arrow-left"></i>
+                <span>Back to Blog</span>
+            </a>
+
+            <div class="heading">
+                <h1>Edit Your Blog</h1>
+                <p>Update your article and publish the latest version.</p>
+            </div>
+        </div>
+
+        <div class="edit-card">
+            <form action="/home/blogs/<%= blog._id %>?_method=PUT" method="POST"
+                enctype="multipart/form-data">
+                <div class="field">
+                    <label>Title :</label>
+                    <input type="text" name="title" value="<%= blog.title %>" required>
+                </div>
+
+                <div class="field">
+                    <label>Topic :</label>
+                    <input type="text" name="topic" value="<%= blog.topic %>" required>
+                </div>
+
+                <div class="field">
+                    <label>Description :</label>
+                    <textarea name="description" rows="4" required><%= blog.description %></textarea>
+                </div>
+
+                <div class="field">
+                    <label>Featured Image URL</label>
+                    <input type="text" name="imageUrl" value="<%= blog.image %>">
+                </div>
+
+                <div class="field">
+                    <label>Upload New Image</label>
+                    <input type="file" name="imageFile" accept="image/*">
+                </div>
+
+                <div class="field">
+                    <label>Content :</label>
+                    <textarea name="content" id="editor"> <%- blog.content %> </textarea>
+                </div>
+
+                <div class="field">
+                    <label>Tags :</label>
+                    <input type="text" name="tags" value="<%= blog.tags.join(', ') %>">
+                </div>
+
+                <div class="buttons">
+                    <a href="/home/blogs/<%= blog._id %>" 
+                        class="cancel"> Cancel </a>
+                    <button type="submit" class="update"> Update Blog </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+<script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+
+<script>
+    const editor = document.querySelector("#editor");
+
+    if (editor) {
+        ClassicEditor
+            .create(editor)
+            .catch(error => {
+                console.error(error);
+            });
+    }
+</script>

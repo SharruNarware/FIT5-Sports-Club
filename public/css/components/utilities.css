@@ -1,0 +1,31 @@
+.container{
+    width:min(var(--container-width),92%);
+    margin:auto;
+}
+
+.section{
+    padding:110px 0;
+}
+
+.bg-light{
+    background:var(--light-bg);
+}
+
+.bg-white{
+    background:#fff;
+}
+
+.flex{
+
+    display:flex;
+}
+
+.flex-center{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.grid{
+    display:grid;
+}

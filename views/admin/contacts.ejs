@@ -1,0 +1,330 @@
+<% layout("layouts/adminLayout") %>
+
+<div class="admin-contacts">
+
+    <!-- =====================================================
+         PAGE HEADER
+    ====================================================== -->
+    <div class="contacts-page-header">
+
+        <div>
+            <h1>Contact Requests</h1>
+            <p>Manage all inquiries and messages from website visitors</p>
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         STATISTICS
+    ====================================================== -->
+    <div class="contact-stats">
+
+        <div class="contact-stat-card">
+            <div class="stat-icon stat-icon-purple">
+                <i class="fa-regular fa-envelope"></i>
+            </div>
+
+            <div class="stat-content">
+                <span class="stat-label">Total Requests</span>
+                <strong class="stat-number"><%= contacts?.length || 0 %></strong>
+            </div>
+        </div>
+
+
+        <div class="contact-stat-card">
+            <div class="stat-icon stat-icon-green">
+                <i class="fa-solid fa-circle-dot"></i>
+            </div>
+
+            <div class="stat-content">
+                <span class="stat-label">New Requests</span>
+                <strong class="stat-number">0</strong>
+            </div>
+        </div>
+
+
+        <div class="contact-stat-card">
+            <div class="stat-icon stat-icon-blue">
+                <i class="fa-regular fa-eye"></i>
+            </div>
+
+            <div class="stat-content">
+                <span class="stat-label">Read Requests</span>
+                <strong class="stat-number">0</strong>
+            </div>
+        </div>
+
+
+        <div class="contact-stat-card">
+            <div class="stat-icon stat-icon-orange">
+                <i class="fa-regular fa-circle-check"></i>
+            </div>
+
+            <div class="stat-content">
+                <span class="stat-label">Replied</span>
+                <strong class="stat-number">0</strong>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         MAIN CONTACT AREA
+    ====================================================== -->
+    <div class="contacts-workspace">
+
+
+        <!-- =================================================
+             LEFT SIDE — REQUEST LIST
+        ================================================== -->
+        <section class="contacts-list-panel">
+
+            <!-- Filters -->
+            <div class="contacts-filters">
+
+                <div class="contact-search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="text"
+                        id="contactSearch"
+                        placeholder="Search by name, email, subject..."
+                    >
+                </div>
+
+
+                <div class="contact-filter">
+
+                    <select id="contactStatusFilter">
+                        <option value="all">All Status</option>
+                        <option value="new">New</option>
+                        <option value="read">Read</option>
+                        <option value="replied">Replied</option>
+                    </select>
+
+                </div>
+
+
+                <div class="contact-date-filter">
+
+                    <i class="fa-regular fa-calendar"></i>
+
+                    <input
+                        type="text"
+                        id="contactDateFilter"
+                        placeholder="21 Aug 2026 - 27 Aug 2026"
+                        readonly
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- Request Table -->
+            <div class="contacts-table-wrapper">
+
+                <table class="contacts-table">
+
+                    <thead>
+
+                        <tr>
+                            <th>Name & Email</th>
+                            <th>Subject</th>
+                            <th>Message</th>
+                            <th>Status</th>
+                            <th>Date</th>
+                            <th></th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="contactsTableBody">
+
+                        <% if (contacts && contacts.length > 0) { %>
+
+                            <% contacts.forEach((contact, index) => { %>
+
+                                <tr
+                                    class="contact-row <%= index === 0 ? 'active' : '' %>"
+                                    data-contact-id="<%= contact._id %>"
+                                >
+
+                                    <!-- Name -->
+                                    <td>
+
+                                        <div class="contact-person">
+
+                                            <div class="contact-avatar">
+                                                <%= contact.name
+                                                    ? contact.name.charAt(0).toUpperCase()
+                                                    : 'U'
+                                                %>
+                                            </div>
+
+                                            <div class="contact-person-info">
+
+                                                <strong>
+                                                    <%= contact.name || 'Unknown' %>
+                                                </strong>
+
+                                                <span>
+                                                    <%= contact.email || '' %>
+                                                </span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <!-- Subject -->
+                                    <td>
+                                        <div class="contact-subject">
+                                            <%= contact.subject || 'General Inquiry' %>
+                                        </div>
+                                    </td>
+
+
+                                    <!-- Message -->
+                                    <td>
+
+                                        <div class="contact-message-preview">
+                                            <%= contact.message
+                                                ? contact.message.substring(0, 55)
+                                                : ''
+                                            %>
+                                            <%= contact.message && contact.message.length > 55 ? '...' : '' %>
+                                        </div>
+
+                                    </td>
+
+
+                                    <!-- Status -->
+                                    <td>
+
+                                        <%
+                                            const contactStatus = contact.status || "new";
+                                            const contactStatusLabel =
+                                                contactStatus.charAt(0).toUpperCase() +
+                                                contactStatus.slice(1);
+                                        %>
+
+                                        <span class="contact-status status-<%= contactStatus %>">
+                                            <%= contactStatusLabel %>
+                                        </span>
+
+                                    </td>
+
+                                    <!-- Date -->
+                                    <td>
+
+                                        <span class="contact-date">
+
+                                            <%= contact.createdAt
+                                                ? new Date(contact.createdAt).toLocaleDateString(
+                                                    'en-GB',
+                                                    {
+                                                        day: '2-digit',
+                                                        month: 'short',
+                                                        year: 'numeric'
+                                                    }
+                                                )
+                                                : ''
+                                            %>
+
+                                        </span>
+
+                                    </td>
+
+
+                                    <!-- Arrow -->
+                                    <td>
+
+                                        <button
+                                            type="button"
+                                            class="contact-view-btn"
+                                            data-contact-id="<%= contact._id %>"
+                                            aria-label="View contact"
+                                        >
+                                            <i class="fa-solid fa-chevron-right"></i>
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+                            <% }) %>
+
+                        <% } else { %>
+
+                            <tr>
+
+                                <td colspan="6">
+
+                                    <div class="contacts-empty-state">
+
+                                        <div class="empty-icon">
+                                            <i class="fa-regular fa-envelope"></i>
+                                        </div>
+
+                                        <h3>No contact requests</h3>
+
+                                        <p>
+                                            Contact requests from website visitors
+                                            will appear here.
+                                        </p>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+                        <% } %>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <!-- Pagination -->
+            <div class="contacts-pagination">
+
+                <span>
+                    Showing <strong><%= contacts?.length || 0 %></strong>
+                    requests
+                </span>
+
+                <div class="pagination-buttons">
+
+                    <button type="button">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+
+                    <button type="button" class="active">1</button>
+
+                    <button type="button">2</button>
+
+                    <button type="button">3</button>
+
+                    <button type="button">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+         
+        <%- include("contactDetails") %>
+    </div>
+
+</div>

@@ -1,0 +1,151 @@
+
+
+<aside class="admin-sidebar" id="adminSidebar">
+
+    <!-- Admin Brand -->
+    <div class="admin-brand">
+
+        <div class="admin-brand-logo">
+            <img src="/images/logo/logo-light.png" alt="FIT5 Sports Club">
+        </div>
+
+        <div class="admin-brand-text">
+            <h2>Admin Panel</h2>
+            <p>FIT5 Sports Club</p>
+        </div>
+
+        <!-- Mobile Close Button -->
+        <button
+            type="button"
+            class="admin-sidebar-close"
+            id="adminSidebarClose"
+            aria-label="Close sidebar"
+        >
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+    </div>
+
+
+    <!-- Sidebar Navigation -->
+    <nav class="admin-sidebar-nav">
+
+        <a
+            href="/admin"
+            class="admin-nav-item <%= currentUrl === '/admin' ? 'active' : '' %>"
+        >
+            <span class="admin-nav-icon">▣</span>
+            <span>Overview</span>
+        </a>
+
+
+        <a
+            href="/admin/contacts"
+            class="admin-nav-item <%= currentUrl.startsWith('/admin/contacts') ? 'active' : '' %>"
+        >
+            <span class="admin-nav-icon">✉</span>
+            <span>Contact Requests</span>
+        </a>
+
+
+        <a
+            href="/admin/coach-volunteers"
+            class="admin-nav-item <%= currentUrl.startsWith('/admin/coach-volunteers') ? 'active' : '' %>"
+        >
+            <span class="admin-nav-icon">♧</span>
+            <span>Coach/Volunteer Registrations</span>
+        </a>
+
+
+        <a
+            href="/admin/camp-registrations"
+            class="admin-nav-item <%= currentUrl.startsWith('/admin/camp-registrations') ? 'active' : '' %>"
+        >
+            <span class="admin-nav-icon">▤</span>
+            <span>Camp/Training Registrations</span>
+        </a>
+
+
+        <a
+            href="/admin/donations"
+            class="admin-nav-item <%= currentUrl.startsWith('/admin/donations') ? 'active' : '' %>"
+        >
+            <span class="admin-nav-icon">₹</span>
+            <span>Donations</span>
+        </a>
+
+
+        <a
+            href="/admin/blogs"
+            class="admin-nav-item <%= currentUrl.startsWith('/admin/blogs') ? 'active' : '' %>"
+        >
+            <span class="admin-nav-icon">▧</span>
+            <span>Blog Posts</span>
+        </a>
+
+
+        <a
+            href="/admin/applications"
+            class="admin-nav-item <%= currentUrl.startsWith('/admin/applications') ? 'active' : '' %>"
+        >
+            <span class="admin-nav-icon">☷</span>
+            <span>All Applications</span>
+        </a>
+
+    </nav>
+
+
+    <!-- Bottom -->
+    <div class="admin-sidebar-bottom">
+
+        <a href="/home" class="admin-back-site">
+            <span>←</span>
+            <span>Back to Website</span>
+        </a>
+
+    </div>
+
+</aside>
+
+
+<!-- Mobile Overlay -->
+<div
+    class="admin-sidebar-overlay"
+    id="adminSidebarOverlay">
+</div>
+
+<!-- Mobile Header -->
+<div class="admin-mobile-header">
+
+    <button
+        type="button"
+        class="admin-sidebar-toggle"
+        id="adminSidebarToggle"
+        aria-label="Open sidebar">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <div class="admin-mobile-brand">
+
+        <img
+            src="/images/logo/logo-dark.png"
+            alt="FIT5 Sports Club">
+
+        <div>
+            <strong>FIT5 Sports Club</strong>
+            <span>Admin Panel</span>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- Tablet Sidebar Toggle -->
+<button
+    type="button"
+    class="admin-tablet-toggle"
+    aria-label="Open sidebar"
+    aria-expanded="false">
+    <i class="fa-solid fa-bars"></i>
+</button>

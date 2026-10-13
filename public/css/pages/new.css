@@ -1,0 +1,271 @@
+/*=========================================
+        CREATE BLOG HERO
+==========================================*/
+
+.create-hero{
+    width:100%;
+    background:linear-gradient(
+        90deg,
+        #ef5a00 0%,
+        #ee6400 45%,
+        #d97706 100%
+    );
+    min-height:245px;
+    display:flex;
+    align-items:center;
+}
+
+.create-hero-content{
+    width:90%;
+    max-width:900px;
+    margin:0 auto;
+}
+
+
+.create-back{
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+    color:#fff;
+    text-decoration:none;
+    font-size:1rem;
+    font-weight:600;
+    margin-bottom:34px;
+    transition:.25s;
+}
+
+.create-back:hover{
+    opacity:.85;
+}
+
+.create-title-row{
+    display:flex;
+    align-items:flex-start;
+    gap:14px;
+}
+
+
+.create-icon{
+    width:60px;
+    height:60px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+    font-size:2.4rem;
+    flex-shrink:0;
+}
+
+
+.create-heading h1{
+    color:#fff;
+    font-size:2.4rem;
+    font-weight:800;
+    line-height:1.1;
+    margin:0 0 16px;
+}
+
+.create-heading p{
+    color:rgba(255,255,255,.92);
+    font-size:1rem;
+    line-height:1.8;
+    margin:0;
+}
+
+.blog-wrapper{
+    background:#f8fafc;
+    padding-bottom:80px;
+}
+
+/*=========================================
+        FORM CARD
+==========================================*/
+
+.blog-box{
+    width:min(900px,92%);
+    margin:auto;
+    margin-top: 55px;
+    background:#ffffff;
+    border:1px solid #e8e8e8;
+    border-radius:15px;
+    box-shadow:0 10px 3px rgba(0,0,0,.10);
+    position:relative;
+    z-index:5;
+    overflow:hidden;
+}
+
+.blog-box form{
+    padding:38px 36px 30px;
+}
+
+.field{
+    margin-bottom:28px;
+}
+
+
+label{
+    display:block;
+    margin-bottom:10px;
+    color:#000000;
+    font-size:.95rem;
+    font-weight:600;
+}
+
+input,
+textarea{
+    width:100%;
+    padding:15px 18px;
+    background:#ffffff;
+    color:#000000;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:14px;
+    font-size:.95rem;
+    outline:none;
+    transition:.3s;
+}
+
+input:focus,
+textarea:focus{
+    border-color:#00a900;
+    box-shadow:
+    0 0 0 4px rgba(102, 227, 0, 0.329);
+}
+
+.editor-box{
+    margin-top:30px;
+    margin-bottom:30px; 
+}
+
+input::placeholder,
+textarea::placeholder{
+    color:#888;
+}
+
+
+.ck-editor__editable{
+    min-height:250px;
+}
+
+
+.buttons{
+    display:flex;
+    justify-content:space-between;
+    margin-top:20px;
+    gap:25px;
+}
+
+.buttons button{
+    flex:1;
+    padding:15px;
+    font-size:16px;
+    font-weight:600;
+    border-radius:12px;
+    border: none;
+    background-color: rgb(245, 243, 243);
+}
+
+
+.publish{
+    background:linear-gradient(135deg,#f67104,#ff7a1b);
+    color:white;
+    border:none;
+    box-shadow:0 4px 5px rgba(205, 79, 0, 0.664);
+}
+
+.publish:hover{
+    background:#be5200;
+}
+
+.image-row{
+    display:flex;
+    gap:20px;
+    align-items:center;
+}
+
+
+
+/*=========================================
+        WRITING TIPS
+==========================================*/
+
+.writing-tips{
+    width:90%;
+    max-width:900px;
+    margin:40px auto 0;
+    padding:30px 30px;
+    background:#fff7ed;
+    border:1px solid #fed7aa;
+    border-radius:15px;
+}
+
+
+.writing-tips h3{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:1.2rem;
+    font-weight:700;
+    color:#9a3412;
+    margin:0 0 10px;
+}
+
+
+.writing-tips h3 i{
+    color:#ea580c;
+    font-size:1.25rem;
+}
+
+.writing-tips ul{
+    margin:0;
+    padding-left:22px;
+}
+
+
+.writing-tips li{
+    color:#7c2d12;
+    font-size:.9rem;
+    line-height:1.5;
+    margin-bottom:12px;
+    list-style: disc;
+}
+
+.writing-tips li:last-child{
+    margin-bottom:0;
+}
+
+.writing-tips li::marker{
+    color:#ea580c;
+}
+
+.tips-subtitle{
+    margin:0 0 18px;
+    color:#9a3412;
+    font-size:.9rem;
+    line-height:1.7;
+}
+
+
+
+
+@media(max-width:768px){
+
+    .writing-tips{
+
+        width:94%;
+
+        padding:26px 22px;
+    }
+
+    .writing-tips h3{
+
+        font-size:1.2rem;
+    }
+
+    .writing-tips li{
+
+        font-size:.95rem;
+
+        line-height:1.8;
+    }
+
+}

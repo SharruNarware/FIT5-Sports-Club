@@ -1,0 +1,782 @@
+<% layout("/layouts/layout") %>
+
+<!-- =========================================
+     CONTACT HERO
+========================================= -->
+<section class="contact-hero">
+    <div class="contact-hero-overlay"></div>
+    <div class="contact-hero-container">
+
+        <!-- Small Badge -->
+        <div class="contact-badge">
+            <i class="fa-regular fa-message"></i>
+            <span>Get in Touch</span>
+        </div>
+        <!-- Heading -->
+        <h1>
+            Contact Us
+        </h1>
+        <!-- Description -->
+        <p class="contact-hero-description">
+            Have questions? We'd love to hear from you. Reach out and let's
+            start a conversation about your child's sports journey.
+        </p>
+
+        <!-- Buttons -->
+        <div class="contact-hero-buttons">
+            <a href="mailto:info@fit5sportsclub.in"
+               class="contact-hero-btn contact-email-btn">
+                <i class="fa-regular fa-envelope"></i>
+                <span>Email Us</span>
+            </a>
+
+            <a href="/home/register"
+               class="contact-hero-btn contact-register-btn">
+                <i class="fa-solid fa-arrow-right"></i>
+                <span>Register Now</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<!-- =========================================
+     CONTACT STATS
+========================================= -->
+<section class="contact-stats">
+    <div class="contact-stats-container">
+
+        <div class="contact-stat">
+            <h3>24h</h3>
+            <p>Average Response Time</p>
+        </div>
+
+        <div class="contact-stat">
+            <h3>2000+</h3>
+            <p>Happy Families</p>
+        </div>
+
+        <div class="contact-stat">
+            <h3>15+</h3>
+            <p>Sports Programs</p>
+        </div>
+
+        <div class="contact-stat">
+            <h3>100%</h3>
+            <p>Satisfaction</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- =========================================
+     WAYS TO REACH US
+========================================= -->
+<section class="reach-section">
+    <div class="reach-container">
+
+        <!-- Section Heading -->
+        <div class="reach-heading">
+            <span class="reach-badge">
+                Ways to Reach Us
+            </span>
+
+            <h2>We're Here to Help</h2>
+
+            <p>
+                Choose the method that works best for you — we're always happy to
+                <br>
+                connect
+            </p>
+        </div>
+
+        <!-- Contact Cards -->
+        <div class="reach-grid">
+
+            <!-- Email -->
+            <div class="reach-card">
+
+                <div class="reach-icon email-icon">
+                    <i class="fa-regular fa-envelope"></i>
+                </div>
+
+                <h3>Email Us</h3>
+
+                <strong>
+                    info@fit5sportsclub.in
+                </strong>
+
+                <p>
+                    We typically respond within 24 hours
+                </p>
+            </div>
+
+            <!-- Call -->
+            <div class="reach-card">
+
+                <div class="reach-icon call-icon">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+
+                <h3>Call Us</h3>
+
+                <strong>
+                    Available on request
+                </strong>
+
+                <p>
+                    Monday - Saturday, 9:00 AM - 6:00 PM IST
+                </p>
+            </div>
+
+            <!-- Visit -->
+            <div class="reach-card">
+
+                <div class="reach-icon visit-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+
+                <h3>Visit Us</h3>
+
+                <strong>
+                    India
+                </strong>
+
+                <p>
+                    Multiple locations across India
+                </p>
+            </div>
+
+            <!-- Live Chat -->
+            <div class="reach-card">
+
+                <div class="reach-icon chat-icon">
+                    <i class="fa-regular fa-message"></i>
+                </div>
+
+                <h3>Live Chat</h3>
+
+                <strong>
+                    Chat with our team
+                </strong>
+
+                <p>
+                    Quick answers to your questions
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- contact -  form -->
+<section class="contactform-section">
+    <div class="contactform-container">
+
+        <!-- =========================
+             LEFT SIDE
+        ========================== -->
+        <div class="contact-left">
+            <span class="contact-badge">
+                Send a Message
+            </span>
+
+            <h1>Send Us a Message</h1>
+
+            <p class="contact-intro">
+                Fill out the form below and our team will get back to you within
+                24-48 hours. We're here to answer any questions about our
+                programs, camps, or enrollment.
+            </p>
+
+            <!-- form-container -->
+            <div id="contactStateContainer">
+
+                <div class="contact-form-card" id="contactFormCard">
+                    <form id="contactForm" action="/home/contact" method="POST"
+                        novalidate
+                    >
+                        <!-- Name + Phone -->
+                        <div class="form-row">
+
+                            <div class="form-group">
+                                <label for="fullName">
+                                    Full Name <span>*</span>
+                                </label>
+                                <input
+                                    type="text"
+                                    id="fullName"
+                                    name="fullName"
+                                    placeholder="Your full name"
+                                    autocomplete="name"
+                                    maxlength="100"
+                                    required
+                                >
+                                <small class="field-error" id="fullNameError"></small>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="phone">
+                                    Phone Number <span>*</span>
+                                </label>
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    placeholder="+91 XXXXX XXXXX"
+                                    autocomplete="tel"
+                                    maxlength="20"
+                                >
+                                <small class="field-error" id="phoneError"></small>
+                            </div>
+                        </div>
+
+                        
+                        <!-- Email -->
+                        <div class="form-group">
+
+                            <label for="email">
+                                Email Address <span>*</span>
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="your@email.com"
+                                autocomplete="email"
+                                maxlength="150"
+                                required
+                            >
+
+                            <small class="field-error" id="emailError"></small>
+                        </div>
+
+
+                        <!-- Subject -->
+                        <div class="form-group">
+                            <label for="subject">
+                                Subject <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="subject"
+                                name="subject"
+                                placeholder="What is this regarding?"
+                                maxlength="200"
+                                required
+                            >
+
+                            <small class="field-error" id="subjectError"></small>
+                        </div>
+
+
+                        <!-- Message -->
+                        <div class="form-group">
+                            <label for="message">
+                                Message <span>*</span>
+                            </label>
+
+                            <textarea
+                                id="message"
+                                name="message"
+                                placeholder="Tell us more about your inquiry..."
+                                maxlength="5000"
+                                required
+                            ></textarea>
+
+                            <div class="message-footer">
+                                <small class="field-error" id="messageError"></small>
+
+                                <span class="character-count">
+                                    <span id="messageCount">0</span>/5000
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Submit -->
+                        <button type="submit" class="contact-submit-btn" id="contactSubmitBtn">
+                            <span
+                                class="submit-icon"
+                                id="submitIcon"
+                            >
+                                ➤
+                            </span>
+
+                            <span id="submitText">
+                                Send Message
+                            </span>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- ===================================================
+                    SUCCESS STATE
+                ====================================================== -->
+                <div
+                    class="contact-form-card contact-result-card"
+                    id="contactSuccessCard" hidden
+                >
+                    <div class="result-icon result-success-icon">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+
+                    <h2>Thank You!</h2>
+
+                    <p>
+                        Your message has been received.
+                        We'll get back to you within 24-48 hours.
+                    </p>
+                </div>
+
+
+                <!-- =====================================================
+                    ERROR STATE
+                ====================================================== -->
+                <div
+                    class="contact-form-card contact-result-card"
+                    id="contactErrorCard"
+                    hidden
+                >
+                    <div class="result-icon result-error-icon">
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                    </div>
+
+                    <h2>Something Went Wrong</h2>
+
+                    <p>
+                        We couldn't send your message right now.
+                        Please try again.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+            
+        <!-- =========================
+             RIGHT SIDE
+        ========================== -->
+        <div class="contact-right">
+
+            <span class="contact-badge contact-badge-blue">
+                Contact Details
+            </span>
+            <h2>Get in Touch</h2>
+            <p class="contact-intro">
+                Reach out through any of these channels. Our friendly team is
+                ready to help you find the perfect program for your child.
+            </p>
+
+            <!-- Email -->
+            <div class="contact-info-card">
+                <div class="info-icon email-icon">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+
+                <div class="info-content">
+                    <h3>Email Us</h3>
+                    <a href="mailto:info@fit5sportsclub.in">
+                        info@fit5sportsclub.in
+                    </a>
+                    <p>
+                        We typically respond within 24 hours
+                    </p>
+                </div>
+            </div>
+
+            <!-- Phone -->
+            <div class="contact-info-card">
+                <div class="info-icon phone-icon">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+
+                <div class="info-content">
+                    <h3>Call Us</h3>
+                    <strong>Available on request</strong>
+                    <p>
+                        Monday - Saturday, 9:00 AM - 6:00 PM IST
+                    </p>
+                </div>
+            </div>
+
+            <!-- Location -->
+            <div class="contact-info-card">
+                <div class="info-icon location-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+
+                <div class="info-content">
+                    <h3>Location</h3>
+                    <strong>India</strong>
+                    <p>
+                        Multiple locations across India
+                    </p>
+                </div>
+            </div>
+
+            <!-- Office Hours -->
+            <div class="office-hours-card">
+                <div class="office-title">
+                    <div class="office-title-icon">
+                        <i class="fa-regular fa-clock"></i>
+                    </div>
+                    <h3>Office Hours</h3>
+                </div>
+
+                <div class="office-row">
+                    <div>
+                        <span class="calendar-icon"><i class="fa-regular fa-calendar"></i></span>
+                        Monday - Friday
+                    </div>
+
+                    <strong>
+                        9:00 AM - 6:00 PM
+                    </strong>
+                </div>
+
+                <div class="office-row">
+                    <div>
+                        <span class="calendar-icon"><i class="fa-regular fa-calendar"></i></span>
+                        Saturday
+                    </div>
+                    <strong>
+                        9:00 AM - 2:00 PM
+                    </strong>
+                </div>
+
+                <div class="office-row">
+                    <div class="closed-row">
+                        <span class="calendar-icon"><i class="fa-regular fa-calendar"></i></span>
+                        Sunday
+                    </div>
+
+                    <strong class="closed-text">
+                        Closed
+                    </strong>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- =========================================
+     WHAT YOU CAN EXPECT
+========================================= -->
+<section class="contact-expect-section">
+    <div class="contact-expect-container">
+
+        <div class="contact-expect-header">
+
+            <span class="contact-expect-badge">
+                Why Reach Out
+            </span>
+
+            <h2>What You Can Expect</h2>
+
+            <p>
+                When you contact us, you're connecting with a team that genuinely cares
+            </p>
+
+        </div>
+
+
+        <div class="contact-expect-grid">
+
+            <!-- Quick Response -->
+            <div class="contact-expect-card">
+
+                <div class="contact-expect-icon">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+
+                <h3>Quick Response</h3>
+
+                <p>
+                    We reply to all inquiries within 24 hours
+                </p>
+
+            </div>
+
+
+            <!-- Expert Guidance -->
+            <div class="contact-expect-card">
+
+                <div class="contact-expect-icon">
+                    <i class="fa-solid fa-headphones"></i>
+                </div>
+
+                <h3>Expert Guidance</h3>
+
+                <p>
+                    Our team helps you choose the right program
+                </p>
+
+            </div>
+
+
+            <!-- Personal Care -->
+            <div class="contact-expect-card">
+
+                <div class="contact-expect-icon">
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+
+                <h3>Personal Care</h3>
+
+                <p>
+                    Every child gets individualized attention
+                </p>
+
+            </div>
+
+
+            <!-- Family Support -->
+            <div class="contact-expect-card">
+
+                <div class="contact-expect-icon">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+
+                <h3>Family Support</h3>
+
+                <p>
+                    We keep parents informed every step of the way
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+
+<!-- =========================================
+     FAQ SECTION
+========================================= -->
+<section class="contact-faq-section">
+
+    <div class="contact-faq-container">
+
+        <!-- HEADER -->
+        <div class="contact-faq-header">
+
+            <span class="contact-faq-badge">
+                FAQ
+            </span>
+
+            <h2>Frequently Asked Questions</h2>
+
+            <p>
+                Quick answers to the questions we hear most often
+            </p>
+
+        </div>
+
+
+        <!-- FAQ LIST -->
+        <div class="contact-faq-list">
+
+            <!-- FAQ ITEM 1 -->
+            <div class="contact-faq-item active">
+
+                <button class="contact-faq-question" type="button">
+                    <span>
+                        How do I enroll my child in a program?
+                    </span>
+
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+
+                <div class="contact-faq-answer">
+                    <p>
+                        Contact us via email or phone to discuss your interests and goals. We'll help you choose the right program and guide you through the enrollment process. You can also visit our Registration page to get started.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- FAQ ITEM 2 -->
+            <div class="contact-faq-item">
+
+                <button class="contact-faq-question" type="button">
+                    <span>
+                        Are your programs suitable for beginners?
+                    </span>
+
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+
+                <div class="contact-faq-answer">
+                    <p>
+                       Absolutely! We offer programs for all skill levels, from complete beginners to advanced athletes. Our coaches will tailor the training to your child's current fitness level and goals.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- FAQ ITEM 3 -->
+            <div class="contact-faq-item">
+
+                <button class="contact-faq-question" type="button">
+                    <span>
+                        What safety measures do you have in place?
+                    </span>
+
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+
+                <div class="contact-faq-answer">
+                    <p>
+                        Safety is our top priority. We have trained medical staff, comprehensive insurance coverage, 24/7 supervision at residential camps, and all our coaches are certified in first aid and CPR.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- FAQ ITEM 4 -->
+            <div class="contact-faq-item">
+
+                <button class="contact-faq-question" type="button">
+                    <span>
+                        Do you offer programs for children with disabilities?
+                    </span>
+
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+
+                <div class="contact-faq-answer">
+                    <p>
+                        Yes, we have specialized adaptive sports programs designed for individuals with various disabilities. Our trained staff ensure an inclusive, supportive environment for all participants.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- FAQ ITEM 5 -->
+            <div class="contact-faq-item">
+
+                <button class="contact-faq-question" type="button">
+                    <span>
+                        What is the typical duration of your camps?
+                    </span>
+
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+
+                <div class="contact-faq-answer">
+                    <p>
+                        Our residential summer camps range from 1 to 4 weeks. We also offer year-round club training programs with flexible scheduling, including weekend and after-school options.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- FAQ ITEM 6 -->
+            <div class="contact-faq-item">
+
+                <button class="contact-faq-question" type="button">
+                    <span>
+                        Can parents visit during residential camps?
+                    </span>
+
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+
+                <div class="contact-faq-answer">
+                    <p>
+                        Yes! We organize scheduled family visit days during residential camps. We also provide regular updates and photos so parents stay connected with their child's camp experience.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     FINAL CONTACT CTA
+========================================= -->
+<section class="contact-final-cta">
+
+    <div class="contact-final-cta-container">
+
+        <!-- ICON -->
+        <div class="contact-final-cta-icon">
+            <i class="fa-regular fa-star"></i>
+        </div>
+
+
+        <!-- CONTENT -->
+        <h2>Still Have Questions?</h2>
+
+        <p>
+            Don't hesitate to reach out. Our team is ready to help you find
+            the perfect program for your child.
+        </p>
+
+
+        <!-- BUTTONS -->
+        <div class="contact-final-cta-buttons">
+
+            <a href="mailto:info@fit5sportsclub.in"
+               class="contact-final-cta-btn contact-final-email-btn">
+                <i class="fa-regular fa-envelope"></i>
+                <span>Email Us</span>
+
+            </a>
+
+
+            <a href="/home/register"
+               class="contact-final-cta-btn contact-final-register-btn">
+
+                <i class="fa-solid fa-arrow-right"></i>
+                <span>Register Now</span>
+
+            </a>
+
+        </div>
+
+
+        <!-- SOCIAL -->
+        <div class="contact-final-social">
+
+            <span>Follow us:</span>
+
+            <a href="#" aria-label="Facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a href="#" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="#" aria-label="Twitter">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+
+            <a href="#" aria-label="YouTube">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>

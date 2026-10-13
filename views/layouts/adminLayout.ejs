@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIT5 Admin Panel</title>
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+
+    <!-- Admin Sidebar -->
+    <link rel="stylesheet" href="/css/layout/admin-sidebar.css">
+
+    <!-- Admin Dashboard -->
+    <link rel="stylesheet" href="/css/pages/admin-dashboard.css">
+
+    <!-- Admin Contacts -->
+    <link rel="stylesheet" href="/css/pages/admin-contacts.css">
+
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<body>
+
+
+    <!-- Admin Sidebar -->
+    <%- include("../partials/adminSidebar") %>
+
+
+    <!-- Page Content -->
+    <%- body %>
+
+
+    <!-- Admin Sidebar JavaScript -->
+    <script src="/js/admin-sidebar.js"></script>
+    <script src="/js/admin-contact.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,415 @@
+/* =========================================
+   ADMIN LOGIN PAGE
+========================================= */
+
+.admin-login-page {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px 20px;
+
+    box-sizing: border-box;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(124, 58, 237, 0.18),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            rgba(59, 130, 246, 0.18),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #f8f7ff 0%,
+            #eef2ff 50%,
+            #f8faff 100%
+        );
+}
+
+
+/* =========================================
+   LOGIN CARD
+========================================= */
+
+.admin-login-card {
+    position: relative;
+
+    width: 100%;
+    max-width: 440px;
+
+    padding: 48px 42px;
+
+    box-sizing: border-box;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    border: 1px solid rgba(255, 255, 255, 0.8);
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 25px 60px rgba(35, 31, 80, 0.12),
+        0 8px 25px rgba(35, 31, 80, 0.06);
+
+    backdrop-filter: blur(12px);
+
+    overflow: hidden;
+}
+
+
+/* Small gradient line at top */
+
+.admin-login-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background: linear-gradient(
+        90deg,
+        #7c3aed,
+        #6366f1,
+        #2563eb
+    );
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.admin-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.admin-logo img {
+    width: 7.5rem;
+    height: auto;
+
+    object-fit: contain;
+
+    transition: transform 0.3s ease;
+}
+
+.admin-logo img:hover {
+    transform: scale(1.04);
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.admin-login-heading {
+    text-align: center;
+
+    margin-bottom: 34px;
+}
+
+.admin-login-heading h1 {
+    margin: 0 0 8px;
+
+    color: #17213f;
+
+    font-size: 30px;
+    font-weight: 750;
+
+    letter-spacing: -0.5px;
+}
+
+.admin-login-heading p {
+    margin: 0;
+
+    color: #7a8198;
+
+    font-size: 16px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.admin-login-form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: #252b40;
+
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   INPUTS
+========================================= */
+
+.form-group input {
+    width: 100%;
+    height: 50px;
+
+    padding: 0 16px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #dfe3ee;
+
+    border-radius: 11px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    color: #252b40;
+
+    font-size: 14px;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.2s ease;
+}
+
+.form-group input::placeholder {
+    color: #a6acbd;
+}
+
+.form-group input:hover {
+    border-color: #c8cde0;
+}
+
+.form-group input:focus {
+    border-color: #7067e8;
+
+    box-shadow:
+        0 0 0 4px rgba(112, 103, 232, 0.10),
+        0 5px 15px rgba(112, 103, 232, 0.06);
+}
+
+
+/* =========================================
+   PASSWORD
+========================================= */
+
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper input {
+    padding-right: 52px;
+}
+
+.password-toggle {
+    position: absolute;
+
+    top: 50%;
+    right: 13px;
+
+    transform: translateY(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 34px;
+    height: 34px;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: transparent;
+
+    color: #777e92;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    opacity: 0.75;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.password-toggle:hover {
+    background: #f0efff;
+
+    color: #635bdb;
+
+    opacity: 1;
+}
+
+
+/* =========================================
+   ERROR MESSAGE
+========================================= */
+
+.login-error {
+    margin-bottom: 20px;
+
+    padding: 12px 14px;
+
+    border: 1px solid #f0c7c7;
+
+    border-radius: 10px;
+
+    background: #fff3f3;
+
+    color: #c43d3d;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   LOGIN BUTTON
+========================================= */
+
+.admin-login-button {
+    position: relative;
+
+    width: 100%;
+    height: 50px;
+
+    margin-top: 6px;
+
+    border: none;
+
+    border-radius: 11px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7c3aed 0%,
+            #6366f1 50%,
+            #3b82f6 100%
+        );
+
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 650;
+
+    letter-spacing: 0.2px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 22px rgba(99, 102, 241, 0.25);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        filter 0.25s ease;
+}
+
+.admin-login-button:hover {
+    transform: translateY(-2px);
+
+    filter: brightness(1.04);
+
+    box-shadow:
+        0 14px 28px rgba(99, 102, 241, 0.32);
+}
+
+.admin-login-button:active {
+    transform: translateY(0);
+
+    box-shadow:
+        0 7px 15px rgba(99, 102, 241, 0.22);
+}
+
+
+/* =========================================
+   BACK TO WEBSITE
+========================================= */
+
+.back-to-website {
+    display: block;
+
+    margin-top: 26px;
+
+    text-align: center;
+
+    color: #625bd7;
+
+    font-size: 14px;
+    font-weight: 550;
+
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.back-to-website:hover {
+    color: #4338a8;
+
+    text-decoration: none;
+
+    transform: translateX(-2px);
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .admin-login-page {
+        min-height: 100vh;
+
+        padding: 25px 15px;
+    }
+
+    .admin-login-card {
+        padding: 40px 25px;
+
+        border-radius: 20px;
+    }
+
+    .admin-login-heading h1 {
+        font-size: 26px;
+    }
+
+    .admin-logo img {
+        width: 75px;
+    }
+
+}

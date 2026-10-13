@@ -1,0 +1,2854 @@
+/* =========================================================
+   OUR TEAM — HERO
+   ========================================================= */
+
+.team-hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 560px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background:
+        linear-gradient(
+            175deg,
+            #14b2a7 0%,
+            #048fae 48%,
+            #3267da 100%
+        );
+}
+
+/* subtle background dots */
+.team-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        radial-gradient(
+            rgba(255, 255, 255, 0.18) 1px,
+            transparent 1px
+        );
+
+    background-size: 38px 38px;
+    opacity: 0.75;
+    pointer-events: none;
+}
+
+.team-hero-content {
+    position: relative;
+    z-index: 1;
+    width: min(1300px, calc(100% - 30px));
+    margin: 0 auto;
+    padding: 85px 0 78px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* ---------- Badge ---------- */
+.team-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 2px 13px;
+    border: 1px solid rgba(255, 255, 255, 0.42);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 34px;
+}
+
+.team-hero-badge i {
+    font-size: 13px;
+}
+
+
+/* ---------- Heading ---------- */
+
+.team-hero h1 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: clamp(3.5rem, 5vw, 4.5rem);
+    line-height: 1.05;
+    font-weight: 600;
+
+    letter-spacing: -1.5px;
+
+    margin-bottom: 25px;
+}
+
+
+/* ---------- Description ---------- */
+
+.team-hero p {
+    max-width: 930px;
+
+    margin: 0 auto;
+
+    color: #ffffff;
+
+    font-size: clamp(1.45rem, 1.9vw, 1.75rem);
+    line-height: 1.45;
+    font-weight: 500;
+}
+
+
+/* ---------- Buttons ---------- */
+
+.team-hero-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 64px;
+}
+
+.team-btn {
+    min-width: 222px;
+    height: 44px;
+
+    padding: 0 25px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    border-radius: 6px;
+
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.team-btn:hover {
+    transform: translateY(-2px);
+}
+
+.team-btn i {
+    font-size: 18px;
+}
+
+
+/* White button */
+
+.team-btn-primary {
+    background: #ffffff;
+    color: #079f96;
+
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.14);
+}
+
+.team-btn-primary:hover {
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
+}
+
+
+/* Outline button */
+
+.team-btn-outline {
+    background: transparent;
+    color: #ffffff;
+
+    border: 2px solid rgba(255, 255, 255, 0.9);
+}
+
+.team-btn-outline:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+
+/* =========================================================
+   OUR TEAM — STATS
+   ========================================================= */
+
+.team-stats {
+    position: relative;
+
+    background: linear-gradient(
+        105deg,
+        #109f91 0%,
+        #099bb2 50%,
+        #1298b9 100%
+    );
+
+    color: #ffffff;
+}
+
+.team-stats-container {
+    width: min(1450px, calc(100% - 26px));
+    margin: 0 auto;
+
+    min-height: 185px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    text-align: center;
+}
+
+.team-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.team-stat strong {
+    display: block;
+
+    color: #ffffff;
+
+    font-size: clamp(3.2rem, 3.5vw, 3.55rem);
+    line-height: 1;
+
+    font-weight: 600;
+
+    margin-bottom: 7px;
+}
+
+.team-stat span {
+    color: #ffffff;
+
+    font-size: 1.25rem;
+    line-height: 1.3;
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .team-hero {
+        min-height: 500px;
+    }
+
+    .team-hero-content {
+        padding: 75px 0 65px;
+    }
+
+    .team-hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .team-hero p {
+        max-width: 700px;
+        font-size: 1.2rem;
+    }
+
+    .team-stats-container {
+        min-height: 145px;
+    }
+
+    .team-stat strong {
+        font-size: 2.7rem;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .team-hero {
+        min-height: auto;
+    }
+
+    .team-hero-content {
+        width: calc(100% - 30px);
+        padding: 65px 0 55px;
+    }
+
+    .team-hero-badge {
+        font-size: 12px;
+        padding: 5px 11px;
+        margin-bottom: 20px;
+    }
+
+    .team-hero h1 {
+        font-size: 2.8rem;
+        letter-spacing: -0.8px;
+        margin-bottom: 18px;
+    }
+
+    .team-hero p {
+        font-size: 1.05rem;
+        line-height: 1.5;
+    }
+
+    .team-hero-actions {
+        width: 100%;
+
+        flex-direction: column;
+
+        gap: 12px;
+        margin-top: 28px;
+    }
+
+    .team-btn {
+        width: min(100%, 280px);
+        min-width: 0;
+    }
+
+
+    /* Stats become 2 × 2 */
+
+    .team-stats-container {
+        width: 100%;
+
+        min-height: auto;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        row-gap: 30px;
+
+        padding: 32px 12px;
+    }
+
+    .team-stat strong {
+        font-size: 2.25rem;
+    }
+
+    .team-stat span {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+
+/* =========================================================
+   LEADERSHIP TEAM
+   ========================================================= */
+
+.leadership-section {
+    background: #ffffff;
+    padding: 105px 0 95px;
+}
+
+.leadership-container {
+    width: min(1605px, calc(100% - 30px));
+    margin: 0 auto;
+}
+
+
+/* ---------- Header ---------- */
+
+.leadership-header {
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto 62px;
+}
+
+.leadership-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 5px 14px;
+
+    border-radius: 7px;
+
+    background: #dff8f5;
+    color: #079f96;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    margin-bottom: 22px;
+
+    box-shadow: 0 2px 7px rgba(7, 159, 150, 0.08);
+}
+
+.leadership-header h2 {
+    margin: 0 0 20px;
+
+    color: #0a0a0a;
+
+    font-size: clamp(2.5rem, 3vw, 3.8rem);
+    line-height: 1.15;
+    font-weight: 600;
+
+    letter-spacing: -0.8px;
+}
+
+.leadership-header p {
+    max-width: 820px;
+    margin: 0 auto;
+
+    color: #3c5874;
+
+    font-size: 1.35rem;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+
+/* ---------- Cards Grid ---------- */
+
+.leadership-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 44px;
+}
+
+
+/* ---------- Individual Card ---------- */
+
+.leader-card {
+    position: relative;
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border-radius: 12px;
+
+    min-height: 450px;
+
+    box-shadow:
+        0 10px 24px rgba(15, 23, 42, 0.10),
+        0 2px 7px rgba(15, 23, 42, 0.05);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.leader-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 16px 30px rgba(15, 23, 42, 0.13),
+        0 3px 9px rgba(15, 23, 42, 0.06);
+}
+
+
+/* ---------- Teal top line ---------- */
+
+.leader-card-top {
+    height: 9px;
+    width: 100%;
+
+    background: linear-gradient(
+        90deg,
+        #11b5a7 0%,
+        #0bb0d0 100%
+    );
+}
+
+
+/* ---------- Card Content ---------- */
+
+.leader-content {
+    min-height: 431px;
+
+    padding: 31px 35px 29px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+}
+
+
+/* ---------- Profile Image ---------- */
+
+.leader-image {
+    width: 145px;
+    height: 145px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 5px solid #c9f5ef;
+
+    display: block;
+
+    margin-bottom: 19px;
+
+    box-shadow:
+        0 4px 12px rgba(15, 23, 42, 0.08);
+}
+
+
+/* ---------- Name ---------- */
+
+.leader-content h3 {
+    margin: 0 0 5px;
+
+    color: #000000;
+
+    font-size: 1.4rem;
+    line-height: 1.25;
+    font-weight: 600;
+}
+
+
+/* ---------- Role ---------- */
+
+.leader-role {
+    color: #079f96;
+
+    font-size: 1.15rem;
+    line-height: 1.3;
+    font-weight: 600;
+
+    margin-bottom: 20px;
+}
+
+
+/* ---------- Description ---------- */
+
+.leader-description {
+    max-width: 410px;
+
+    margin: 0 0 25px;
+
+    color: #6e7173;
+
+    font-size: 1.1rem;
+    line-height: 1.5;
+    font-weight: 200;
+}
+
+
+/* ---------- Experience Badge ---------- */
+
+.leader-experience {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 4px 11px;
+
+    border-radius: 7px;
+
+    background: #eeffff;
+    color: #05867d;
+    box-shadow: 1px 4px 4px rgba(61, 68, 66, 0.18);
+    font-size: 0.95rem;
+    line-height: 1.3;
+    font-weight: 545;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+}
+
+
+/* ---------- Specialization ---------- */
+.leader-specialization {
+    margin: 0;
+
+    color: #718096;
+
+    font-size: 1.07rem;
+    line-height: 1.4;
+
+    font-style: italic;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+@media (max-width: 1200px) {
+
+    .leadership-section {
+        padding: 80px 0 75px;
+    }
+
+    .leadership-container {
+        width: calc(100% - 36px);
+    }
+
+    .leadership-header {
+        margin-bottom: 48px;
+    }
+
+    .leadership-header h2 {
+        font-size: 2.5rem;
+    }
+
+    .leadership-header p {
+        font-size: 1.1rem;
+    }
+
+    .leadership-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .leader-card {
+        min-height: 410px;
+    }
+
+    .leader-content {
+        padding: 28px 25px;
+    }
+
+    .leader-image {
+        width: 135px;
+        height: 135px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .leadership-section {
+        padding: 65px 0 60px;
+    }
+
+    .leadership-container {
+        width: calc(100% - 40px);
+    }
+
+    .leadership-header {
+        margin-bottom: 38px;
+    }
+
+    .leadership-badge {
+        font-size: 14px;
+        padding: 5px 12px;
+        margin-bottom: 18px;
+    }
+
+    .leadership-header h2 {
+        font-size: 2.2rem;
+        margin-bottom: 14px;
+    }
+
+    .leadership-header p {
+        font-size: 1.25rem;
+        line-height: 1.5;
+    }
+
+    .leadership-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .leader-card {
+        min-height: auto;
+    }
+
+    .leader-content {
+        min-height: 0;
+        padding: 27px 22px 28px;
+    }
+
+    .leader-image {
+        width: 130px;
+        height: 130px;
+
+        margin-bottom: 16px;
+    }
+
+    .leader-content h3 {
+        font-size: 1.25rem;
+    }
+
+    .leader-role {
+        font-size: 1.02rem;
+    }
+
+    .leader-description {
+        font-size: 0.99rem;
+        max-width: 330px;
+    }
+
+    .leader-specialization {
+        font-size: 0.995rem;
+    }
+}
+
+
+
+
+/* =========================================================
+   OUR TEAM VALUES
+   ========================================================= */
+.team-values-section {
+    background: #f8fafc;
+    padding: 95px 0 95px;
+}
+
+.team-values-container {
+    width: min(1555px, calc(100% - 28px));
+    margin: 0 auto;
+}
+
+
+/* ---------- Common Section Header ---------- */
+
+.team-section-header {
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto 60px;
+}
+
+.team-section-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 5px 13px;
+    border-radius: 7px;
+    background: #d9f8f5;
+    color: #079f96;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 7px rgba(7, 159, 150, 0.08);
+}
+
+.team-section-header h2 {
+    margin: 0 0 18px;
+    color: #071a35;
+    font-size: clamp(2.4rem, 3.2vw, 3.5rem);
+    line-height: 1.15;
+    font-weight: 600;
+    letter-spacing: -0.8px;
+}
+
+.team-section-header p {
+    margin: 0 auto;
+    color: #405a75;
+    font-size: 1.55rem;
+    line-height: 1.5;
+}
+
+
+/* ---------- Values Grid ---------- */
+.team-values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+
+/* ---------- Value Card ---------- */
+.team-value-card {
+    min-height: 230px;
+    padding: 28px 25px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow:
+        0 9px 22px rgba(15, 23, 42, 0.10),
+        0 2px 6px rgba(15, 23, 42, 0.14);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.team-value-card:hover {
+    transform: translateY(-8px);
+    box-shadow:
+        0 14px 28px rgba(15, 23, 42, 0.13),
+        0 3px 8px rgba(15, 23, 42, 0.12);
+}
+
+
+/* ---------- Value Icons ---------- */
+.team-value-icon {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    color: #ffffff;
+    font-size: 30px;
+    margin-bottom: 25px;
+    box-shadow:
+        0 6px 13px rgba(15, 23, 42, 0.12);
+}
+
+.team-value-icon.passion {
+    background: linear-gradient(135deg, #f43f73, #ec3c8b);
+}
+
+.team-value-icon.safety {
+    background: linear-gradient(135deg, #397cf0, #08abc1);
+}
+
+.team-value-icon.expertise {
+    background: linear-gradient(135deg, #9650ed, #8754ef);
+}
+
+.team-value-icon.care {
+    background: linear-gradient(135deg, #ffab00, #ff7b00);
+}
+
+
+/* ---------- Value Text ---------- */
+.team-value-card h3 {
+    margin: 0 0 13px;
+    color: #030d1a;
+    font-size: 1.4rem;
+    line-height: 1.25;
+    font-weight: 600;
+}
+
+.team-value-card p {
+    max-width: 300px;
+    margin: 0;
+    color: #48627c;
+    font-size: 1.05rem;
+    line-height: 1.45;
+}
+
+
+/* =========================================================
+   PROFESSIONAL COACHING STAFF
+   ========================================================= */
+
+.coaching-section {
+    background: #f8fafc;
+    padding: 95px 0 105px;
+}
+
+.coaching-container {
+    width: min(1555px, calc(100% - 28px));
+    margin: 0 auto;
+}
+
+.coaching-header {
+    margin-bottom: 60px;
+}
+
+.coaching-badge {
+    margin-bottom: 20px;
+}
+
+
+/* ---------- Coaching Grid ---------- */
+
+.coaching-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    column-gap: 25px;
+    row-gap: 30px;
+}
+
+
+/* ---------- Coach Card ---------- */
+
+.coach-card {
+    min-height: 188px;
+
+    padding: 25px 25px;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 17px;
+
+    background: #ffffff;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 9px 22px rgba(15, 23, 42, 0.10),
+        0 2px 6px rgba(15, 23, 42, 0.04);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.coach-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 14px 28px rgba(15, 23, 42, 0.13),
+        0 3px 8px rgba(15, 23, 42, 0.05);
+}
+
+
+/* ---------- Coach Icon ---------- */
+
+.coach-icon {
+    flex: 0 0 68px;
+
+    width: 72px;
+    height: 72px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: linear-gradient(
+        135deg,
+        #0fb1a9,
+        #06c7e9
+    );
+
+    color: #faf6f6;
+
+    font-size: 35px;
+
+    box-shadow:
+        0 6px 13px rgba(208, 209, 212, 0.02);
+}
+
+
+/* ---------- Coach Information ---------- */
+
+.coach-info {
+    min-width: 0;
+}
+
+.coach-info h3 {
+    margin: 1px 0 7px;
+
+    color: #071a35;
+
+    font-size: 1.35rem;
+    line-height: 1.54;
+    font-weight: 600;
+}
+
+.coach-info h4 {
+    margin: 0 0 10px;
+
+    color: #079f96;
+
+    font-size: 1.2rem;
+    line-height: 1.35;
+    font-weight: 400;
+}
+
+.coach-info p {
+    margin: 0 0 7px;
+    color: #5e748c;
+    font-size: 1.19rem;
+    line-height: 1.35;
+}
+
+.coach-info span {
+    display: block;
+
+    color: #6f7f92;
+
+    font-size: 1rem;
+    line-height: 1.35;
+
+    font-style: italic;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+    .team-values-section {
+        padding: 80px 0 75px;
+    }
+
+    .team-values-container,
+    .coaching-container {
+        width: calc(100% - 40px);
+    }
+
+    .team-section-header {
+        margin-bottom: 48px;
+    }
+
+    .team-section-header h2 {
+        font-size: 2.5rem;
+    }
+
+    .team-section-header p {
+        font-size: 1.3rem;
+    }
+
+
+    /* Values → 2 columns */
+
+    .team-values-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px;
+    }
+
+
+    /* Coaching → 2 columns */
+    .coaching-section {
+        padding: 75px 0 80px;
+    }
+
+    .coaching-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px;
+    }
+
+    .coach-card {
+        padding: 23px 21px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+    .team-values-section {
+        padding: 65px 0 60px;
+    }
+
+    .team-values-container,
+    .coaching-container {
+        width: calc(100% - 40px);
+    }
+
+    .team-section-header {
+        margin-bottom: 38px;
+    }
+
+    .team-section-badge {
+        font-size: 14px;
+        padding: 5px 11px;
+        margin-bottom: 20px;
+    }
+
+    .team-section-header h2 {
+        font-size: 2.2rem;
+        margin-bottom: 14px;
+    }
+
+    .team-section-header p {
+        font-size: 1.25rem;
+        line-height: 1.5;
+    }
+
+
+    /* Values → single column */
+    .team-values-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .team-value-card {
+        min-height: 190px;
+        padding: 24px 20px;
+    }
+
+
+    /* Coaching → single column */
+    .coaching-section {
+        padding: 65px 0 70px;
+    }
+
+    .coaching-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-top: 10px;
+    }
+
+    .coach-card {
+        min-height: 145px;
+        padding: 22px 19px;
+        gap: 20px;
+    }
+
+    .coach-icon {
+        flex-basis: 62px;
+        width: 65px;
+        height: 65px;
+        font-size: 30px;
+    }
+
+    .coach-info h3 {
+        font-size: 1.3rem;
+    }
+
+    .coach-info h4 {
+        font-size: 1.1rem;
+    }
+
+    .coach-info p {
+        font-size: 0.99rem;
+    }
+
+    .coach-info span {
+        font-size: 0.88rem;
+    }
+}
+
+
+
+
+
+/* =========================================================
+   OUR CERTIFICATIONS
+   ========================================================= */
+
+.certifications-section {
+    background: #effdfc;
+    padding: 95px 0 105px;
+}
+
+.certifications-container {
+    width: min(1305px, calc(100% - 30px));
+    margin: 0 auto;
+}
+
+
+/* ---------- Header ---------- */
+.certifications-header {
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto 52px;
+}
+
+.certifications-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 5px 13px;
+
+    border-radius: 7px;
+
+    background: #d8f8f7;
+    color: #078ea5;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    margin-bottom: 20px;
+
+    box-shadow: 0 2px 7px rgba(7, 142, 165, 0.10);
+}
+
+.certifications-header h2 {
+    margin: 0 0 18px;
+    color: #071a35;
+    font-size: clamp(2.4rem, 3.2vw, 3.5rem);
+    line-height: 1.15;
+    font-weight: 600;
+    letter-spacing: -0.8px;
+}
+
+.certifications-header p {
+    margin: 0 auto;
+    color: #405a75;
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+
+
+/* ---------- Certification Grid ---------- */
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px 22px;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+
+/* ---------- Certification Card ---------- */
+.certification-card {
+    min-height: 170px;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow:
+        0 7px 16px rgba(15, 23, 42, 0.09),
+        0 2px 5px rgba(15, 23, 42, 0.14);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.certification-card:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        0 11px 22px rgba(15, 23, 42, 0.12),
+        0 3px 7px rgba(15, 23, 42, 0.05);
+}
+
+
+/* ---------- Icon ---------- */
+.certification-icons {
+    width: 62px;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    border-radius: 12px;
+    background: linear-gradient(
+        135deg,
+        #15b9ae,
+        #087b78
+    );
+    color: #ffffff;
+    font-size: 28px;
+    box-shadow:
+        0 5px 11px rgba(8, 175, 208, 0.18);
+}
+
+
+/* ---------- Card Text ---------- */
+.certification-card h3 {
+    margin: 0;
+    color: #10243e;
+    font-size: 1.15rem;
+    line-height: 1.3;
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+    .certifications-section {
+        padding: 80px 0 75px;
+    }
+
+    .certifications-container {
+        width: calc(100% - 46px);
+    }
+
+    .certifications-header {
+        margin-bottom: 45px;
+    }
+
+    .certifications-header h2 {
+        font-size: 2.5rem;
+    }
+
+    .certifications-header p {
+        font-size: 1.1rem;
+    }
+
+    .certifications-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        max-width: 700px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .certifications-section {
+        padding: 65px 0 60px;
+    }
+
+    .certifications-container {
+        width: calc(100% - 30px);
+    }
+
+    .certifications-header {
+        margin-bottom: 35px;
+    }
+
+    .certifications-badge {
+        font-size: 15px;
+        padding: 5px 11px;
+        margin-bottom: 17px;
+    }
+
+    .certifications-header h2 {
+        font-size: 2.1rem;
+        margin-bottom: 14px;
+    }
+
+    .certifications-header p {
+        font-size: 1.15rem;
+        line-height: 1.5;
+    }
+
+    .certifications-grid {
+       grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        max-width: 520px;
+    }
+
+    .certification-card {
+        min-height: 125px;
+        padding: 20px 15px;
+    }
+
+    .certification-icon {
+        width: 45px;
+        height: 45px;
+        margin-bottom: 13px;
+        font-size: 22px;
+    }
+
+    .certification-card h3 {
+        font-size: 0.95rem;
+    }
+
+}
+
+
+
+
+
+/* =========================================================
+   SUPPORT & CARE TEAM
+   ========================================================= */
+
+.support-care-section {
+    background: #ffffff;
+    padding: 95px 0 105px;
+}
+
+.support-care-container {
+    width: min(1505px, calc(100% - 30px));
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.support-care-header {
+    text-align: center;
+    max-width: 1250px;
+    margin: 0 auto 60px;
+}
+
+.support-care-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 5px 13px;
+
+    background: #d9f8f6;
+    color: #078da3;
+
+    border-radius: 7px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    margin-bottom: 20px;
+
+    box-shadow: 0 2px 7px rgba(7, 142, 165, 0.10);
+}
+
+.support-care-header h2 {
+    margin: 0 0 18px;
+
+    color: #071a35;
+
+    font-size: clamp(2.35rem, 3.2vw, 3.4rem);
+    line-height: 1.15;
+    font-weight: 600;
+    letter-spacing: -0.8px;
+}
+
+.support-care-header p {
+    margin: 0;
+    color: #405a75;
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   CARDS GRID
+   ========================================================= */
+.support-care-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 30px;
+    width: 100%;
+}
+
+
+/* =========================================================
+   CARD
+   ========================================================= */
+.support-care-card {
+    min-height: 235px;
+    padding: 25px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    border-radius: 11px;
+
+    box-shadow:
+        0 8px 18px rgba(15, 23, 42, 0.09),
+        0 2px 5px rgba(15, 23, 42, 0.04);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.support-care-card:hover {
+    transform: translateY(-8px);
+    box-shadow:
+        0 12px 24px rgba(15, 23, 42, 0.12),
+        0 3px 7px rgba(15, 23, 42, 0.05);
+}
+
+
+/* =========================================================
+   ICON
+   ========================================================= */
+.support-care-icon {
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 19px;
+
+    border-radius: 15px;
+
+    color: #ffffff;
+
+    font-size: 30px;
+
+    box-shadow:
+        0 6px 12px rgba(15, 23, 42, 0.14);
+}
+
+
+/* Individual reference colors */
+
+.medical-icon {
+    background: linear-gradient(
+        125deg,
+        #ee1f4c,
+        #fc7391
+    );
+}
+
+.counselors-icon {
+    background: linear-gradient(
+        120deg,
+        #648ffc,
+        #3e4acb
+    );
+}
+
+.therapists-icon {
+    background: linear-gradient(
+        120deg,
+        #12bfa0,
+        #07796e
+    );
+}
+
+.staff-icon {
+    background: linear-gradient(
+        120deg,
+        #ffbd5a,
+        #f57a00
+    );
+}
+
+
+/* =========================================================
+   CARD TEXT
+   ========================================================= */
+.support-care-card h3 {
+    margin: 0 0 12px;
+    color: #071a35;
+    font-size: 1.42rem;
+    line-height: 1.45;
+    font-weight: 600;
+}
+
+.support-care-card p {
+    margin: 0;
+    color: #405a75;
+    font-size: 1.3rem;
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+@media (max-width: 1200px) {
+
+    .support-care-section {
+        padding: 80px 0 70px;
+    }
+
+    .support-care-container {
+        width: calc(100% - 36px);
+    }
+
+    .support-care-header {
+        margin-bottom: 45px;
+    }
+
+    .support-care-header h2 {
+        font-size: 2.5rem;
+    }
+
+    .support-care-header p {
+        font-size: 1.1rem;
+    }
+
+    .support-care-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .support-care-card {
+        min-height: 190px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .support-care-section {
+        padding: 65px 0 60px;
+    }
+
+    .support-care-container {
+        width: calc(100% - 30px);
+    }
+
+    .support-care-header {
+        margin-bottom: 35px;
+    }
+
+    .support-care-badge {
+        font-size: 15px;
+        padding: 5px 11px;
+        margin-bottom: 17px;
+    }
+
+    .support-care-header h2 {
+        font-size: 2.1rem;
+        letter-spacing: -0.5px;
+        margin-bottom: 14px;
+    }
+
+    .support-care-header p {
+        font-size: 1.3rem;
+        line-height: 1.5;
+    }
+
+    .support-care-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px 16px;
+    }
+
+    .support-care-card {
+        min-height: 175px;
+        padding: 22px 15px;
+    }
+
+    .support-care-icon {
+        width: 55px;
+        height: 55px;
+
+        margin-bottom: 16px;
+
+        border-radius: 14px;
+
+        font-size: 22px;
+    }
+
+    .support-care-card h3 {
+        font-size: 1.1rem;
+        margin-bottom: 9px;
+    }
+
+    .support-care-card p {
+        font-size: 1rem;
+    }
+
+}
+
+
+
+
+
+
+
+/* =========================================================
+   OUR TRAINING PHILOSOPHY
+   ========================================================= */
+
+.training-philosophy-section {
+    background: #f6f6f8;
+    padding: 95px 0 105px;
+}
+
+.training-philosophy-container {
+    width: min(1505px, calc(100% - 30px));
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.training-philosophy-header {
+    max-width: 1000px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.training-philosophy-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 5px 13px;
+
+    background: #d8f8f5;
+    color: #078d9f;
+
+    border-radius: 7px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    margin-bottom: 20px;
+
+    box-shadow: 0 2px 7px rgba(7, 142, 165, 0.10);
+}
+
+.training-philosophy-header h2 {
+    margin: 0 0 18px;
+
+    color: #071a35;
+
+    font-size: clamp(2.35rem, 3.2vw, 3.4rem);
+    line-height: 1.15;
+
+    font-weight: 600;
+
+    letter-spacing: -0.8px;
+}
+
+.training-philosophy-header p {
+    margin: 0;
+
+    color: #405a75;
+
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   CARDS GRID
+   ========================================================= */
+.training-philosophy-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 30px;
+}
+
+
+/* =========================================================
+   CARD
+   ========================================================= */
+.training-philosophy-card {
+    min-height: 280px;
+
+    padding: 27px 25px 24px;
+
+    background: #ffffff;
+
+    border-radius: 11px;
+
+    box-shadow:
+        0 8px 18px rgba(15, 23, 42, 0.09),
+        0 2px 5px rgba(15, 23, 42, 0.04);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.training-philosophy-card:hover {
+    transform: translateY(-3px);
+    box-shadow:
+        0 12px 24px rgba(15, 23, 42, 0.12),
+        0 3px 7px rgba(15, 23, 42, 0.05);
+}
+
+
+/* =========================================================
+   ICON
+   ========================================================= */
+.training-philosophy-icon {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 21px;
+    border-radius: 15px;
+    color: #ffffff;
+    font-size: 30px;
+    box-shadow:
+        0 6px 12px rgba(15, 23, 42, 0.13);
+}
+
+
+/* Individual icon colors */
+.child-first-icon {
+    background: linear-gradient(
+        120deg,
+        #f97e32,
+        #933003
+    );
+}
+
+.goal-icon {
+    background: linear-gradient(
+        120deg,
+        #71c06f,
+        #034f0b
+    );
+}
+
+.positive-icon {
+    background: linear-gradient(
+        120deg,
+        #da7eca,
+        #310429
+    );
+}
+
+.adaptive-icon {
+    background: linear-gradient(
+        120deg,
+        #5c86f0,
+        #030d69
+    );
+}
+
+
+/* =========================================================
+   CARD TEXT
+   ========================================================= */
+
+.training-philosophy-card h3 {
+    margin: 0 0 12px;
+    color: #071a35;
+    font-size: 1.25rem;
+    line-height: 1.25;
+    font-weight: 700;
+}
+
+.training-philosophy-card p {
+    margin: 0;
+
+    color: #405a75;
+
+    font-size: 1.05rem;
+    line-height: 1.55;
+
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+    .training-philosophy-section {
+        padding: 80px 0 70px;
+    }
+
+    .training-philosophy-container {
+        width: calc(100% - 36px);
+    }
+
+    .training-philosophy-header {
+        margin-bottom: 45px;
+    }
+
+    .training-philosophy-header h2 {
+        font-size: 2.5rem;
+    }
+
+    .training-philosophy-header p {
+        font-size: 1.1rem;
+    }
+
+    .training-philosophy-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .training-philosophy-card {
+        min-height: 235px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .training-philosophy-section {
+        padding: 65px 0 60px;
+    }
+
+    .training-philosophy-container {
+        width: calc(100% - 30px);
+    }
+
+    .training-philosophy-header {
+        margin-bottom: 35px;
+    }
+
+    .training-philosophy-badge {
+        font-size: 15px;
+        padding: 5px 11px;
+        margin-bottom: 17px;
+    }
+
+    .training-philosophy-header h2 {
+        font-size: 2.1rem;
+        letter-spacing: -0.5px;
+        margin-bottom: 14px;
+    }
+
+    .training-philosophy-header p {
+        font-size: 1.3rem;
+        line-height: 1.5;
+    }
+
+    .training-philosophy-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .training-philosophy-card {
+        min-height: auto;
+        padding: 23px 20px;
+    }
+
+    .training-philosophy-icon {
+        width: 60px;
+        height: 60px;
+
+        margin-bottom: 18px;
+
+        border-radius: 14px;
+
+        font-size: 28px;
+    }
+
+    .training-philosophy-card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 9px;
+    }
+
+    .training-philosophy-card p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+}
+
+
+
+
+
+/* =========================================================
+   CONTINUOUS LEARNING & DEVELOPMENT
+   ========================================================= */
+.continuous-learning-section {
+    background: #ffffff;
+    padding: 95px 0 105px;
+}
+
+.continuous-learning-container {
+    width: min(1505px, calc(100% - 30px));
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+.continuous-learning-header {
+    max-width: 1000px;
+    margin: 0 auto 58px;
+    text-align: center;
+}
+
+.continuous-learning-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 13px;
+    background: #d7f8f5;
+    color: #078b9c;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 7px rgba(7, 142, 165, 0.10);
+}
+
+.continuous-learning-header h2 {
+    margin: 0 0 18px;
+    color: #071a35;
+    font-size: clamp(2.3rem, 3.2vw, 3.2rem);
+    line-height: 1.15;
+    font-weight: 600;
+    letter-spacing: -0.7px;
+}
+
+.continuous-learning-header p {
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #405a75;
+    font-size: 1.45rem;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   GRID
+   ========================================================= */
+.continuous-learning-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 34px;
+}
+
+
+/* =========================================================
+   CARD
+   ========================================================= */
+.continuous-learning-card {
+    min-height: 260px;
+    padding: 30px 34px;
+    background: #ffffff;
+    border-radius: 11px;
+    box-shadow:
+        0 8px 18px rgba(15, 23, 42, 0.09),
+        0 2px 5px rgba(15, 23, 42, 0.04);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.continuous-learning-card:hover {
+    transform: translateY(-3px);
+    box-shadow:
+        0 12px 24px rgba(15, 23, 42, 0.12),
+        0 3px 7px rgba(15, 23, 42, 0.05);
+}
+
+
+/* =========================================================
+   CARD TOP
+   ========================================================= */
+.continuous-learning-card-top {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    margin-bottom: 24px;
+}
+
+.continuous-learning-card-top h3 {
+    margin: 0;
+    color: #071a35;
+    font-size: 1.49rem;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   ICON
+   ========================================================= */
+.continuous-learning-icon {
+    width: 62px;
+    height: 62px;
+    flex: 0 0 61px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    color: #ffffff;
+    font-size: 29px;
+    box-shadow:
+        0 6px 12px rgba(15, 23, 42, 0.13);
+}
+
+
+/* Icon colors */
+.training-icon {
+    background: linear-gradient(
+        135deg,
+        #12bfc2,
+        #08acbd
+    );
+}
+
+.certification-icon {
+    background: linear-gradient(
+        135deg,
+        #22a7e9,
+        #2778ed
+    );
+}
+
+.science-icon {
+    background: linear-gradient(
+        135deg,
+        #4c7df0,
+        #5368e9
+    );
+}
+
+.mentorship-icon {
+    background: linear-gradient(
+        135deg,
+        #8254f2,
+        #9349e8
+    );
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+.continuous-learning-card > p {
+    margin: 0;
+    color: #405a75;
+    font-size: 1.2rem;
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+    .continuous-learning-section {
+        padding: 80px 0 70px;
+    }
+
+    .continuous-learning-container {
+        width: calc(100% - 36px);
+    }
+
+    .continuous-learning-header {
+        margin-bottom: 45px;
+    }
+
+    .continuous-learning-header h2 {
+        font-size: 2.45rem;
+    }
+
+    .continuous-learning-header p {
+        font-size: 1.35rem;
+    }
+
+    .continuous-learning-grid {
+        gap: 22px;
+    }
+
+    .continuous-learning-card {
+        min-height: 250px;
+        padding: 27px 28px;
+    }
+
+    .continuous-learning-card-top h3 {
+        font-size: 1.5rem;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .continuous-learning-section {
+        padding: 65px 0 60px;
+    }
+
+    .continuous-learning-container {
+        width: calc(100% - 30px);
+    }
+
+    .continuous-learning-header {
+        margin-bottom: 35px;
+    }
+
+    .continuous-learning-badge {
+        font-size: 15px;
+        padding: 5px 11px;
+        margin-bottom: 17px;
+    }
+
+    .continuous-learning-header h2 {
+        font-size: 2.1rem;
+        letter-spacing: -0.5px;
+        margin-bottom: 14px;
+    }
+
+    .continuous-learning-header p {
+        font-size: 1.3rem;
+        line-height: 1.5;
+    }
+
+    .continuous-learning-grid {
+        grid-template-columns: 1fr;
+        gap: 17px;
+    }
+
+    .continuous-learning-card {
+        min-height: auto;
+        padding: 23px 20px;
+    }
+
+    .continuous-learning-card-top {
+        gap: 14px;
+        margin-bottom: 20px;
+    }
+
+    .continuous-learning-icon {
+        width: 60px;
+        height: 60px;
+        flex-basis: 58px;
+        border-radius: 14px;
+        font-size: 28px;
+    }
+
+    .continuous-learning-card-top h3 {
+        font-size: 1.25rem;
+    }
+
+    .continuous-learning-card > p {
+        font-size: 1rem;
+        line-height: 1.55;
+    }
+
+}
+
+
+
+
+
+
+/* =========================================================
+   VOLUNTEER & INTERNSHIP PROGRAM
+   ========================================================= */
+
+.volunteer-section {
+    background: #effdfc;
+    padding: 95px 0 105px;
+}
+
+.volunteer-container {
+    width: min(1485px, calc(100% - 30px));
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.volunteer-header {
+    max-width: 1250px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.volunteer-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 5px 13px;
+
+    background: #d5f8f4;
+    color: #07899a;
+
+    border-radius: 7px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    margin-bottom: 20px;
+
+    box-shadow: 0 2px 7px rgba(8, 150, 160, 0.10);
+}
+
+.volunteer-header h2 {
+    margin: 0 0 18px;
+
+    color: #071a35;
+
+    font-size: clamp(2.3rem, 3.2vw, 3.4rem);
+    line-height: 1.15;
+
+    font-weight: 600;
+    letter-spacing: -0.7px;
+}
+
+.volunteer-header p {
+    max-width: 900px;
+    margin: 0 auto;
+
+    color: #405a75;
+
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   CARDS GRID
+   ========================================================= */
+
+.volunteer-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 25px;
+}
+
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.volunteer-card {
+    min-height: 335px;
+
+    padding: 27px 26px 25px;
+
+    background: #ffffff;
+
+    border-radius: 11px;
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow:
+        0 8px 18px rgba(15, 23, 42, 0.09),
+        0 2px 5px rgba(15, 23, 42, 0.04);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.volunteer-card:hover {
+    transform: translateY(-3px);
+    box-shadow:
+        0 12px 24px rgba(15, 23, 42, 0.12),
+        0 3px 7px rgba(15, 23, 42, 0.05);
+}
+
+
+/* =========================================================
+   ICON
+   ========================================================= */
+
+.volunteer-icon {
+    width: 65px;
+    height: 65px;
+
+    flex: 0 0 61px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    color: #ffffff;
+
+    font-size: 30px;
+
+    margin-bottom: 21px;
+
+    box-shadow:
+        0 6px 12px rgba(15, 23, 42, 0.13);
+}
+
+.volunteer-icon-one {
+    background: linear-gradient(
+        135deg,
+        #35e4e7,
+        #035d7d
+    );
+}
+
+.volunteer-icon-two {
+    background: linear-gradient(
+        135deg,
+        #9e5af1,
+        #023a93
+    );
+}
+
+.volunteer-icon-three {
+    background: linear-gradient(
+        135deg,
+        #eb6db5,
+        #96005a
+    );
+}
+
+
+/* =========================================================
+   CARD CONTENT
+   ========================================================= */
+
+.volunteer-card h3 {
+    margin: 0 0 12px;
+
+    color: #071a35;
+
+    font-size: 1.38rem;
+    line-height: 1.3;
+
+    font-weight: 600;
+}
+
+.volunteer-card > p {
+    margin: 0;
+
+    color: #405a75;
+
+    font-size: 1.08rem;
+    line-height: 1.62;
+}
+
+
+/* =========================================================
+   TAG
+   ========================================================= */
+
+.volunteer-tag {
+    display: inline-flex;
+    align-items: center;
+
+    width: fit-content;
+
+    margin-top: auto;
+    padding: 5px 10px;
+
+    background: #eefcfb;
+    color: #078b96;
+
+    border-radius: 6px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    box-shadow:
+        0 2px 5px rgba(15, 23, 42, 0.08);
+}
+
+.volunteer-tag-blue {
+    color: #3567e8;
+    background: #f1f5ff;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+    .volunteer-section {
+        padding: 80px 0 70px;
+    }
+
+    .volunteer-container {
+        width: calc(100% - 36px);
+    }
+
+    .volunteer-header {
+        margin-bottom: 45px;
+    }
+
+    .volunteer-header h2 {
+        font-size: 2.4rem;
+    }
+
+    .volunteer-header p {
+        font-size: 1.4rem;
+    }
+
+    .volunteer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .volunteer-card {
+        min-height: 365px;
+        padding: 25px 23px;
+    }
+
+    .volunteer-card h3 {
+        font-size: 1.4rem;
+    }
+
+    .volunteer-card > p {
+        font-size: 1.3rem;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .volunteer-section {
+        padding: 65px 0 60px;
+    }
+
+    .volunteer-container {
+        width: calc(100% - 30px);
+    }
+
+    .volunteer-header {
+        margin-bottom: 35px;
+    }
+
+    .volunteer-badge {
+        font-size: 12px;
+        padding: 5px 11px;
+        margin-bottom: 17px;
+    }
+
+    .volunteer-header h2 {
+        font-size: 2rem;
+        letter-spacing: -0.5px;
+        margin-bottom: 14px;
+    }
+
+    .volunteer-header p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .volunteer-grid {
+        grid-template-columns: 1fr;
+        gap: 17px;
+    }
+
+    .volunteer-card {
+        min-height: auto;
+        padding: 23px 20px 22px;
+    }
+
+    .volunteer-icon {
+        width: 58px;
+        height: 58px;
+        flex-basis: 58px;
+
+        border-radius: 14px;
+
+        font-size: 25px;
+        margin-bottom: 18px;
+    }
+
+    .volunteer-card h3 {
+        font-size: 1.08rem;
+    }
+
+    .volunteer-card > p {
+        font-size: 0.95rem;
+        line-height: 1.55;
+    }
+
+}
+
+
+
+
+
+/* =========================================================
+   JOIN OUR TEAM — FINAL SECTION
+   ========================================================= */
+.join-team-section {
+    position: relative;
+    overflow: hidden;
+    background:
+        linear-gradient(
+            145deg,
+            #0b9e98 0%,
+            #079fb8 48%,
+            #2563eb 100%
+        );
+    padding: 85px 0 90px;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   SUBTLE DOT PATTERN
+   ========================================================= */
+
+.join-team-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(
+            rgba(255, 255, 255, 0.18) 1px,
+            transparent 1px
+        );
+    background-size: 25px 25px;
+    opacity: 0.45;
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+.join-team-container {
+    position: relative;
+    z-index: 1;
+    width: min(1505px, calc(100% - 30px));
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 70px;
+}
+
+
+/* =========================================================
+   LEFT CONTENT
+   ========================================================= */
+.join-team-content {
+    max-width: 1290px;
+}
+
+.join-team-icon {
+    width: 75px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 27px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.20);
+    color: #ffffff;
+    font-size: 38px;
+    backdrop-filter: blur(4px);
+}
+
+.join-team-content h2 {
+    margin: 0 0 25px;
+    color: #ffffff;
+    font-size: clamp(2.5rem, 4vw, 3.6rem);
+    line-height: 1.1;
+    font-weight: 600;
+    letter-spacing: -0.7px;
+}
+
+.join-team-description {
+    max-width: 690px;
+    margin: 0 0 31px;
+    color: #ffffff;
+    font-size: 1.42rem;
+    line-height: 1.62;
+}
+
+
+/* =========================================================
+   BENEFITS
+   ========================================================= */
+.join-team-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.join-team-benefits li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #ffffff;
+    font-size: 1.3rem;
+    line-height: 1.4;
+}
+
+.benefit-icon i{
+    width: 25px;
+    height: 25px;
+    flex: 0 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 13px;
+    background: rgba(211, 211, 211, 0.353);
+}
+
+
+/* =========================================================
+   RIGHT CTA
+   ========================================================= */
+.join-team-action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.join-team-button {
+    width: 370px;
+    min-height: 53px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    padding: 14px 24px;
+    background: #ffffff;
+    color: #079b98;
+    border-radius: 7px;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 700;
+    box-shadow:
+        0 8px 18px rgba(0, 0, 0, 0.12);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.join-team-button i {
+    font-size: 20px;
+}
+
+.join-team-button:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        0 12px 24px rgba(0, 0, 0, 0.17);
+}
+
+.join-team-email {
+    margin: 20px 0 0;
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1.3rem;
+}
+
+.join-team-email a {
+    color: #ffffff;
+    font-weight: 400;
+    text-decoration: underline;
+    font-size: 1.4;
+
+}
+
+.join-team-email a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+    .join-team-section {
+        padding: 75px 0 80px;
+    }
+
+    .join-team-container {
+        width: calc(100% - 36px);
+
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .join-team-content {
+        max-width: 650px;
+    }
+
+    .join-team-content h2 {
+        font-size: 2.7rem;
+    }
+
+    .join-team-description {
+        font-size: 1.1rem;
+    }
+
+    .join-team-action {
+        align-items: flex-start;
+
+        text-align: left;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .join-team-section {
+        padding: 60px 0 65px;
+    }
+
+    .join-team-container {
+        width: calc(100% - 40px);
+
+        gap: 38px;
+    }
+
+    .join-team-icon {
+        width: 62px;
+        height: 62px;
+
+        margin-bottom: 22px;
+
+        border-radius: 14px;
+
+        font-size: 30px;
+    }
+
+    .join-team-content h2 {
+        font-size: 2.3rem;
+        margin-bottom: 19px;
+    }
+
+    .join-team-description {
+        font-size: 1.2rem;
+        line-height: 1.55;
+        margin-bottom: 27px;
+    }
+
+    .join-team-benefits {
+        gap: 13px;
+    }
+
+    .join-team-benefits li {
+        font-size: 1rem;
+    }
+
+    .join-team-action {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .join-team-button {
+        width: 100%;
+        max-width: 330px;
+        min-height: 52px;
+        font-size: 1.13rem;
+    }
+
+    .join-team-email {
+        font-size: 1.1rem;
+        line-height: 1.5;
+        margin-top: 17px;
+    }
+
+}

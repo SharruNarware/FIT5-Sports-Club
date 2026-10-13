@@ -1,0 +1,114 @@
+<% layout("/layouts/layout") %>
+
+    <div class="blog-wrapper">
+
+        <div class="create-hero">
+            <div class="create-hero-content">
+                <a href="/home/blogs" class="create-back">                        <i class="fa-solid fa-arrow-left"></i>
+                    <span>Back to Blog</span>
+                </a>
+
+                <div class="create-title-row">
+                    <div class="create-icon">
+                        <i class="fa-solid fa-pen-nib"></i>
+                    </div>
+
+                    <div class="create-heading">
+                        <h1>Create Your Blog Post</h1>
+                        <p>
+                            Share your thoughts, experiences, and insights with the community
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="blog-box">
+            <form action="/home/blogs" method="POST" enctype="multipart/form-data">
+                <div class="field">
+                    <label>Blog Title *</label>
+                    <input type="text" name="title" placeholder="Enter an engaging Blog Title">
+                </div>
+
+
+                <div class="field">
+                    <label>Topic / Category *</label>
+                    <input type="text" name="topic" placeholder="Select a topic or category for your blog post">
+
+                </div>
+
+
+                <div class="field">
+                    <label>Short Description</label>
+                    <textarea rows="4" name="description" placeholder="Short brief summary of your blog post (will appear in previews)...."></textarea>
+                </div>
+
+
+                <div class="editor-box">
+                    <label>Content</label>
+                    <textarea id="editor" name="content"></textarea>
+                </div>
+
+
+                <div class="field">
+                    <label>Featured Image / URL</label>
+                    <div class="image-row">
+                            <input type="text" name="imageUrl" placeholder="Paste Image URL">
+
+                            <label class="custom-file-upload">
+                                <i class="fa-solid fa-cloud-arrow-up"></i>
+                                <span>Choose Image</span>
+                                <input type="file" name="imageFile" accept="image/*">
+                            </label>
+                    </div>
+                </div>
+
+
+                <div class="field">
+                    <label>Tags :</label>
+                    <input type="text" name="tags" placeholder="sports, fitness, community">
+                </div>
+
+
+                <div class="buttons">
+                    <a href="/home/blogs" class="cancel">Cancel Blog</a>
+                    <button class="publish" type="submit">Publish Blog</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="writing-tips">
+            <h3>
+            <i class="fa-solid fa-lightbulb"></i>
+                Writing Tips:
+            </h3>
+
+            <p class="tips-subtitle">
+                Follow these recommendations to create engaging, well-structured blog posts.
+            </p>
+
+            <ul>
+                <li>Write a catchy, descriptive title that captures attention.</li>
+                <li>Choose the most relevant category for your blog.</li>
+                <li>Keep your content informative, engaging, and easy to read.</li>
+                <li>Use markdown formatting to structure your content (headings, lists, bold text).</li>
+                <li>Add relevant tags to help readers find your content.</li>
+                <li>Proofread your blog before publishing.</li>
+            </ul>
+        </div>
+
+    </div>
+
+     
+    <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+
+    <script>
+        ClassicEditor.create(document.querySelector('#editor')
+        ).catch(error=>{
+            console.log(error);
+        }
+        );
+    </script>
+
+

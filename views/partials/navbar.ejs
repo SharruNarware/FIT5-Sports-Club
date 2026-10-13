@@ -1,0 +1,55 @@
+<nav class="navbar">
+        <div class="logo">
+            <a href="/home">
+                <img src="/images/logo/logo-dark.png" alt="Fit5 Sports Club Logo" class="site-logo">
+            </a>
+            <div class="logo-text">
+                <h2>Fit5 Sports Club</h2>
+                <p>Sports Training & Camp Management</p>
+            </div>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="/home" class="<%= currentUrl === '/home' ? 'active' : '' %>">Home</a></li>
+            <li><a href="/home/programs" class="<%= currentUrl.startsWith('/home/programs') ? 'active' : '' %>">Programs/Camps</a></li>
+            <li><a href="/home/blogs" class="<%= currentUrl.startsWith('/home/blogs') ? 'active' : '' %>">Blog</a></li>
+            <li><a href="/home/contact" class="<%= currentUrl.startsWith('/home/contact') ? 'active' : '' %>">Contact Us</a></li>
+            <li class="dropdown">
+                <a href="#">
+                    About Us
+                    <i class="fa-solid fa-chevron-down"></i>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="/home/about">About Us</a></li>
+                    <li><a href="/home/about/our-team">Our Team</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">
+                    Our Camps
+                    <i class="fa-solid fa-chevron-down"></i>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="/home/camps/residential-camp">Residential Summer Camp</a></li>
+                    <li><a href="/home/camps/international-camp">International Summer Camp</a></li>
+                    <li><a href="/home/camps/adventures-camp">Adventures Summer Camp</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">
+                    Initiatives
+                    <i class="fa-solid fa-chevron-down"></i>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="/home/initiatives/marathons-run">Marathons & Run</a></li>
+                    <li><a href="/home/initiatives/coach-training">Coach Training</a></li>
+                    <li><a href="/home/initiatives/tribal-outreach">Tribal Outreach</a></li>
+                </ul>
+            </li>
+        </ul>
+
+
+        <div class="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+</nav>

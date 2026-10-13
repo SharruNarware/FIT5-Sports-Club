@@ -1,0 +1,713 @@
+/* =========================================================
+   FIT5 ADMIN DASHBOARD
+   Desktop + Tablet + Mobile
+   ========================================================= */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   DASHBOARD MAIN AREA
+   ========================================================= */
+
+.admin-dashboard {
+    min-height: 100vh;
+    margin-left: 300px;
+    padding: 40px;
+    background: #f6f7fb;
+    color: #202640;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+.admin-dashboard-header {
+    margin-bottom: 30px;
+}
+
+.admin-dashboard-header h1 {
+    margin: 0 0 7px;
+    color: #17213f;
+    font-size: 30px;
+    font-weight: 750;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+}
+
+.admin-dashboard-header p {
+    margin: 0;
+    color: #7a8198;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   STATISTICS
+   ========================================================= */
+.admin-statistics {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   STAT CARD
+   ========================================================= */
+.admin-stat-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    min-width: 0;
+    min-height: 125px;
+    padding: 22px;
+    background: #ffffff;
+    border: 1px solid #e8eaf1;
+    border-radius: 16px;
+    box-shadow:
+        0 8px 25px rgba(25, 30, 60, 0.05);
+}
+
+
+/* =========================================================
+   STAT ICON
+   ========================================================= */
+.admin-stat-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 13px;
+    font-size: 26px;
+}
+
+.contact-icon {
+    background: #eeeaff;
+    color: #6c5ce7;
+}
+
+.volunteer-icon {
+    background: #e9f8f1;
+    color: #2ca36a;
+}
+
+.camp-icon {
+    background: #fff1df;
+    color: #e58b27;
+}
+
+.donation-icon {
+    background: #e8f1ff;
+    color: #3779d5;
+}
+
+
+/* =========================================================
+   STAT CONTENT
+   ========================================================= */
+
+.admin-stat-content {
+    min-width: 0;
+}
+
+.admin-stat-content h3 {
+    margin: 0 0 5px;
+    color: #18213d;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.admin-stat-content p {
+    margin: 0 0 4px;
+    color: #3d4358;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+.admin-stat-content span {
+    color: #9298a9;
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   DASHBOARD GRID
+   ========================================================= */
+
+.admin-dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.admin-dashboard-grid-three {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+
+/* =========================================================
+   DASHBOARD CARD
+   ========================================================= */
+.admin-dashboard-card {
+    min-width: 0;
+    width: 100%;
+    padding: 24px;
+    background: #ffffff;
+    border: 1px solid #e8eaf1;
+    border-radius: 16px;
+    box-shadow:
+        0 8px 25px rgba(25, 30, 60, 0.05);
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   CARD HEADER
+   ========================================================= */
+.admin-card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.admin-card-header > div {
+    min-width: 0;
+}
+
+.admin-card-header h2 {
+    margin: 0 0 5px;
+    color: #202640;
+    font-size: 16px;
+    font-weight: 650;
+    line-height: 1.3;
+}
+
+.admin-card-header p {
+    margin: 0;
+    color: #9298a9;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.admin-card-header a {
+    flex-shrink: 0;
+    color: #665dd8;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.admin-card-header a:hover {
+    color: #4f46b8;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+.admin-empty-state {
+    min-height: 145px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.admin-empty-icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    background: #f0efff;
+    color: #6c63d9;
+    font-size: 18px;
+}
+
+.admin-empty-state h3 {
+    margin: 0 0 5px;
+    color: #555b70;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.admin-empty-state p {
+    margin: 0;
+    color: #999eae;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   RECENT CONTACT REQUESTS
+   ========================================================= */
+.recent-contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 330px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 4px;
+}
+
+.recent-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    min-width: 0;
+    padding: 12px 10px;
+    color: inherit;
+    text-decoration: none;
+    border-radius: 12px;
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.recent-contact-item:hover {
+    background: #f7f6ff;
+    transform: translateX(3px);
+}
+
+
+/* =========================================================
+   CONTACT AVATAR
+   ========================================================= */
+.recent-contact-avatar {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(
+        135deg,
+        #7c3aed,
+        #6366f1
+    );
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   CONTACT INFO
+   ========================================================= */
+.recent-contact-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.recent-contact-top {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+}
+
+.recent-contact-top h3 {
+    min-width: 0;
+    margin: 0;
+    color: #202640;
+    font-size: 14px;
+    font-weight: 650;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.recent-contact-info p {
+    min-width: 0;
+    margin: 3px 0;
+    color: #9298a9;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.recent-contact-subject {
+    display: block;
+    min-width: 0;
+    color: #665dd8;
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* =========================================================
+   NEW DOT
+   ========================================================= */
+.new-contact-dot {
+    width: 7px;
+    height: 7px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #ef4444;
+}
+
+
+/* =========================================================
+   ARROW
+   ========================================================= */
+.recent-contact-arrow {
+    flex-shrink: 0;
+    color: #665dd8;
+    font-size: 18px;
+    font-weight: 600;
+    transition: transform 0.2s ease;
+}
+
+.recent-contact-item:hover .recent-contact-arrow {
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+.recent-contact-list::-webkit-scrollbar {
+    width: 5px;
+}
+
+.recent-contact-list::-webkit-scrollbar-thumb {
+    background: #d8d5f5;
+    border-radius: 10px;
+}
+
+.recent-contact-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   1400px+
+   ========================================================= */
+@media (min-width: 1400px) {
+    .admin-dashboard {
+        padding: 40px 44px;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+   768px - 1199px
+   ========================================================= */
+@media (min-width: 768px) and (max-width: 1199px) {
+    /*
+       Sidebar becomes 68px.
+       Dashboard starts AFTER sidebar.
+    */
+    .admin-dashboard {
+        margin-left: 75px;
+        width: calc(100% - 68px);
+        padding: 28px 24px;
+    }
+
+    /* Header */
+    .admin-dashboard-header {
+        margin-bottom: 24px;
+        margin-left: 35px;
+    }
+
+    .admin-dashboard-header h1 {
+        font-size: 1.9rem;
+    }
+
+    .admin-dashboard-header p {
+        font-size: 1.2rem;
+    }
+
+    /* Statistics: 2 x 2 */
+    .admin-statistics {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+        margin-bottom: 20px;
+    }
+
+    .admin-stat-card {
+        min-height: 110px;
+        padding: 18px;
+    }
+
+    .admin-stat-icon {
+        width: 46px;
+        height: 46px;
+        font-size: 1.5rem;
+    }
+
+
+    /* Main dashboard cards: 2 columns */
+    .admin-dashboard-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .admin-dashboard-grid-three {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .admin-dashboard-card {
+        padding: 20px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   <= 767px
+   ========================================================= */
+@media (max-width: 767px) {
+    /*
+       Mobile sidebar is OFF-CANVAS.
+       Dashboard takes full width.
+    */
+    .admin-dashboard {
+        margin-left: 0;
+        width: 100%;
+        min-width: 0;
+        padding: 92px 16px 24px;
+    }
+
+    /* Header */
+    .admin-dashboard-header {
+        margin-bottom: 20px;
+    }
+
+    .admin-dashboard-header h1 {
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+
+    .admin-dashboard-header p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+
+    /* Statistics: 2 x 2 */
+    .admin-statistics {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        margin-bottom: 16px;
+    }
+
+    .admin-stat-card {
+        min-height: 105px;
+        padding: 14px;
+        gap: 10px;
+        align-items: flex-start;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+
+    }
+
+    .admin-stat-icon {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        border-radius: 10px;
+        font-size: 24px;
+    }
+
+    .admin-stat-content h3 {
+        font-size: 20px;
+        margin-bottom: 3px;
+    }
+
+    .admin-stat-content p {
+        font-size: 14px;
+        line-height: 1.35;
+    }
+
+    .admin-stat-content span {
+        font-size: 13px;
+    }
+
+
+    /* Dashboard cards become one column */
+    .admin-dashboard-grid,
+    .admin-dashboard-grid-three {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        margin-bottom: 14px;
+    }
+
+    .admin-dashboard-card {
+        width: 100%;
+        min-width: 0;
+        padding: 18px;
+        border-radius: 12px;
+    }
+
+    /* Card header */
+    .admin-card-header {
+        gap: 10px;
+        margin-bottom: 16px;
+    }
+
+    .admin-card-header h2 {
+        font-size: 1.12rem;
+    }
+
+    .admin-card-header p {
+        font-size: .95rem;
+    }
+
+    .admin-card-header a {
+        font-size: 0.92rem;
+    }
+
+
+    /* Recent contacts */
+    .recent-contact-list {
+        max-height: 300px;
+    }
+
+    .recent-contact-item {
+        gap: 10px;
+        padding: 10px 6px;
+    }
+
+    .recent-contact-avatar {
+        width: 36px;
+        height: 36px;
+        font-size: 1.13rem;
+    }
+
+    .recent-contact-top h3 {
+        font-size: 1.12rem;
+    }
+
+    .recent-contact-info p,
+    .recent-contact-subject {
+        font-size: 0.88rem;
+    }
+
+    .recent-contact-arrow {
+        font-size: 1.15rem;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   <= 400px
+   ========================================================= */
+@media (max-width: 400px) {
+
+    .admin-dashboard {
+        padding: 88px 12px 20px;
+    }
+
+    .admin-dashboard-header h1 {
+        font-size: 1.6rem;
+        line-height: 1.2;
+
+    }
+        
+    .admin-dashboard-header p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .admin-statistics {
+        gap: 10px;
+    }
+
+    .admin-stat-card {
+        padding: 12px;
+        gap: 8px;
+    }
+
+    .admin-stat-icon {
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+        font-size: 18px;
+    }
+
+    .admin-stat-content h3 {
+        font-size: 18px;
+    }
+
+    .admin-stat-content p {
+        font-size: 11px;
+    }
+
+    .admin-stat-content span {
+        font-size: 15px;
+    }
+
+    .admin-dashboard-card {
+        padding: 15px;
+    }
+}
+
+
+/* =========================================================
+   REMOVE MOBILE HEADER / TOP WHITE STRIP ON DESKTOP
+   ========================================================= */
+
+@media (min-width: 1200px) {
+
+    .admin-mobile-header {
+        display: none !important;
+        height: 0 !important;
+        min-height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        border: 0 !important;
+    }
+
+    .admin-tablet-toggle {
+        display: none !important;
+    }
+
+    body {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+}

@@ -1,0 +1,336 @@
+<% layout("layouts/adminLayout") %>
+
+<div class="admin-dashboard">
+
+    <main class="admin-main">
+
+        <!-- Dashboard Header -->
+        <div class="admin-dashboard-header">
+
+            <div>
+                <h1>Dashboard Overview</h1>
+                <p>
+                    Welcome back! Here's what's happening at
+                    FIT5 Sports Club.
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- ================================
+             STATISTICS CARDS
+        ================================= -->
+        <section class="admin-statistics">
+
+            <!-- Contact Requests -->
+
+            <div class="admin-stat-card">
+
+                <div class="admin-stat-icon contact-icon">
+                    ✉
+                </div>
+
+                <div class="admin-stat-content">
+
+                    <h3><%= totalContacts %></h3>
+
+                    <p>Contact Requests</p>
+                    
+                    <span><%= newContacts %> new requests</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Volunteer Registrations -->
+
+            <div class="admin-stat-card">
+
+                <div class="admin-stat-icon volunteer-icon">
+                    ♧
+                </div>
+
+                <div class="admin-stat-content">
+
+                    <h3>0</h3>
+
+                    <p>Coach/Volunteer Registractions</p>
+
+                    <span>0 pending</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Camp Registrations -->
+
+            <div class="admin-stat-card">
+
+                <div class="admin-stat-icon camp-icon">
+                    ▤
+                </div>
+
+                <div class="admin-stat-content">
+
+                    <h3>0</h3>
+
+                    <p>Camp/Trainging Registrations</p>
+
+                    <span>All programs</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Donations -->
+
+            <div class="admin-stat-card">
+
+                <div class="admin-stat-icon donation-icon">
+                    ₹
+                </div>
+
+                <div class="admin-stat-content">
+
+                    <h3>₹0</h3>
+
+                    <p>Total Donations</p>
+
+                    <span>0 donors</span>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- ================================
+             DASHBOARD CONTENT
+        ================================= -->
+
+        <section class="admin-dashboard-grid">
+
+
+            <!-- Recent Contact Requests -->
+
+            <div class="admin-dashboard-card">
+
+                <div class="admin-card-header">
+
+                    <div>
+                        <h2>Recent Contact Requests</h2>
+                        <p>Latest messages received from visitors</p>
+                    </div>
+
+                    <a href="/admin/contacts">
+                        View All
+                    </a>
+
+                </div>
+
+
+                <% if (recentContacts.length === 0) { %>
+
+                    <div class="admin-empty-state">
+
+                        <div class="admin-empty-icon">
+                            ✉
+                        </div>
+
+                        <h3>No contact requests yet</h3>
+
+                        <p>
+                            New contact requests will appear here.
+                        </p>
+
+                    </div>
+
+                <% } else { %>
+
+                    <div class="recent-contact-list">
+
+                        <% recentContacts.forEach(contact => { %>
+
+                            <a
+                                href="/admin/contacts/<%= contact._id %>"
+                                class="recent-contact-item"
+                            >
+
+                                <div class="recent-contact-avatar">
+                                    <%= contact.fullName.charAt(0).toUpperCase() %>
+                                </div>
+
+                                <div class="recent-contact-info">
+
+                                    <div class="recent-contact-top">
+
+                                        <h3>
+                                            <%= contact.fullName %>
+                                        </h3>
+
+                                        <% if (contact.status === "new") { %>
+                                            <span class="new-contact-dot"></span>
+                                        <% } %>
+
+                                    </div>
+
+
+                                    <p>
+                                        <%= contact.email %>
+                                    </p>
+
+
+                                    <span class="recent-contact-subject">
+                                        <%= contact.subject %>
+                                    </span>
+
+                                </div>
+
+
+                                <div class="recent-contact-arrow">
+                                    →
+                                </div>
+
+                            </a>
+
+                        <% }) %>
+
+                    </div>
+
+                <% } %>
+
+            </div>
+
+
+            <!-- Recent Registrations -->
+
+            <div class="admin-dashboard-card">
+
+                <div class="admin-card-header">
+
+                    <div>
+                        <h2>Applications by Role</h2>
+                        <p>Latest registrations by different Roles</p>
+                    </div>
+
+                    <a href="/admin/camp-registrations">
+                        View All
+                    </a>
+
+                </div>
+
+
+                <div class="admin-empty-state">
+
+                    <div class="admin-empty-icon">
+                        ▤
+                    </div>
+
+                    <h3>No registrations yet</h3>
+
+                    <p>
+                        All registrations will appear here.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- ================================
+             LOWER DASHBOARD CARDS
+        ================================= -->
+
+        <section class="admin-dashboard-grid admin-dashboard-grid-three">
+
+
+            <!-- Volunteers -->
+
+            <div class="admin-dashboard-card">
+
+                <div class="admin-card-header">
+
+                    <div>
+                        <h2>Camp/Training Registrations</h2>
+                        <p>Latest applications</p>
+                    </div>
+
+                </div>
+
+
+                <div class="admin-empty-state">
+
+                    <h3>No applications yet.</h3>
+
+                </div>
+
+            </div>
+
+
+            <!-- Donations -->
+
+            <div class="admin-dashboard-card">
+
+                <div class="admin-card-header">
+
+                    <div>
+                        <h2>Recent Donations</h2>
+                        <p>Latest donation activity</p>
+                    </div>
+
+                </div>
+
+
+                <div class="admin-empty-state">
+
+                    <h3>No donations yet.</h3>
+
+                </div>
+
+            </div>
+
+
+            <!-- Blog Posts -->
+
+            <div class="admin-dashboard-card">
+
+                <div class="admin-card-header">
+
+                    <div>
+                        <h2>Blog Posts</h2>
+                        <p>Published content</p>
+                    </div>
+
+                    <a href="/admin/blogs">
+                        View All
+                    </a>
+
+                </div>
+
+
+                <div class="admin-empty-state">
+
+                    <h3>5 Published Posts</h3>
+
+                    <p>
+                        Your blog content will be managed here.
+                    </p>
+
+                </div>
+                
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
